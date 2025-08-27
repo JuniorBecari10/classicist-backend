@@ -1,12 +1,13 @@
-# Dependencies:
-# Go: pacman -S go
-# Reflex: go install github.com/cespare/reflex@latest
+BE=backend
 
 build:
-	go build main.go
+	cd $(BE) && \
+		make build
 
 run:
-	go run main.go
+	cd $(BE) && \
+		make run
 
 watch:
-	reflex -s -r '\.go$$' make run
+	cd $(BE) && \
+		make watch
