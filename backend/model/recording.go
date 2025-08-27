@@ -16,7 +16,8 @@ type Recording struct {
 	WorkId int // what is the work this recording is from.
 
 	Performers []Performer
-	FileYear int
+	Year int
+	Movements []RecordedMovement
 }
 
 type AudioFile struct {
