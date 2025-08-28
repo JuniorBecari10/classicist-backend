@@ -2,8 +2,121 @@ package database
 
 import (
 	"database/sql"
+	_ "github.com/mattn/go-sqlite3"
+	"log"
 )
 
 func CreateTables() {
-	db, err := sql.Ope
+	log.Println("Creating database schema..")
+
+	db, err := sql.Open("sqlite3", "../database.db")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer db.Close()
+
+	schema := `
+CREATE TABLE IF NOT EXISTS composers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    name TEXT NOT NULL,
+    birth_year INT NOT NULL,
+    death_year INT
+);
+
+CREATE TABLE IF NOT EXISTS works (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    title_kind TEXT NOT NULL,
+    title_number INT NOT NULL,
+    title_nickname TEXT,
+
+    key_central_note INT NOT NULL,
+    key_mode INT NOT NULL,
+
+    composer_id INT NOT NULL,
+
+    catalog_name TEXT NOT NULL,
+    catalog_number INT NOT NULL,
+    catalog_inside_number INT,
+
+    composition_start_year INT NOT NULL,
+    composition_end_year INT,
+
+    FOREIGN KEY (composer_id) REFERENCES composers(id)
+);
+
+CREATE TABLE IF NOT EXISTS movements (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    work_id INT NOT NULL,
+    kind TEXT,
+    nickname TEXT,
+    order_num INT NOT NULL,
+
+    FOREIGN KEY (work_id) REFERENCES works(id)
+);
+
+CREATE TABLE IF NOT EXISTS tempo_markings (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    movement_id INT NOT NULL,
+    name TEXT NOT NULL,
+    bpm INT,
+
+    FOREIGN KEY (movement_id) REFERENCES movements(id)
+);
+
+CREATE TABLE IF NOT EXISTS recordings (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    work_id INT NOT NULL,
+    year INT NOT NULL,
+
+    FOREIGN KEY (work_id) REFERENCES works(id)
+);
+
+CREATE TABLE IF NOT EXISTS performers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    name TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS recording_performers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    recording_id INT NOT NULL,
+    performer_id INT NOT NULL,
+    role TEXT NOT NULL,
+
+    FOREIGN KEY (recording_id) REFERENCES recordings(id),
+    FOREIGN KEY (performer_id) REFERENCES performers(id)
+);
+
+CREATE TABLE IF NOT EXISTS audio_files (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    path TEXT NOT NULL,
+    duration INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS recorded_movements (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    movement_id INT NOT NULL,
+    recording_id INT NOT NULL,
+    audio_file_id INT NOT NULL,
+
+    FOREIGN KEY (movement_id) REFERENCES movements(id),
+    FOREIGN KEY (recording_id) REFERENCES recordings(id),
+    FOREIGN KEY (audio_file_id) REFERENCES audio_files(id)
+);
+`
+	_, err = db.Exec(schema)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	log.Println("Database schema created.")
 }

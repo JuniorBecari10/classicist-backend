@@ -5,7 +5,7 @@ const (
 	C Note = iota
 	CSharp
 	DFlat
-    DSharp
+	DSharp
 	EFlat
 	E
 	F
@@ -41,7 +41,7 @@ type Key struct {
 type Composer struct {
     Name string
 	BirthDate int
-	DeathDate *int // optional, the composer may be alive now :shrug:
+	DeathDate *int // optional, the composer may be alive now
 }
 
 type TempoMarking struct {
@@ -68,8 +68,6 @@ type CompositionYear struct {
 	EndYear *int // optional, if the work has been finished in the same year of start
 }
 
-// the length of the work will be an approximation of the sum of the lengths of its movements.
-// recordings stored separately.
 type Work struct {
 	Id int
 	Title WorkTitle
