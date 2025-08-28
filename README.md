@@ -14,7 +14,7 @@ make build
 ```
 This will generate an executable file that runs your app.
 
-## For Development
+## For development
 Run:
 ```sh
 make watch
