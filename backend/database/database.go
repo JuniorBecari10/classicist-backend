@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS recorded_movements (
     recording_id INT NOT NULL,
     
 	audio_path TEXT NOT NULL,
-    duration INT NOT NULL
+    duration INT NOT NULL,
 
     FOREIGN KEY (movement_id) REFERENCES movements(id),
     FOREIGN KEY (recording_id) REFERENCES recordings(id)

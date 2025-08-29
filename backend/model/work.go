@@ -42,7 +42,7 @@ type Composer struct {
     Name string
 	BirthYear int
 	DeathYear *int // optional, the composer may be alive now
-	PhotoPath string
+	PhotoPath string // relative to /public/images
 }
 
 // e.g.: Op. 27, No. 2 (Chopin's Nocturne in D-flat Major)
