@@ -22,7 +22,8 @@ CREATE TABLE IF NOT EXISTS composers (
 
     name TEXT NOT NULL,
     birth_year INT NOT NULL,
-    death_year INT
+    death_year INT,
+    photo_path TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS works (
@@ -32,14 +33,14 @@ CREATE TABLE IF NOT EXISTS works (
     title_number INT NOT NULL,
     title_nickname TEXT,
 
-    key_central_note INT NOT NULL,
+    key_note INT NOT NULL,
     key_mode INT NOT NULL,
 
     composer_id INT NOT NULL,
 
-    catalog_name TEXT NOT NULL,
+    catalog_prefix TEXT NOT NULL,
     catalog_number INT NOT NULL,
-    catalog_inside_number INT,
+    catalog_subnumber INT,
 
     composition_start_year INT NOT NULL,
     composition_end_year INT,
@@ -73,6 +74,7 @@ CREATE TABLE IF NOT EXISTS recordings (
 
     work_id INT NOT NULL,
     year INT NOT NULL,
+    photo_path TEXT NOT NULL,
 
     FOREIGN KEY (work_id) REFERENCES works(id)
 );
@@ -94,23 +96,17 @@ CREATE TABLE IF NOT EXISTS recording_performers (
     FOREIGN KEY (performer_id) REFERENCES performers(id)
 );
 
-CREATE TABLE IF NOT EXISTS audio_files (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-
-    path TEXT NOT NULL,
-    duration INT NOT NULL
-);
-
 CREATE TABLE IF NOT EXISTS recorded_movements (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
 
     movement_id INT NOT NULL,
     recording_id INT NOT NULL,
-    audio_file_id INT NOT NULL,
+    
+	audio_path TEXT NOT NULL,
+    duration INT NOT NULL
 
     FOREIGN KEY (movement_id) REFERENCES movements(id),
-    FOREIGN KEY (recording_id) REFERENCES recordings(id),
-    FOREIGN KEY (audio_file_id) REFERENCES audio_files(id)
+    FOREIGN KEY (recording_id) REFERENCES recordings(id)
 );
 `
 	_, err = db.Exec(schema)

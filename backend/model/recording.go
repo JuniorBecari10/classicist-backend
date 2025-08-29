@@ -1,27 +1,30 @@
 package model
 
+type AudioFile struct {
+	Path string
+	Duration int // in seconds
+}
+
 type Performer struct {
 	Name string
+}
+
+// two different structs are necessary because a single performer
+// can have multiple roles, depending on the recording.
+type RecordingPerformer struct {
+	Performer Performer
 	Role string // e.g. Conductor, Pianist, Violinist, Orchestra
 }
 
 type RecordedMovement struct {
-	MovementId int
-	RecordingId int
-	File AudioFile
+	Movement Movement // yes, a copy. no problem for now
+	AudioFile AudioFile
 }
 
 type Recording struct {
-	Id int
-	WorkId int // what is the work this recording is from.
-
-	Performers []Performer
+	Work Work
 	Year int
+	PhotoPath string
+	Performers []RecordingPerformer
 	Movements []RecordedMovement
-}
-
-type AudioFile struct {
-	Id int
-	Path string
-	Duration int // in seconds
 }
