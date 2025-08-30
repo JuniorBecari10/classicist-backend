@@ -29,7 +29,7 @@ const (
 
 type WorkTitle struct {
 	Kind string
-	Number int
+	Number *int // optional, it may be the only piece of a gender made by the composer
 	Nickname *string // optional
 }
 
@@ -42,10 +42,11 @@ type Composer struct {
     Name string
 	BirthYear int
 	DeathYear *int // optional, the composer may be alive now
-	PhotoPath string // relative to /public/images
+	PhotoPath string // relative to /public/images/composers
 }
 
 // e.g.: Op. 27, No. 2 (Chopin's Nocturne in D-flat Major)
+// the app assumes every work is catalogued, so this is mandatory
 type Catalog struct {
 	Prefix string // Op, D, K..
 	Number int

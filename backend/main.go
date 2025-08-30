@@ -6,6 +6,10 @@ import (
 )
 
 func main() {
-	database.CreateTables()
+	setupEnvironment()
 	server.SetupServer()
+}
+
+func setupEnvironment() {
+	database.CreateTables()
 }

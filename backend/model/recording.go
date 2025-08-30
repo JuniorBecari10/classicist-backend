@@ -24,7 +24,7 @@ type RecordedMovement struct {
 type Recording struct {
 	Work Work
 	Year int
-	PhotoPath string
+	PhotoPath string // relative to /public/images/recordings
 	Performers []RecordingPerformer
 	Movements []RecordedMovement
 }

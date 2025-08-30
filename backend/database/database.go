@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS works (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
 
     title_kind TEXT NOT NULL,
-    title_number INT NOT NULL,
+    title_number INT,
     title_nickname TEXT,
 
     key_note INT NOT NULL,
