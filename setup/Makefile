@@ -3,7 +3,7 @@
 # Reflex: go install github.com/cespare/reflex@latest
 
 build:
-	go build main.go -o ../backend
+	go build main.go -o ../setup
 
 run:
 	go run main.go
