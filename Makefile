@@ -1,32 +1,32 @@
-BE=backend
-SE=setup
+BACK=back
+SETUP=setup
 
-be_build:
-	cd $(BE) && \
+back_build:
+	cd $(BACK) && \
 		make build
 
-be_run:
-	cd $(BE) && \
+back_run:
+	cd $(BACK) && \
 		make run
 
-be_watch:
-	cd $(BE) && \
+back_watch:
+	cd $(BACK) && \
 		make watch
 
 # ---
 
-se_build:
-	cd $(SE) && \
+setup_build:
+	cd $(SETUP) && \
 		make build
 
-se_run:
-	cd $(SE) && \
+setup_run:
+	cd $(SETUP) && \
 		make run
 
-se_watch:
-	cd $(SE) && \
+setup_watch:
+	cd $(SETUP) && \
 		make watch
 
 # ---
 
-build: be_build se_build
+build: back_build setup_build

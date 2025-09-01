@@ -13,7 +13,7 @@ func SetupServer() {
 	log.Printf("Starting server on port %d..\n", PORT)
 	app := fiber.New()
 
-	app.Static("/public", "../public")
+	app.Static("/public", "../public/files")
 	setupApi(app)
 	
 	app.Listen(fmt.Sprintf(":%d", PORT))
