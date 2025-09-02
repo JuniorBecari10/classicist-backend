@@ -3,14 +3,27 @@ package database
 import (
 	"database/sql"
 	"log"
+	"os"
+	"setup/util"
 
 	_ "github.com/mattn/go-sqlite3"
 )
 
+const FILE = "database.db"
+
 func CreateTables() {
+	log.Println("Erasing previous database file if it exists..")
+
+	path := util.GetPath(FILE)
+
+	err := os.Remove(path)
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	log.Println("Creating database schema..")
 
-	db, err := sql.Open("sqlite3", "../database.db")
+	db, err := sql.Open("sqlite3", path)
 	if err != nil {
 		log.Fatal(err)
 	}

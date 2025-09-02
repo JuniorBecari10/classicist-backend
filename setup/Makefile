@@ -2,11 +2,14 @@
 # Go: pacman -S go
 # Reflex: go install github.com/cespare/reflex@latest
 
-build:
-	go build main.go -o ../setup
+FILE=../setup_bin
 
-run:
-	go run main.go
+build:
+	go build -o $(FILE) main.go
+
+run: build
+	trap "rm -fr $(FILE)" EXIT; \
+		$(FILE) yes
 
 watch:
 	reflex -s -r '\.go$$' make run

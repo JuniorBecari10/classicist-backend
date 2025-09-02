@@ -1,15 +1,15 @@
-BACK=back
+BACK=backend
 SETUP=setup
 
-back_build:
+backend_build:
 	cd $(BACK) && \
 		make build
 
-back_run:
+backend_run:
 	cd $(BACK) && \
 		make run
 
-back_watch:
+backend_watch:
 	cd $(BACK) && \
 		make watch
 
@@ -29,4 +29,4 @@ setup_watch:
 
 # ---
 
-build: back_build setup_build
+build: backend_build setup_build
