@@ -122,263 +122,263 @@ INSERT INTO works (
  'D.', '759', NULL, 1822, NULL);
 
 -- Movements
-INSERT INTO movements (work_id, order_num, kind, nickname) VALUES
+INSERT INTO movements (work_id, order_num, kind) VALUES
 -- Bach: Harpsichord Concerto in D minor, BWV 1052
-(1, 1, NULL, NULL),
-(1, 2, NULL, NULL),
-(1, 3, NULL, NULL),
+(1, 1, NULL),
+(1, 2, NULL),
+(1, 3, NULL),
 
 -- Beethoven: Piano Concerto No. 5 "Emperor"
-(2, 1, NULL, NULL),
-(2, 2, NULL, NULL),
-(2, 3, 'Rondo', NULL),
+(2, 1, NULL),
+(2, 2, NULL),
+(2, 3, 'Rondo'),
 
 -- Beethoven: Piano Sonata No. 17 "Tempest"
-(3, 1, NULL, NULL),
-(3, 2, NULL, NULL),
-(3, 3, NULL, NULL),
+(3, 1, NULL),
+(3, 2, NULL),
+(3, 3, NULL),
 
 -- Beethoven: Symphony No. 7
-(4, 1, NULL, NULL),
-(4, 2, NULL, NULL),
-(4, 3, NULL, NULL),
-(4, 4, NULL, NULL),
+(4, 1, NULL),
+(4, 2, NULL),
+(4, 3, NULL),
+(4, 4, NULL),
 
 -- Beethoven: Symphony No. 9
-(5, 1, NULL, NULL),
-(5, 2, NULL, NULL),
-(5, 3, NULL, NULL),
-(5, 4, 'Finale', 'Ode to Joy'),
+(5, 1, NULL),
+(5, 2, NULL),
+(5, 3, NULL),
+(5, 4, 'Finale'),
 
 -- Chopin: Piano Sonata No. 2
-(6, 1, NULL, NULL),
-(6, 2, NULL, NULL),
-(6, 3, 'Marche funèbre', NULL),
-(6, 4, 'Finale', NULL),
+(6, 1, NULL),
+(6, 2, NULL),
+(6, 3, 'Marche funèbre'),
+(6, 4, 'Finale'),
 
 -- Chopin: Piano Sonata No. 3
-(7, 1, NULL, NULL),
-(7, 2, NULL, NULL),
-(7, 3, NULL, NULL),
-(7, 4, NULL, NULL),
+(7, 1, NULL),
+(7, 2, NULL),
+(7, 3, NULL),
+(7, 4, NULL),
 
 -- Chopin: Ballade No. 1
-(8, 1, NULL, NULL),
+(8, 1, NULL),
 
 -- Chopin: Ballade No. 4
-(9, 1, NULL, NULL),
+(9, 1, NULL),
 
 -- Chopin: Nocturnes
-(10, 1, NULL, NULL),
-(11, 1, NULL, NULL),
-(12, 1, NULL, NULL),
-(13, 1, NULL, NULL),
-(14, 1, NULL, NULL),
+(10, 1, NULL),
+(11, 1, NULL),
+(12, 1, NULL),
+(13, 1, NULL),
+(14, 1, NULL),
 
 -- Chopin: Piano Concerto No. 1
-(15, 1, NULL, NULL),
-(15, 2, NULL, NULL),
-(15, 3, 'Rondo', NULL),
+(15, 1, NULL),
+(15, 2, NULL),
+(15, 3, 'Rondo'),
 
 -- Liszt: Liebestraum No. 3
-(16, 1, 'Notturno', NULL),
+(16, 1, 'Notturno'),
 
 -- Mozart: Piano Concerto No. 20
-(17, 1, NULL, NULL),
-(17, 2, NULL, NULL),
-(17, 3, 'Rondo', NULL),
+(17, 1, NULL),
+(17, 2, NULL),
+(17, 3, 'Rondo'),
 
 -- Mendelssohn: Symphony No. 2 "Lobgesang"
-(18, 1, 'Sinfonia', NULL),
-(18, 2, NULL, NULL),
-(18, 3, NULL, NULL),
-(18, 4, 'Chorale', NULL),
-(18, 5, 'Chorus', NULL),
-(18, 6, 'Aria', NULL),
-(18, 7, 'Chorus', NULL),
-(18, 8, 'Aria', NULL),
-(18, 9, 'Chorus', NULL),
-(18, 10, 'Aria', NULL),
-(18, 11, 'Chorus', NULL),
-(18, 12, 'Finale', NULL),
+(18, 1, 'Sinfonia'),
+(18, 2, NULL),
+(18, 3, NULL),
+(18, 4, 'Chorale'),
+(18, 5, 'Chorus'),
+(18, 6, 'Aria'),
+(18, 7, 'Chorus'),
+(18, 8, 'Aria'),
+(18, 9, 'Chorus'),
+(18, 10, 'Aria'),
+(18, 11, 'Chorus'),
+(18, 12, 'Finale'),
 
 -- Mendelssohn: Violin Concerto
-(19, 1, NULL, NULL),
-(19, 2, NULL, NULL),
-(19, 3, NULL, NULL),
+(19, 1, NULL),
+(19, 2, NULL),
+(19, 3, NULL),
 
 -- Mahler: Symphony No. 3
-(20, 1, NULL, NULL),
-(20, 2, NULL, NULL),
-(20, 3, NULL, NULL),
-(20, 4, NULL, NULL),
-(20, 5, NULL, NULL),
-(20, 6, NULL, NULL),
+(20, 1, NULL),
+(20, 2, NULL),
+(20, 3, NULL),
+(20, 4, NULL),
+(20, 5, NULL),
+(20, 6, NULL),
 
 -- Mahler: Symphony No. 5
-(21, 1, NULL, NULL),
-(21, 2, NULL, NULL),
-(21, 3, NULL, NULL),
-(21, 4, NULL, NULL),
-(21, 5, NULL, NULL),
+(21, 1, NULL),
+(21, 2, NULL),
+(21, 3, NULL),
+(21, 4, NULL),
+(21, 5, NULL),
 
 -- Mahler: Symphony No. 8
-(22, 1, NULL, NULL),
-(22, 2, 'Finale', NULL),
+(22, 1, NULL),
+(22, 2, 'Finale'),
 
 -- Mahler: Symphony No. 10
-(23, 1, NULL, NULL),
-(23, 2, NULL, NULL),
-(23, 3, 'Purgatorio', NULL),
-(23, 4, 'Scherzo', NULL),
-(23, 5, 'Finale', NULL),
+(23, 1, NULL),
+(23, 2, NULL),
+(23, 3, 'Purgatorio'),
+(23, 4, 'Scherzo'),
+(23, 5, 'Finale'),
 
 -- Rachmaninoff: Piano Concerto No. 2
-(24, 1, NULL, NULL),
-(24, 2, NULL, NULL),
-(24, 3, NULL, NULL),
+(24, 1, NULL),
+(24, 2, NULL),
+(24, 3, NULL),
 
 -- Rachmaninoff: Piano Concerto No. 3
-(25, 1, NULL, NULL),
-(25, 2, 'Intermezzo', NULL),
-(25, 3, 'Finale', NULL),
+(25, 1, NULL),
+(25, 2, 'Intermezzo'),
+(25, 3, 'Finale'),
 
 -- Schubert: Symphony No. 8 "Unfinished"
-(26, 1, NULL, NULL),
-(26, 2, NULL, NULL);
+(26, 1, NULL),
+(26, 2, NULL);
 
 -- Tempo markings
-INSERT INTO tempo_markings (movement_id, order_num, name, bpm) VALUES
--- Bach
-(1, 1, 'Allegro', NULL),
-(2, 1, 'Adagio', NULL),
-(3, 1, 'Allegro', NULL),
+INSERT INTO tempo_markings (movement_id, order_num, name) VALUES
+-- Bach: Harpsichord Concerto No. 1
+(1, 1, 'Allegro'),
+(2, 1, 'Adagio'),
+(3, 1, 'Allegro'),
 
 -- Beethoven: Piano Concerto No. 5
-(4, 1, 'Allegro', NULL),
-(5, 1, 'Adagio un poco mosso', NULL),
-(6, 1, 'Rondo: Allegro', NULL),
+(4, 1, 'Allegro'),
+(5, 1, 'Adagio un poco mosso'),
+(6, 1, 'Rondo: Allegro'),
 
 -- Beethoven: Piano Sonata No. 17
-(7, 1, 'Largo', NULL),
-(7, 2, 'Allegro', NULL),
-(8, 1, 'Adagio', NULL),
-(9, 1, 'Allegretto', NULL),
+(7, 1, 'Largo'),
+(7, 2, 'Allegro'),
+(8, 1, 'Adagio'),
+(9, 1, 'Allegretto'),
 
 -- Beethoven: Symphony No. 7
-(10, 1, 'Poco sostenuto', NULL),
-(10, 2, 'Vivace', NULL),
-(11, 1, 'Allegretto', NULL),
-(12, 1, 'Presto', NULL),
-(12, 2, 'Assai meno presto', NULL),
-(13, 1, 'Allegro con brio', NULL),
+(10, 1, 'Poco sostenuto'),
+(10, 2, 'Vivace'),
+(11, 1, 'Allegretto'),
+(12, 1, 'Presto'),
+(12, 2, 'Assai meno presto'),
+(13, 1, 'Allegro con brio'),
 
 -- Beethoven: Symphony No. 9
-(14, 1, 'Allegro ma non troppo, un poco maestoso', NULL),
-(15, 1, 'Molto vivace', NULL),
-(16, 1, 'Adagio molto e cantabile', NULL),
-(17, 1, 'Presto', NULL),
-(17, 2, 'Allegro assai', NULL),
+(14, 1, 'Allegro ma non troppo, un poco maestoso'),
+(15, 1, 'Molto vivace'),
+(16, 1, 'Adagio molto e cantabile'),
+(17, 1, 'Presto'),
+(17, 2, 'Allegro assai'),
 
 -- Chopin: Piano Sonata No. 2
-(18, 1, 'Grave', NULL),
-(18, 2, 'Doppio movimento', NULL),
-(19, 1, 'Scherzo', NULL),
-(20, 1, 'Lento', NULL),
-(21, 1, 'Presto', NULL),
+(18, 1, 'Grave'),
+(18, 2, 'Doppio movimento'),
+(19, 1, 'Scherzo'),
+(20, 1, 'Lento'),
+(21, 1, 'Presto'),
 
 -- Chopin: Piano Sonata No. 3
-(22, 1, 'Allegro maestoso', NULL),
-(23, 1, 'Molto vivace', NULL),
-(24, 1, 'Largo', NULL),
-(25, 1, 'Presto non tanto', NULL),
+(22, 1, 'Allegro maestoso'),
+(23, 1, 'Molto vivace'),
+(24, 1, 'Largo'),
+(25, 1, 'Presto non tanto'),
 
 -- Chopin: Ballade No. 1
-(26, 1, 'Largo', NULL),
-(26, 2, 'Moderato', NULL),
-(26, 3, 'Presto con fuoco', NULL),
+(26, 1, 'Largo'),
+(26, 2, 'Moderato'),
+(26, 3, 'Presto con fuoco'),
 
 -- Chopin: Ballade No. 4
-(27, 1, 'Andante con moto', NULL),
+(27, 1, 'Andante con moto'),
 
 -- Chopin: Nocturnes
-(28, 1, 'Larghetto', NULL),
-(29, 1, 'Andante', NULL),
-(30, 1, 'Andante cantabile', NULL),
-(31, 1, 'Lento sostenuto', NULL),
-(32, 1, 'Lento con gran espressione', NULL);
+(28, 1, 'Larghetto'),
+(29, 1, 'Andante'),
+(30, 1, 'Andante cantabile'),
+(31, 1, 'Lento sostenuto'),
+(32, 1, 'Lento con gran espressione'),
 
 -- Chopin: Piano Concerto No. 1
-(33, 1, 'Allegro maestoso', NULL),
-(34, 1, 'Larghetto', NULL),
-(35, 1, 'Vivace', NULL),
+(33, 1, 'Allegro maestoso'),
+(34, 1, 'Larghetto'),
+(35, 1, 'Vivace'),
 
 -- Liszt: Liebestraum No. 3
-(36, 1, 'Poco allegro, con affetto', NULL),
-(36, 2, 'Tempo I', NULL),
+(36, 1, 'Poco allegro, con affetto'),
+(36, 2, 'Tempo I'),
 
 -- Mozart: Piano Concerto No. 20
-(37, 1, 'Allegro', NULL),
-(38, 1, 'Romanze', NULL),
-(39, 1, 'Allegro assai', NULL),
+(37, 1, 'Allegro'),
+(38, 1, 'Romanze'),
+(39, 1, 'Allegro assai'),
 
 -- Mendelssohn: Symphony No. 2 "Lobgesang"
-(40, 1, 'Maestoso con moto', NULL),
-(41, 1, 'Allegretto un poco agitato', NULL),
-(42, 1, 'Adagio religioso', NULL),
-(43, 1, 'O Herr, lehre mich', NULL),
-(44, 1, 'Nun danket alle Gott', NULL),
-(45, 1, 'Ihr Sorgen, flieht', NULL),
-(46, 1, 'Wer bis an das Ende beharrt', NULL),
-(47, 1, 'Ihr Völker des Himmels', NULL),
-(48, 1, 'Halleluja', NULL),
-(49, 1, 'Preiset den Herrn', NULL),
-(50, 1, 'Lobet den Herrn', NULL),
-(51, 1, 'Alles was Odem hat, lobe den Herrn', NULL),
+(40, 1, 'Maestoso con moto'),
+(41, 1, 'Allegretto un poco agitato'),
+(42, 1, 'Adagio religioso'),
+(43, 1, 'O Herr, lehre mich'),
+(44, 1, 'Nun danket alle Gott'),
+(45, 1, 'Ihr Sorgen, flieht'),
+(46, 1, 'Wer bis an das Ende beharrt'),
+(47, 1, 'Ihr Völker des Himmels'),
+(48, 1, 'Halleluja'),
+(49, 1, 'Preiset den Herrn'),
+(50, 1, 'Lobet den Herrn'),
+(51, 1, 'Alles was Odem hat, lobe den Herrn'),
 
 -- Mendelssohn: Violin Concerto
-(52, 1, 'Allegro molto appassionato', NULL),
-(53, 1, 'Andante', NULL),
-(54, 1, 'Allegretto non troppo', NULL),
-(54, 2, 'Allegro molto vivace', NULL),
+(52, 1, 'Allegro molto appassionato'),
+(53, 1, 'Andante'),
+(54, 1, 'Allegretto non troppo'),
+(54, 2, 'Allegro molto vivace'),
 
 -- Mahler: Symphony No. 3
-(55, 1, 'Kräftig. Entschieden', NULL),
-(56, 1, 'Tempo di Menuetto', NULL),
-(57, 1, 'Comodo. Scherzando', NULL),
-(58, 1, 'Sehr langsam', NULL),
-(58, 2, 'Misterioso', NULL),
-(59, 1, 'Lustig im Tempo und keck im Ausdruck', NULL),
-(60, 1, 'Langsam. Ruhevoll. Empfunden', NULL),
+(55, 1, 'Kräftig. Entschieden'),
+(56, 1, 'Tempo di Menuetto'),
+(57, 1, 'Comodo. Scherzando'),
+(58, 1, 'Sehr langsam'),
+(58, 2, 'Misterioso'),
+(59, 1, 'Lustig im Tempo und keck im Ausdruck'),
+(60, 1, 'Langsam. Ruhevoll. Empfunden'),
 
 -- Mahler: Symphony No. 5
-(61, 1, 'Trauermarsch', NULL),
-(62, 1, 'Stürmisch bewegt', NULL),
-(63, 1, 'Scherzo', NULL),
-(64, 1, 'Adagietto', NULL),
-(65, 1, 'Rondo-Finale', NULL),
+(61, 1, 'Trauermarsch'),
+(62, 1, 'Stürmisch bewegt'),
+(63, 1, 'Scherzo'),
+(64, 1, 'Adagietto'),
+(65, 1, 'Rondo-Finale'),
 
 -- Mahler: Symphony No. 8
-(66, 1, 'Veni, creator spiritus', NULL),
-(67, 1, 'Chorus mysticus', NULL),
+(66, 1, 'Veni, creator spiritus'),
+(67, 1, 'Chorus mysticus'),
 
 -- Mahler: Symphony No. 10
-(68, 1, 'Adagio', NULL),
-(69, 1, 'Scherzo', NULL),
-(70, 1, 'Allegretto moderato', NULL),
-(71, 1, 'Allegro pesante', NULL),
-(72, 1, 'Langsam, schwer', NULL),
+(68, 1, 'Adagio'),
+(69, 1, 'Scherzo'),
+(70, 1, 'Allegretto moderato'),
+(71, 1, 'Allegro pesante'),
+(72, 1, 'Langsam, schwer'),
 
 -- Rachmaninoff: Piano Concerto No. 2
-(73, 1, 'Moderato', NULL),
-(74, 1, 'Adagio sostenuto', NULL),
-(75, 1, 'Allegro scherzando', NULL),
+(73, 1, 'Moderato'),
+(74, 1, 'Adagio sostenuto'),
+(75, 1, 'Allegro scherzando'),
 
 -- Rachmaninoff: Piano Concerto No. 3
-(76, 1, 'Allegro ma non tanto', NULL),
-(77, 1, 'Adagio', NULL),
-(78, 1, 'Alla breve', NULL),
+(76, 1, 'Allegro ma non tanto'),
+(77, 1, 'Adagio'),
+(78, 1, 'Alla breve'),
 
 -- Schubert: Symphony No. 8 "Unfinished"
-(79, 1, 'Allegro moderato', NULL),
-(80, 1, 'Andante con moto', NULL);
+(79, 1, 'Allegro moderato'),
+(80, 1, 'Andante con moto');

@@ -56,14 +56,13 @@ type Catalog struct {
 
 type Movement struct {
 	Kind *string // optional, e.g. Scherzo, Finale, Alla breve
-	Nickname *string // optional
 	TempoMarkings []TempoMarking
 	Order int
 }
 
+// TODO: add BPM
 type TempoMarking struct {
 	Name string
-	Bpm *int // optional, since many markings don’t have a strict BPM
 }
 
 type CompositionYear struct {

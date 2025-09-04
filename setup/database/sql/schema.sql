@@ -45,7 +45,6 @@ CREATE TABLE IF NOT EXISTS tempo_markings (
 
     movement_id INT NOT NULL,
     name TEXT NOT NULL,
-    bpm INT,
     order_num INT NOT NULL,
 
     FOREIGN KEY (movement_id) REFERENCES movements(id)
