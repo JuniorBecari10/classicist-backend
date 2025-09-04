@@ -5,9 +5,13 @@ import (
 	"log"
 
 	_ "github.com/mattn/go-sqlite3"
+	_ "embed"
 )
 
-func InsertBaseData() {
+//go:embed sql/seed.sql
+var seed string
+
+func InsertSeed() {
 	log.Println("Inserting base data into the database..")
 
 	db, err := sql.Open("sqlite3", "../database.db")
@@ -17,10 +21,7 @@ func InsertBaseData() {
 
 	defer db.Close()
 
-	inserts := `
--- TODO!
-`
-	_, err = db.Exec(inserts)
+	_, err = db.Exec(seed)
 	if err != nil {
 		log.Fatal(err)
 	}
