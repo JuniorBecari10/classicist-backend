@@ -29,6 +29,10 @@ INSERT INTO works (
 ('Piano Sonata', 17, 'Tempest', 3, 1, 2,
  'Op.', '31', '2', 1801, NULL),
 
+-- Beethoven: Symphony No. 5 in C minor ("Fate")
+('Symphony', 5, 'Fate', 0, 1, 2,
+ 'Op.', '67', NULL, 1804, 1808),
+
 -- Beethoven: Symphony No. 7 in A major
 ('Symphony', 7, NULL, 13, 0, 2,
  'Op.', '92', NULL, 1811, NULL),
@@ -137,6 +141,12 @@ INSERT INTO movements (work_id, order_num, kind) VALUES
 (3, 1, NULL),
 (3, 2, NULL),
 (3, 3, NULL),
+
+-- Beethoven: Symphony No. 5
+(4, 1, NULL),
+(4, 2, NULL),
+(4, 3, 'Scherzo'),
+(4, 4, 'Finale'),
 
 -- Beethoven: Symphony No. 7
 (4, 1, NULL),
@@ -264,6 +274,12 @@ INSERT INTO tempo_markings (movement_id, order_num, name) VALUES
 (7, 2, 'Allegro'),
 (8, 1, 'Adagio'),
 (9, 1, 'Allegretto'),
+
+-- Beethoven: Symphony No. 7
+(10, 1, 'Allegro con brio'),
+(11, 1, 'Andante con moto'),
+(12, 1, 'Allegro'),
+(13, 1, 'Allegro'),
 
 -- Beethoven: Symphony No. 7
 (10, 1, 'Poco sostenuto'),
