@@ -5,6 +5,7 @@ const (
 	C Note = iota
 	CSharp
 	DFlat
+	D
 	DSharp
 	EFlat
 	E
@@ -49,8 +50,8 @@ type Composer struct {
 // the app assumes every work is catalogued, so this is mandatory
 type Catalog struct {
 	Prefix string // Op, D, K..
-	Number int
-    Subnumber *int // optional, it may not have a number.
+	Number *string // optional, it may be posthumous or it just doesn't have a number. It's a string because it may contain letters.
+    Subnumber *string // optional, it may not have a subnumber. It may also contain letters.
 }
 
 type Movement struct {

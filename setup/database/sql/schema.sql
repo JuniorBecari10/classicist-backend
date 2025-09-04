@@ -20,8 +20,8 @@ CREATE TABLE IF NOT EXISTS works (
     composer_id INT NOT NULL,
 
     catalog_prefix TEXT NOT NULL,
-    catalog_number INT NOT NULL,
-    catalog_subnumber INT,
+    catalog_number TEXT,
+    catalog_subnumber TEXT,
 
     composition_start_year INT NOT NULL,
     composition_end_year INT,
@@ -33,9 +33,9 @@ CREATE TABLE IF NOT EXISTS movements (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
 
     work_id INT NOT NULL,
+    order_num INT NOT NULL,
     kind TEXT,
     nickname TEXT,
-    order_num INT NOT NULL,
 
     FOREIGN KEY (work_id) REFERENCES works(id)
 );
@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS tempo_markings (
     movement_id INT NOT NULL,
     name TEXT NOT NULL,
     bpm INT,
+    order_num INT NOT NULL,
 
     FOREIGN KEY (movement_id) REFERENCES movements(id)
 );

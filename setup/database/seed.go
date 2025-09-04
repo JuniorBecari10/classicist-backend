@@ -18,6 +18,7 @@ func InsertSeed() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	defer db.Close()
 
 	_, err = db.Exec(seed)

@@ -22,7 +22,7 @@ func CreateTables() {
 
 	err := os.Remove(path)
 	if err != nil {
-		log.Fatal(err)
+		log.Println("Cannot delete:", err)
 	}
 
 	log.Println("Creating database schema..")
