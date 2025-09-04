@@ -12,13 +12,12 @@ import (
 var seed string
 
 func InsertSeed() {
-	log.Println("Inserting base data into the database..")
+	log.Println("Inserting seed data into the database..")
 
 	db, err := sql.Open("sqlite3", "../database.db")
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	defer db.Close()
 
 	_, err = db.Exec(seed)
@@ -26,5 +25,5 @@ func InsertSeed() {
 		log.Fatal(err)
 	}
 
-	log.Println("Base data insertion complete.")
+	log.Println("Seed data insertion complete.")
 }
