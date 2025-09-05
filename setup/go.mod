@@ -2,4 +2,7 @@ module setup
 
 go 1.24.5
 
-require github.com/mattn/go-sqlite3 v1.14.32 // direct
+require (
+	github.com/mattn/go-sqlite3 v1.14.32 // direct
+	shared v0.0.0
+)
