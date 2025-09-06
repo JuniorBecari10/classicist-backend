@@ -91,6 +91,12 @@ var works = []model.Work{
 					{
 						Name: "Allegro",
 					},
+					{
+						Name: "Adagio",
+					},
+					{
+						Name: "Allegro",
+					},
 				},
 			},
 		},
