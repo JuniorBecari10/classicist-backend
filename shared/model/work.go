@@ -57,9 +57,8 @@ type Catalog struct {
 }
 
 type Movement struct {
-	Kind Option[string] // e.g. Scherzo, Finale, Alla breve
+	Form Option[string] // e.g. Scherzo, Finale, Alla breve
 	TempoMarkings []TempoMarking
-	Order int
 }
 
 // TODO: add BPM

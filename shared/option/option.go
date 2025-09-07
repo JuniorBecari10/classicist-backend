@@ -2,37 +2,53 @@ package option
 
 type Option[T any] struct {
 	val T
-	ok bool
+	present bool
 }
 
 func Some[T any](val T) Option[T] {
 	return Option[T]{
 		val: val,
-		ok: true,
+		present: true,
 	}
 }
 
 func None[T any]() Option[T] {
 	return Option[T]{
-		ok: false,
+		present: false,
 	}
 }
 
 // ---
 
 // Use this with caution, as the value may be invalid.
+// Not an unintialized value that leads to UB, but still not safe.
+// The value may be the default value of T, or a past one if the Option was reused.
+// Prefer TryUnwrap or UnwrapOr.
+// This won't panic if you use it on a None Option.
 func (o Option[T]) Unwrap() T {
 	return o.val
 }
 
+func (o Option[T]) UnwrapOr(other T) T {
+	if o.present {
+		return o.val
+	} else {
+		return other
+	}
+}
+
+// Use this in if statements.
+// Example:
+//
+// if val, ok := option.TryUnwrap(); ok { ... }
 func (o Option[T]) TryUnwrap() (T, bool) {
-	return o.val, o.ok
+	return o.val, o.present
 }
 
-func (o Option[T]) IsSome() bool {
-	return o.ok
+func (o Option[T]) IsPresent() bool {
+	return o.present
 }
 
-func (o Option[T]) IsNone() bool {
-	return !o.ok
+func (o Option[T]) IsNotPresent() bool {
+	return !o.present
 }

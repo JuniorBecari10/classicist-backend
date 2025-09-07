@@ -97,6 +97,10 @@ INSERT INTO works (
 ('Violin Concerto', NULL, NULL, 6, 1, 5,
  'Op.', '64', NULL, 1844, NULL),
 
+-- Mahler: Symphony No. 2 in C minor
+('Symphony', 2, 'Resurrection', 0, 1, 7,
+ 'GWV', '30', NULL, 1888, 1894),
+
 -- Mahler: Symphony No. 3 in D minor
 ('Symphony', 3, NULL, 3, 1, 7,
  'GWV', '31', NULL, 1893, 1896),
@@ -202,7 +206,7 @@ INSERT INTO movements (work_id, order_num, kind) VALUES
 (18, 1, 'Sinfonia'),
 (18, 2, NULL),
 (18, 3, NULL),
-(18, 4, 'Chorale'),
+(18, 4, 'Chorus'),
 (18, 5, 'Chorus'),
 (18, 6, 'Aria'),
 (18, 7, 'Chorus'),
@@ -216,6 +220,14 @@ INSERT INTO movements (work_id, order_num, kind) VALUES
 (19, 1, NULL),
 (19, 2, NULL),
 (19, 3, NULL),
+
+-- Mahler: Symphony No. 2
+(20, 1, NULL),
+(20, 2, NULL),
+(20, 3, NULL),
+(20, 4, NULL),
+(20, 5, 'Urlicht'),
+(20, 6, 'Finale'),
 
 -- Mahler: Symphony No. 3
 (20, 1, NULL),
@@ -267,7 +279,7 @@ INSERT INTO tempo_markings (movement_id, order_num, name) VALUES
 -- Beethoven: Piano Concerto No. 5
 (4, 1, 'Allegro'),
 (5, 1, 'Adagio un poco mosso'),
-(6, 1, 'Rondo: Allegro'),
+(6, 1, 'Allegro'),
 
 -- Beethoven: Piano Sonata No. 17
 (7, 1, 'Largo'),
