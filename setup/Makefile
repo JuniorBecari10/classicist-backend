@@ -5,7 +5,7 @@
 FILE=../setup_bin
 
 build:
-	go build -o $(FILE) main.go
+	go build -gcflags="-N -l" -o $(FILE) main.go
 
 run: build
 	trap "rm -fr $(FILE)" EXIT; \

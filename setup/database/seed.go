@@ -3,6 +3,7 @@ package database
 import (
 	"database/sql"
 	"log"
+	"shared/serialization"
 
 	_ "github.com/mattn/go-sqlite3"
 )
@@ -17,7 +18,7 @@ func InsertSeed() {
 
 	defer db.Close()
 
-	var seed string
+	seed := serialization.WriteAll(works, composers)
 
 	_, err = db.Exec(seed)
 	if err != nil {

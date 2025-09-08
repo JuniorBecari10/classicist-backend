@@ -1134,7 +1134,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[7], // Mahler
+		Composer: composers[4], // Mahler
 
 		Catalog: model.Catalog{
 			Prefix: "GMW",
@@ -1204,7 +1204,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[7], // Mahler
+		Composer: composers[4], // Mahler
 
 		Catalog: model.Catalog{
 			Prefix: "GMW",
@@ -1290,7 +1290,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[7], // Mahler
+		Composer: composers[4], // Mahler
 
 		Catalog: model.Catalog{
 			Prefix: "GMW",
@@ -1360,7 +1360,7 @@ var works = []model.Work{
 			Mode: model.Major,
 		},
 
-		Composer: composers[7], // Mahler
+		Composer: composers[4], // Mahler
 
 		Catalog: model.Catalog{
 			Prefix: "GMW",
@@ -1404,7 +1404,7 @@ var works = []model.Work{
 			Mode: model.Major,
 		},
 
-		Composer: composers[7], // Mahler
+		Composer: composers[4], // Mahler
 
 		Catalog: model.Catalog{
 			Prefix: "GMW",
@@ -1472,7 +1472,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[8], // Rachmaninoff
+		Composer: composers[7], // Rachmaninoff
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -1524,7 +1524,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[8], // Rachmaninoff
+		Composer: composers[7], // Rachmaninoff
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -1576,7 +1576,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[9], // Schubert
+		Composer: composers[8], // Schubert
 
 		Catalog: model.Catalog{
 			Prefix: "D.",
