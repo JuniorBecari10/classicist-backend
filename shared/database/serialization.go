@@ -13,14 +13,20 @@ func WriteWork(w model.Work) string {
 }
 
 func WriteWorkData(w model.Work) string {
+	var b strings.Builder
+	b.WriteString(GetWorkInsertHeader())
 
 }
 
 func WriteWorkMovements(w model.Work) string {
+	var b strings.Builder
+	b.WriteString(GetWorkInsertHeader())
 
 }
 
 func WriteWorkTempoMarkings(w model.Work) string {
+	var b strings.Builder
+	b.WriteString(GetWorkInsertHeader())
 
 }
 
@@ -34,13 +40,29 @@ func WriteWorks(works []model.Work) string {
 	return b.String()
 }
 
+func GetWorkInsertHeader() string {
+	return `INSERT INTO works (
+    title_kind, title_number, title_nickname,
+    key_note, key_mode, composer_id,
+    catalog_prefix, catalog_number, catalog_subnumber,
+    composition_start_year, composition_end_year) VALUES `
+}
+
+func GetMovementInsertHeader() string {
+	return "INSERT INTO movements (work_id, order_num, kind) VALUES "
+}
+
+func GetTempoMarkingInsertHeader() string {
+	return "INSERT INTO tempo_markings (movement_id, order_num, name) VALUES "
+}
+
 // ---
 
-func WriteComposer(c model.Composer) string {
+func WriteComposer(composer model.Composer) string {
 	var b strings.Builder
 
 	b.WriteString(GetComposerInsertHeader())
-	b.WriteString(WriteComposerData(c))
+	b.WriteString(WriteComposerData(composer))
 	b.WriteByte(';')
 
 	return b.String()
