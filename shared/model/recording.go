@@ -1,7 +1,7 @@
 package model
 
 type AudioFile struct {
-	Path string
+	Path string // relative to /public/audio
 	Duration int // in seconds
 }
 
