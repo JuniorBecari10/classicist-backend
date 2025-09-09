@@ -71,6 +71,10 @@ type CompositionYear struct {
 	EndYear Option[int] // if the work has been finished in the same year of start
 }
 
+type SheetMusic struct {
+	Path string // relative to /public/sheets
+}
+
 type Work struct {
 	Title WorkTitle
 	Key Key
@@ -78,4 +82,5 @@ type Work struct {
 	Catalog Catalog
 	Movements []Movement
 	Year CompositionYear
+	Sheet SheetMusic
 }

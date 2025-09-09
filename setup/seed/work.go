@@ -1,11 +1,11 @@
-package database
+package seed
 
 import (
 	"shared/model"
 	. "shared/option"
 )
 
-var composers = []model.Composer{
+var Composers = []model.Composer{
 	{
 		Name: "Johann Sebastian Bach",
 		BirthYear: 1685,
@@ -62,7 +62,7 @@ var composers = []model.Composer{
 	},
 }
 
-var works = []model.Work{
+var Works = []model.Work{
 	{
 		Title: model.WorkTitle{
 			Kind: "Harpsichord Concerto",
@@ -75,7 +75,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[0], // Bach
+		Composer: Composers[0], // Bach
 
 		Catalog: model.Catalog{
 			Prefix: "BWV",
@@ -114,6 +114,10 @@ var works = []model.Work{
 			StartYear: 1730,
 			EndYear: None[int](),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "bhc1.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -127,7 +131,7 @@ var works = []model.Work{
 			Mode: model.Major,
 		},
 
-		Composer: composers[1], // Beethoven
+		Composer: Composers[1], // Beethoven
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -166,6 +170,10 @@ var works = []model.Work{
 			StartYear: 1809,
 			EndYear: None[int](),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "bpc5.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -179,7 +187,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[1], // Beethoven
+		Composer: Composers[1], // Beethoven
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -221,6 +229,10 @@ var works = []model.Work{
 			StartYear: 1801,
 			EndYear: None[int](),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "bps17.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -234,7 +246,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[1], // Beethoven
+		Composer: Composers[1], // Beethoven
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -294,7 +306,7 @@ var works = []model.Work{
 			Mode: model.Major,
 		},
 
-		Composer: composers[1], // Beethoven
+		Composer: Composers[1], // Beethoven
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -347,6 +359,10 @@ var works = []model.Work{
 			StartYear: 1811,
 			EndYear: None[int](),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "bs7.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -360,7 +376,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[1], // Beethoven
+		Composer: Composers[1], // Beethoven
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -410,6 +426,10 @@ var works = []model.Work{
 			StartYear: 1822,
 			EndYear: Some(1824),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "bs9.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -423,7 +443,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[2], // Chopin
+		Composer: Composers[2], // Chopin
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -473,6 +493,10 @@ var works = []model.Work{
 			StartYear: 1839,
 			EndYear: Some(1840),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "cps2.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -486,7 +510,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[2], // Chopin
+		Composer: Composers[2], // Chopin
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -533,6 +557,10 @@ var works = []model.Work{
 			StartYear: 1844,
 			EndYear: None[int](),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "cps3.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -546,7 +574,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[2], // Chopin
+		Composer: Composers[2], // Chopin
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -575,6 +603,10 @@ var works = []model.Work{
 			StartYear: 1831,
 			EndYear: Some(1835),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "cb1.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -588,7 +620,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[2], // Chopin
+		Composer: Composers[2], // Chopin
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -617,6 +649,10 @@ var works = []model.Work{
 			StartYear: 1842,
 			EndYear: None[int](),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "cb4.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -630,7 +666,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[2], // Chopin
+		Composer: Composers[2], // Chopin
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -653,6 +689,10 @@ var works = []model.Work{
 			StartYear: 1830,
 			EndYear: Some(1832),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "cn1.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -666,7 +706,7 @@ var works = []model.Work{
 			Mode: model.Major,
 		},
 
-		Composer: composers[2], // Chopin
+		Composer: Composers[2], // Chopin
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -689,6 +729,10 @@ var works = []model.Work{
 			StartYear: 1830,
 			EndYear: Some(1832),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "cn2.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -702,7 +746,7 @@ var works = []model.Work{
 			Mode: model.Major,
 		},
 
-		Composer: composers[2], // Chopin
+		Composer: Composers[2], // Chopin
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -725,6 +769,10 @@ var works = []model.Work{
 			StartYear: 1830,
 			EndYear: Some(1833),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "cn4.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -738,7 +786,7 @@ var works = []model.Work{
 			Mode: model.Major,
 		},
 
-		Composer: composers[2], // Chopin
+		Composer: Composers[2], // Chopin
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -761,6 +809,10 @@ var works = []model.Work{
 			StartYear: 1835,
 			EndYear: Some(1836),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "cn8.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -774,7 +826,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[2], // Chopin
+		Composer: Composers[2], // Chopin
 
 		Catalog: model.Catalog{
 			Prefix: "Op. posth.",
@@ -797,6 +849,10 @@ var works = []model.Work{
 			StartYear: 1830,
 			EndYear: None[int](),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "cn20.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -810,7 +866,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[2], // Chopin
+		Composer: Composers[2], // Chopin
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -849,6 +905,10 @@ var works = []model.Work{
 			StartYear: 1830,
 			EndYear: None[int](),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "cpc1.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -862,7 +922,7 @@ var works = []model.Work{
 			Mode: model.Major,
 		},
 
-		Composer: composers[3], // Liszt
+		Composer: Composers[3], // Liszt
 
 		Catalog: model.Catalog{
 			Prefix: "S.",
@@ -889,6 +949,10 @@ var works = []model.Work{
 			StartYear: 1850,
 			EndYear: None[int](),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "ll3.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -902,7 +966,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[6], // Mozart
+		Composer: Composers[6], // Mozart
 
 		Catalog: model.Catalog{
 			Prefix: "K.",
@@ -942,6 +1006,10 @@ var works = []model.Work{
 			StartYear: 1850,
 			EndYear: None[int](),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "mpc20.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -955,7 +1023,7 @@ var works = []model.Work{
 			Mode: model.Major,
 		},
 
-		Composer: composers[5], // Mendelssohn
+		Composer: Composers[5], // Mendelssohn
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -1066,6 +1134,10 @@ var works = []model.Work{
 			StartYear: 1840,
 			EndYear: None[int](),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "mds2.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -1079,7 +1151,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[5], // Mendelssohn
+		Composer: Composers[5], // Mendelssohn
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -1121,6 +1193,10 @@ var works = []model.Work{
 			StartYear: 1844,
 			EndYear: None[int](),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "mvc.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -1134,7 +1210,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[4], // Mahler
+		Composer: Composers[4], // Mahler
 
 		Catalog: model.Catalog{
 			Prefix: "GMW",
@@ -1191,6 +1267,10 @@ var works = []model.Work{
 			StartYear: 1888,
 			EndYear: Some(1894),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "mas2.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -1204,7 +1284,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[4], // Mahler
+		Composer: Composers[4], // Mahler
 
 		Catalog: model.Catalog{
 			Prefix: "GMW",
@@ -1277,6 +1357,10 @@ var works = []model.Work{
 			StartYear: 1893,
 			EndYear: Some(1896),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "mas3.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -1290,7 +1374,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[4], // Mahler
+		Composer: Composers[4], // Mahler
 
 		Catalog: model.Catalog{
 			Prefix: "GMW",
@@ -1347,6 +1431,10 @@ var works = []model.Work{
 			StartYear: 1901,
 			EndYear: Some(1902),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "mas5.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -1360,7 +1448,7 @@ var works = []model.Work{
 			Mode: model.Major,
 		},
 
-		Composer: composers[4], // Mahler
+		Composer: Composers[4], // Mahler
 
 		Catalog: model.Catalog{
 			Prefix: "GMW",
@@ -1391,6 +1479,10 @@ var works = []model.Work{
 			StartYear: 1906,
 			EndYear: Some(1907),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "mas8.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -1404,7 +1496,7 @@ var works = []model.Work{
 			Mode: model.Major,
 		},
 
-		Composer: composers[4], // Mahler
+		Composer: Composers[4], // Mahler
 
 		Catalog: model.Catalog{
 			Prefix: "GMW",
@@ -1459,6 +1551,10 @@ var works = []model.Work{
 			StartYear: 1906,
 			EndYear: Some(1907),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "mas10.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -1472,7 +1568,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[7], // Rachmaninoff
+		Composer: Composers[7], // Rachmaninoff
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -1511,6 +1607,10 @@ var works = []model.Work{
 			StartYear: 1900,
 			EndYear: Some(1901),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "rpc2.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -1524,7 +1624,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[7], // Rachmaninoff
+		Composer: Composers[7], // Rachmaninoff
 
 		Catalog: model.Catalog{
 			Prefix: "Op.",
@@ -1563,6 +1663,10 @@ var works = []model.Work{
 			StartYear: 1900,
 			EndYear: Some(1901),
 		},
+
+		Sheet: model.SheetMusic{
+			Path: "rpc3.mxl",
+		},
 	},
 	{
 		Title: model.WorkTitle{
@@ -1576,7 +1680,7 @@ var works = []model.Work{
 			Mode: model.Minor,
 		},
 
-		Composer: composers[8], // Schubert
+		Composer: Composers[8], // Schubert
 
 		Catalog: model.Catalog{
 			Prefix: "D.",
@@ -1606,6 +1710,10 @@ var works = []model.Work{
 		Year: model.CompositionYear{
 			StartYear: 1822,
 			EndYear: Some(1823),
+		},
+
+		Sheet: model.SheetMusic{
+			Path: "ss8.mxl",
 		},
 	},
 }
