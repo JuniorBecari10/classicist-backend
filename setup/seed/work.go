@@ -1384,10 +1384,10 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
-				Form: None[string](),
+				Form: Some("Traeurmarsch"),
 				TempoMarkings: []model.TempoMarking{
 					{
-						Name: "Traeurmarsch. In gemessenem Schritt. Streng. Wie ein Kondukt",
+						Name: "In gemessenem Schritt. Streng. Wie ein Kondukt",
 					},
 				},
 			},
@@ -1400,10 +1400,10 @@ var Works = []model.Work{
 				},
 			},
 			{
-				Form: None[string](),
+				Form: Some("Scherzo"),
 				TempoMarkings: []model.TempoMarking{
 					{
-						Name: "Scherzo. Kräftig, Nicht zu schnell",
+						Name: "Kräftig, Nicht zu schnell",
 					},
 					
 				},
@@ -1461,7 +1461,7 @@ var Works = []model.Work{
 				Form: Some("Part I"),
 				TempoMarkings: []model.TempoMarking{
 					{
-						Name: "Veni, creator spiritus",
+						Name: "Veni, Creator Spiritus",
 					},
 				},
 			},
