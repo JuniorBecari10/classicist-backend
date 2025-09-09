@@ -10,8 +10,4 @@ func setupApi(app *fiber.App) {
 	api.Get("/", func (c *fiber.Ctx) error {
 		return c.SendString("Start")
 	})
-	
-	api.Get("/hello", func (c *fiber.Ctx) error {
-		return c.SendString("Hello, World!")
-	})
 }
