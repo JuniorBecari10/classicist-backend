@@ -42,10 +42,10 @@ type Key struct {
 }
 
 type Composer struct {
-    Name string
-	BirthYear int
-	DeathYear Option[int] // the composer may be alive now
-	PhotoPath string // relative to /public/images/composers
+    Name      string      `json:"name"`
+    BirthYear int         `json:"birth_year"`
+    DeathYear Option[int] `json:"death_year"` // the composer may be alive not
+    PhotoPath string      `json:"photo_path"` // relative to public/images/composers
 }
 
 // e.g.: Op. 27, No. 2 (Chopin's Nocturne in D-flat Major)

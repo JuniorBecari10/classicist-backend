@@ -1,5 +1,7 @@
 package option
 
+import "encoding/json"
+
 type Option[T any] struct {
 	val T
 	present bool
@@ -15,6 +17,14 @@ func Some[T any](val T) Option[T] {
 func None[T any]() Option[T] {
 	return Option[T]{
 		present: false,
+	}
+}
+
+func FromSQL[T any](val T, valid bool) Option[T] {
+	if valid {
+		return Some(val)
+	} else {
+		return None[T]()
 	}
 }
 
@@ -51,4 +61,12 @@ func (o Option[T]) IsPresent() bool {
 
 func (o Option[T]) IsNotPresent() bool {
 	return !o.present
+}
+
+func (o Option[T]) MarshalJSON() ([]byte, error) {
+	if o.present {
+		return json.Marshal(o.val)
+	} else {
+		return []byte("null"), nil
+	}
 }

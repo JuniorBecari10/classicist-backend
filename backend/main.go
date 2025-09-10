@@ -1,8 +1,8 @@
 package main
 
 import (
+	"classicist/database"
 	"classicist/server"
-	"database/sql"
 	"log"
 	"os"
 
@@ -29,12 +29,12 @@ func checkDatabase() {
 	// Check if 'database.db' exists and is usable via ping.
 
 	// Check if the the file exists.
-	if _, err := os.Stat("../database.db"); os.IsNotExist(err) {
+	if _, err := os.Stat(database.DATABASE_PATH); os.IsNotExist(err) {
 		log.Fatal("ERROR: Database file does not exist.")
 	}
 
 	// Check if a connection is possible.
-	db, err := sql.Open("sqlite3", "../database.db")
+	db, err := database.GetDatabaseConnection()
 	if err != nil {
 		log.Fatal("ERROR:", err)
 	}
