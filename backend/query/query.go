@@ -27,7 +27,7 @@ func GetComposerById(db *sql.DB, id int) (model.Composer, error) {
 
 	row := db.QueryRow(composerByIdQuery, id)
 	
-	if err := row.Scan(&id, &composer.Name, &composer.BirthYear, &deathYear, &composer.PhotoPath); err != nil {
+	if err := row.Scan(&composer.Id, &composer.Name, &composer.BirthYear, &deathYear, &composer.PhotoPath); err != nil {
 		if err == sql.ErrNoRows {
 			return model.Composer{}, fmt.Errorf("Composer not found")
 		}

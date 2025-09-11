@@ -3,6 +3,8 @@ package server
 import (
 	"classicist/database"
 	"classicist/query"
+	"database/sql"
+	"fmt"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -16,7 +18,12 @@ func setupApi(app *fiber.App) {
 		return c.SendString("Start")
 	})
 
-	api.Get("/composer/:id", func (c *fiber.Ctx) error {
+	getById(api, "composer", "Composer", query.GetComposerById)
+	//getById(api, "work", "Work", query.GetWorkById)
+}
+
+func getById[W any](api fiber.Router, route, what string, getFn func (*sql.DB, int) (W, error)) fiber.Router {
+	return api.Get(fmt.Sprintf("/%s/:id", route), func (c *fiber.Ctx) error {
 		id, err := c.ParamsInt("id")
 		if err != nil {
 			return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{
@@ -31,13 +38,13 @@ func setupApi(app *fiber.App) {
 			})
 		}
 
-		composer, err := query.GetComposerById(db, id)
+		it, err := getFn(db, id)
 		if err != nil {
 			return c.Status(fiber.StatusNotFound).JSON(fiber.Map{
-				"error": "Composer not found",
+				"error": fmt.Sprintf("%s not found", what),
 			})
 		}
 
-		return c.JSON(composer)
+		return c.JSON(it)
 	})
 }

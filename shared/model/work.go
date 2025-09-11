@@ -42,10 +42,11 @@ type Key struct {
 }
 
 type Composer struct {
-    Name      string      `json:"name"`
-    BirthYear int         `json:"birth_year"`
+    Id int `json:"id"`
+    Name string `json:"name"`
+    BirthYear int `json:"birth_year"`
     DeathYear Option[int] `json:"death_year"` // the composer may be alive not
-    PhotoPath string      `json:"photo_path"` // relative to public/images/composers
+    PhotoPath string `json:"photo_path"` // relative to public/images/composers
 }
 
 // e.g.: Op. 27, No. 2 (Chopin's Nocturne in D-flat Major)
@@ -57,12 +58,14 @@ type Catalog struct {
 }
 
 type Movement struct {
+	Id int
 	Form Option[string] // e.g. Scherzo, Finale, Alla breve
 	TempoMarkings []TempoMarking
 }
 
 // TODO: add BPM
 type TempoMarking struct {
+	Id int
 	Name string
 }
 
@@ -76,6 +79,7 @@ type SheetMusic struct {
 }
 
 type Work struct {
+	Id int
 	Title WorkTitle
 	Key Key
 	Composer Composer
