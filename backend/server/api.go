@@ -19,7 +19,7 @@ func setupApi(app *fiber.App) {
 	})
 
 	getById(api, "composer", "Composer", query.GetComposerById)
-	//getById(api, "work", "Work", query.GetWorkById)
+	getById(api, "work", "Work", query.GetWorkById)
 }
 
 func getById[W any](api fiber.Router, route, what string, getFn func (*sql.DB, int) (W, error)) fiber.Router {

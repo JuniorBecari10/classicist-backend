@@ -29,6 +29,7 @@ make watch
 ```
 This will reload the program every time you change your source code.
 
-## Image requirements:
+## Image requirements
 
 All images must be of high quality and with aspect ratio of 1:1 (square). Try to find an image that looks good when cut like a banner.
+The banner will cut the image at its top.

@@ -27,7 +27,7 @@ func writeWorksData(works []model.Work, composers []model.Composer) string {
 
 	for i, w := range works {
 		b.WriteString(
-			fmt.Sprintf("(%s, %s, %s, %d, %d, %d, %s, %s, %s, %d, %s)",
+			fmt.Sprintf("(%s, %s, %s, %d, %d, %d, %s, %s, %s, %d, %s, %s)",
 				StringToSQL(w.Title.Kind),
 				OptionalToSQL(w.Title.Number),
 				OptionalToSQL(w.Title.Nickname),
@@ -38,6 +38,7 @@ func writeWorksData(works []model.Work, composers []model.Composer) string {
 				OptionalToSQL(w.Catalog.Subnumber),
 				w.Year.StartYear,
 				OptionalToSQL(w.Year.EndYear),
+				StringToSQL(w.Sheet.Path),
 			),
 		)
 
@@ -147,7 +148,7 @@ func getWorkDataInsertHeader() string {
     title_kind, title_number, title_nickname,
     key_note, key_mode, composer_id,
     catalog_prefix, catalog_number, catalog_subnumber,
-    composition_start_year, composition_end_year) VALUES `
+    composition_start_year, composition_end_year, sheet_path) VALUES `
 }
 
 func getMovementInsertHeader() string {

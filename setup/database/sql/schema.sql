@@ -26,6 +26,8 @@ CREATE TABLE IF NOT EXISTS works (
     composition_start_year INT NOT NULL,
     composition_end_year INT,
 
+    sheet_path TEXT NOT NULL,
+
     FOREIGN KEY (composer_id) REFERENCES composers(id)
 );
 
