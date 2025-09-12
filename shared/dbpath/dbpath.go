@@ -1,4 +1,4 @@
-package util
+package dbpath
 
 import (
 	"os"

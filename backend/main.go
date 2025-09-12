@@ -29,7 +29,7 @@ func checkDatabase() {
 	// Check if 'database.db' exists and is usable via ping.
 
 	// Check if the the file exists.
-	if _, err := os.Stat(database.DATABASE_PATH); os.IsNotExist(err) {
+	if _, err := os.Stat(database.GetDatabasePath()); os.IsNotExist(err) {
 		log.Fatal("ERROR: Database file does not exist.")
 	}
 

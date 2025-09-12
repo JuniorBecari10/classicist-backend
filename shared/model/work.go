@@ -58,14 +58,13 @@ type Catalog struct {
 }
 
 type Movement struct {
-	Id int
+	Nickname Option[string] // e.g. "Ode to Joy"
 	Form Option[string] // e.g. Scherzo, Finale, Alla breve
 	TempoMarkings []TempoMarking
 }
 
 // TODO: add BPM
 type TempoMarking struct {
-	Id int
 	Name string
 }
 

@@ -1,11 +1,18 @@
 package database
 
-import "database/sql"
+import (
+	"database/sql"
+	"shared/dbpath"
+)
 
-const DATABASE_PATH = "../database.db"
+const DATABASE = "database.db"
+
+func GetDatabasePath() string {
+	return dbpath.GetPath(DATABASE)
+}
 
 // Don't forget to defer the closing of the handler.
 func GetDatabaseConnection() (*sql.DB, error) {
-	db, err := sql.Open("sqlite3", DATABASE_PATH)
+	db, err := sql.Open("sqlite3", GetDatabasePath())
 	return db, err
 }

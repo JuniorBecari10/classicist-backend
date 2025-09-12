@@ -5,11 +5,10 @@
 FILE=../setup_bin
 
 build:
-	go build -gcflags="-N -l" -o $(FILE) main.go
+	go build -o $(FILE) main.go
 
-run: build
-	trap "rm -fr $(FILE)" EXIT; \
-		$(FILE) yes
+run:
+	go run main.go -- yes
 
 watch:
 	reflex -s -r '\.go$$' make run

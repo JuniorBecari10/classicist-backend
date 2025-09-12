@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 	"os/exec"
-	"setup/util"
+	"shared/dbpath"
 )
 
 const (
@@ -18,7 +18,8 @@ func FetchPublicFolder() {
 
 	log.Println("Checking if it exists..")
 
-	path := util.GetPath(FOLDER)
+	path := dbpath.GetPath(FOLDER)
+
 	_, err := os.Stat(path)
 	if err == nil {
     	log.Println("It does. Let's update it by pulling any changes..")

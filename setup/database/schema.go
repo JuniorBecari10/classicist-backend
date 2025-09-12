@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"log"
 	"os"
-	"setup/util"
+	"shared/dbpath"
 
 	_ "github.com/mattn/go-sqlite3"
 	_ "embed"
@@ -18,7 +18,7 @@ const FILE = "database.db"
 func CreateTables() {
 	log.Println("Erasing previous database file if it exists..")
 
-	path := util.GetPath(FILE)
+	path := dbpath.GetPath(FILE)
 
 	err := os.Remove(path)
 	if err != nil {

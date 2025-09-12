@@ -85,6 +85,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -93,6 +94,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -101,6 +103,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -141,6 +144,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -149,6 +153,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -157,6 +162,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Rondo"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -197,6 +203,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -208,6 +215,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -216,6 +224,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -256,6 +265,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -264,6 +274,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -272,6 +283,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Scherzo"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -280,6 +292,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Finale"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -292,6 +305,10 @@ var Works = []model.Work{
 		Year: model.CompositionYear{
 			StartYear: 1804,
 			EndYear: Some(1808),
+		},
+		
+		Sheet: model.SheetMusic{
+			Path: "bs5.mxl",
 		},
 	},
 	{
@@ -316,6 +333,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -327,6 +345,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -335,6 +354,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -346,6 +366,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -386,6 +407,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -394,6 +416,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -402,6 +425,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -410,6 +434,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: Some("Ode to Joy"),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -453,6 +478,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -464,6 +490,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -472,6 +499,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: Some("Funeral March"),
 				Form: Some("Marche funèbre"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -480,6 +508,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Finale"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -520,6 +549,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -528,6 +558,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -536,6 +567,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -544,6 +576,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Finale"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -584,6 +617,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -630,6 +664,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -676,6 +711,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -716,6 +752,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -756,6 +793,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -796,6 +834,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -836,6 +875,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -876,6 +916,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -884,6 +925,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -892,6 +934,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Rondo"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -932,6 +975,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: Some("Notturno"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -976,6 +1020,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -984,6 +1029,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -992,6 +1038,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1033,6 +1080,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: Some("Sinfonia"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1041,6 +1089,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1049,6 +1098,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1057,6 +1107,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Chorale"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1065,6 +1116,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Chorus"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1073,6 +1125,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Aria"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1081,6 +1134,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Chorus"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1089,6 +1143,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Aria"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1097,6 +1152,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Chorus"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1105,6 +1161,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Aria"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1113,6 +1170,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Chorus"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1121,6 +1179,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Finale"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1161,6 +1220,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1169,6 +1229,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1177,6 +1238,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1220,6 +1282,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1228,6 +1291,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1236,6 +1300,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1245,6 +1310,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Urllicht"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1254,6 +1320,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Finale. Im Tempo des Scherzos"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1294,6 +1361,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1302,6 +1370,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1310,6 +1379,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1319,6 +1389,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1328,6 +1399,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1336,6 +1408,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1344,6 +1417,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1384,6 +1458,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: Some("Traeurmarsch"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1392,6 +1467,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1400,6 +1476,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Scherzo"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1409,6 +1486,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1418,6 +1496,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Rondo-Finale"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1458,6 +1537,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: Some("Part I"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1466,6 +1546,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Part II. Finale"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1506,6 +1587,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1514,6 +1596,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1522,6 +1605,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Purgatorio"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1530,6 +1614,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Scherzo"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1538,6 +1623,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Finale"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1578,6 +1664,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1586,6 +1673,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1594,6 +1682,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1634,6 +1723,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1642,6 +1732,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Intermezzo"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1650,6 +1741,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Finale"),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1690,6 +1782,7 @@ var Works = []model.Work{
 
 		Movements: []model.Movement{
 			{
+				Nickname: None[string](),
 				Form: None[string](),
 				TempoMarkings: []model.TempoMarking{
 					{
@@ -1698,6 +1791,7 @@ var Works = []model.Work{
 				},
 			},
 			{
+				Nickname: None[string](),
 				Form: Some("Intermezzo"),
 				TempoMarkings: []model.TempoMarking{
 					{

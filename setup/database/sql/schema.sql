@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS movements (
 
     work_id INT NOT NULL,
     order_num INT NOT NULL,
-    kind TEXT,
+    form TEXT,
     nickname TEXT,
 
     FOREIGN KEY (work_id) REFERENCES works(id)

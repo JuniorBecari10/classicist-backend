@@ -8,4 +8,5 @@ Setup executable that prepares the database with some default data for the back-
 > If there are no arguments being passed to it, it will read the database file from the current directory of the executable.
 > If there are 1 or more arguments it will read from the parent directory.
 >
-> This kind of mechanism is necessary because there are cases that use both.
+> This kind of mechanism is necessary because if you run the code from source, the databse file will be in the parent directory,
+> and if you compile it and then run it, it would need to read the file from the same directory.

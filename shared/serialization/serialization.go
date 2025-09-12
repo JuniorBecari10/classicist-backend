@@ -66,7 +66,7 @@ func writeWorksMovements(works []model.Work) string {
 	for i, w := range works {
 		for j, mov := range w.Movements {
 			count++
-			b.WriteString(fmt.Sprintf("(%d, %d, %s)", i + 1, j + 1, OptionalToSQL(mov.Form)))
+			b.WriteString(fmt.Sprintf("(%d, %d, %s, %s)", i + 1, j + 1, OptionalToSQL(mov.Form), OptionalToSQL(mov.Nickname)))
 
 			if count < total {
 				b.WriteByte(',')
@@ -152,7 +152,7 @@ func getWorkDataInsertHeader() string {
 }
 
 func getMovementInsertHeader() string {
-	return "INSERT INTO movements (work_id, order_num, kind) VALUES "
+	return "INSERT INTO movements (work_id, order_num, form, nickname) VALUES "
 }
 
 func getTempoMarkingInsertHeader() string {
