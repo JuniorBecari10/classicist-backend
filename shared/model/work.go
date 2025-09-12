@@ -31,14 +31,14 @@ const (
 )
 
 type WorkTitle struct {
-	Kind string
-	Number Option[int] // it may be the only piece of a gender made by the composer
-	Nickname Option[string]
+	Kind string `json:"kind"`
+	Number Option[int] `json:"number"` // it may be the only piece of a gender made by the composer
+	Nickname Option[string] `json:"nickname"`
 }
 
 type Key struct {
-	Note Note
-    Mode KeyMode
+	Note Note `json:"note"`
+    Mode KeyMode `json:"mode"`
 }
 
 type Composer struct {
@@ -52,38 +52,38 @@ type Composer struct {
 // e.g.: Op. 27, No. 2 (Chopin's Nocturne in D-flat Major)
 // the app assumes every work is catalogued, so this is mandatory
 type Catalog struct {
-	Prefix string // Op., BWV, D., K...
-	Number Option[string] // it may be posthumous or it just doesn't have a number. It's a string because it may contain letters.
-    Subnumber Option[string] // it may not have a subnumber. It may also contain letters.
+	Prefix string `json:"prefix"` // Op., BWV, D., K...
+	Number Option[string] `json:"number"` // it may be posthumous or it just doesn't have a number. It's a string because it may contain letters.
+    Subnumber Option[string] `json:"subnumber"` // it may not have a subnumber. It may also contain letters.
 }
 
 type Movement struct {
-	Nickname Option[string] // e.g. "Ode to Joy"
-	Form Option[string] // e.g. Scherzo, Finale, Alla breve
-	TempoMarkings []TempoMarking
+	Nickname Option[string] `json:"nickname"` // e.g. "Ode to Joy"
+	Form Option[string] `json:"form"` // e.g. Scherzo, Finale, Alla breve
+	TempoMarkings []TempoMarking `json:"tempo_markings"`
 }
 
 // TODO: add BPM
 type TempoMarking struct {
-	Name string
+	Name string `json:"name"`
 }
 
 type CompositionYear struct {
-	StartYear int
-	EndYear Option[int] // if the work has been finished in the same year of start
+	StartYear int `json:"start_year"`
+	EndYear Option[int] `json:"end_year"` // if the work has been finished in the same year of start
 }
 
 type SheetMusic struct {
-	Path string // relative to /public/sheets
+	Path string `json:"path"` // relative to /public/sheets
 }
 
 type Work struct {
-	Id int
-	Title WorkTitle
-	Key Key
-	Composer Composer
-	Catalog Catalog
-	Movements []Movement
-	Year CompositionYear
-	Sheet SheetMusic
+	Id int `json:"id"`
+	Title WorkTitle `json:"title"`
+	Key Key `json:"key"`
+	Composer Composer `json:"composer"`
+	Catalog Catalog `json:"catalog"`
+	Movements []Movement `json:"movements"`
+	Year CompositionYear `json:"year"`
+	Sheet SheetMusic `json:"sheet"`
 }

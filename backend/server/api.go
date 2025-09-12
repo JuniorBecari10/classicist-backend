@@ -40,7 +40,6 @@ func getById[W any](api fiber.Router, route, what string, getFn func (*sql.DB, i
 		}
 
 		it, err := getFn(db, id)
-		fmt.Printf("%#v\n", it)
 		if err != nil {
 			log.Println(err)
 			return c.Status(fiber.StatusNotFound).JSON(fiber.Map{
