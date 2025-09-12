@@ -130,14 +130,14 @@ func queryMovements(db *sql.DB, id int) ([]model.Movement, error) {
 	for rows.Next() {
 		var (
 			nickname, form sql.NullString
-			id, workId, orderNum int // unused for now.
+			movId, workId, orderNum int // unused for now.
 		)
 
-		if err := rows.Scan(&id, &workId, &orderNum, &form, &nickname); err != nil {
+		if err := rows.Scan(&movId, &workId, &orderNum, &form, &nickname); err != nil {
 			return nil, err
 		}
 
-		tm, err := queryTempoMarkings(db, id)
+		tm, err := queryTempoMarkings(db, id, movId)
 		if err != nil {
 			return nil, err
 		}
@@ -154,8 +154,8 @@ func queryMovements(db *sql.DB, id int) ([]model.Movement, error) {
 	return movements, nil
 }
 
-func queryTempoMarkings(db *sql.DB, id int) ([]model.TempoMarking, error) {
-	rows, err := db.Query(tempoMarkingsByIdQuery, id)
+func queryTempoMarkings(db *sql.DB, id, movId int) ([]model.TempoMarking, error) {
+	rows, err := db.Query(tempoMarkingsByIdQuery, id, movId)
 	if err != nil {
 		return nil, err
 	}
@@ -169,7 +169,7 @@ func queryTempoMarkings(db *sql.DB, id int) ([]model.TempoMarking, error) {
 			id, movementId, orderNum int // unused for now.
 		)
 
-		if err := rows.Scan(&id, &movementId, &tempo.Name, &orderNum); err != nil {
+		if err := rows.Scan(&id, &movementId, &orderNum, &tempo.Name); err != nil {
 			return nil, err
 		}
 

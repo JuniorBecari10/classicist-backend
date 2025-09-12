@@ -46,8 +46,8 @@ CREATE TABLE IF NOT EXISTS tempo_markings (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
 
     movement_id INT NOT NULL,
-    name TEXT NOT NULL,
     order_num INT NOT NULL,
+    name TEXT NOT NULL,
 
     FOREIGN KEY (movement_id) REFERENCES movements(id)
 );
