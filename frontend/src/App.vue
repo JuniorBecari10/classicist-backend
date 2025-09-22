@@ -1,13 +1,3 @@
-<script setup lang="ts">
-    const a = 10;
-    const a = 10;
-</script>
-
 <template>
+    <h1 class="text-2xl underline">Hello</h1>
 </template>
-
-<style scoped>
-div {
-    margin: 10;
-}
-</style>
