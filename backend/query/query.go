@@ -173,7 +173,6 @@ func queryTempoMarkings(db *sql.DB, id, movId int) ([]model.TempoMarking, error)
 			return nil, err
 		}
 
-
 		tempos = append(tempos, tempo)
 	}
 
