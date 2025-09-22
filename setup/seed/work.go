@@ -92,6 +92,10 @@ var Works = []model.Work{
 						Name: "Allegro",
 					},
 				},
+
+				Sheet: model.SheetMusic{
+					Path: "bhc1-1.mxl",
+				},
 			},
 			{
 				Nickname: None[string](),
@@ -100,6 +104,10 @@ var Works = []model.Work{
 					{
 						Name: "Adagio",
 					},
+				},
+
+				Sheet: model.SheetMusic{
+					Path: "bhc1-2.mxl",
 				},
 			},
 			{
@@ -110,16 +118,16 @@ var Works = []model.Work{
 						Name: "Allegro",
 					},
 				},
+
+				Sheet: model.SheetMusic{
+					Path: "bhc1-3.mxl",
+				},
 			},
 		},
 
 		Year: model.CompositionYear{
 			StartYear: 1730,
 			EndYear: None[int](),
-		},
-
-		Sheet: model.SheetMusic{
-			Path: "bhc1.mxl",
 		},
 	},
 	{

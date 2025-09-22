@@ -61,6 +61,7 @@ type Movement struct {
 	Nickname Option[string] `json:"nickname"` // e.g. "Ode to Joy"
 	Form Option[string] `json:"form"` // e.g. Scherzo, Finale, Alla breve
 	TempoMarkings []TempoMarking `json:"tempo_markings"`
+	Sheet SheetMusic `json:"sheet"`
 }
 
 // TODO: add BPM
@@ -85,5 +86,4 @@ type Work struct {
 	Catalog Catalog `json:"catalog"`
 	Movements []Movement `json:"movements"`
 	Year CompositionYear `json:"year"`
-	Sheet SheetMusic `json:"sheet"`
 }
