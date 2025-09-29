@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 	"shared/model"
-	"shared/option"
 
+	"shared/option"
 	_ "embed"
 )
 
@@ -20,6 +20,9 @@ var movementsByIdQuery string
 
 //go:embed sql/tempo_markings_by_id.sql
 var tempoMarkingsByIdQuery string
+
+//go:embed sql/lyrics_by_id.sql
+var lyricsByIdQuery string
 
 func GetComposerById(db *sql.DB, id int) (model.Composer, error) {
 	rows, err := db.Query(composerByIdQuery, id)
@@ -94,7 +97,7 @@ func queryWork(db *sql.DB, id int) (model.Work, error) {
 		&work.Id, &work.Title.Kind, &titleNumber, &titleNickname,
 		&work.Key.Note, &work.Key.Mode, &composerId,
 		&work.Catalog.Prefix, &catalogNumber, &catalogSubnumber,
-		&work.Year.StartYear, &compositionEndYear, &work.Sheet.Path,
+		&work.Year.StartYear, &compositionEndYear,
 	); err != nil {
 		if err == sql.ErrNoRows {
 			return model.Work{}, fmt.Errorf("Composer not found")
@@ -130,10 +133,11 @@ func queryMovements(db *sql.DB, id int) ([]model.Movement, error) {
 	for rows.Next() {
 		var (
 			nickname, form sql.NullString
+			sheetPath string
 			movId, workId, orderNum int // unused for now.
 		)
 
-		if err := rows.Scan(&movId, &workId, &orderNum, &form, &nickname); err != nil {
+		if err := rows.Scan(&movId, &workId, &orderNum, &form, &nickname, &sheetPath); err != nil {
 			return nil, err
 		}
 
@@ -142,10 +146,20 @@ func queryMovements(db *sql.DB, id int) ([]model.Movement, error) {
 			return nil, err
 		}
 
+		lyrics, err := queryLyrics(db, id, movId)
+		if err != nil {
+			return nil, err
+		}
+
 		mov := model.Movement{
 			Nickname: option.FromSQL(nickname.String, nickname.Valid),
 			Form: option.FromSQL(form.String, form.Valid),
 			TempoMarkings: tm,
+			Lyrics: lyrics,
+
+			Sheet: model.SheetMusic{
+				Path: sheetPath,
+			},
 		}
 
 		movements = append(movements, mov)
@@ -166,15 +180,46 @@ func queryTempoMarkings(db *sql.DB, id, movId int) ([]model.TempoMarking, error)
 	for rows.Next() {
 		var (
 			tempo model.TempoMarking
+			form sql.NullString
 			id, movementId, orderNum int // unused for now.
 		)
 
-		if err := rows.Scan(&id, &movementId, &orderNum, &tempo.Name); err != nil {
+		if err := rows.Scan(&id, &movementId, &orderNum, &form, &tempo.Name); err != nil {
 			return nil, err
 		}
 
+		tempo.Form = option.FromSQL(form.String, form.Valid)
 		tempos = append(tempos, tempo)
 	}
 
 	return tempos, nil
+}
+
+func queryLyrics(db *sql.DB, id, movId int) (option.Option[[]string], error) {
+	rows, err := db.Query(lyricsByIdQuery, id, movId)
+	if err != nil {
+		return option.Option[[]string]{}, err
+	}
+
+	defer rows.Close()
+	lyrics := []string{}
+
+	for rows.Next() {
+		var (
+			line string
+			id, movementId, orderNum int // unused for now.
+		)
+
+		if err := rows.Scan(&id, &movementId, &orderNum, &line); err != nil {
+			return option.Option[[]string]{}, err
+		}
+
+		lyrics = append(lyrics, line)
+	}
+
+	if len(lyrics) == 0 {
+		return option.None[[]string](), nil
+	} else {
+		return option.Some(lyrics), nil
+	}
 }

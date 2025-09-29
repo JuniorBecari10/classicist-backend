@@ -15,6 +15,7 @@ func writeWorks(works []model.Work, composers []model.Composer) string {
 	b.WriteString(writeWorksData(works, composers))
 	b.WriteString(writeWorksMovements(works))
 	b.WriteString(writeWorksTempoMarkings(works))
+	b.WriteString(writeWorksLyrics(works))
 
 	return b.String()
 }
@@ -27,7 +28,7 @@ func writeWorksData(works []model.Work, composers []model.Composer) string {
 
 	for i, w := range works {
 		b.WriteString(
-			fmt.Sprintf("(%s, %s, %s, %d, %d, %d, %s, %s, %s, %d, %s, %s)",
+			fmt.Sprintf("(%s, %s, %s, %d, %d, %d, %s, %s, %s, %d, %s)",
 				StringToSQL(w.Title.Kind),
 				OptionalToSQL(w.Title.Number),
 				OptionalToSQL(w.Title.Nickname),
@@ -38,7 +39,6 @@ func writeWorksData(works []model.Work, composers []model.Composer) string {
 				OptionalToSQL(w.Catalog.Subnumber),
 				w.Year.StartYear,
 				OptionalToSQL(w.Year.EndYear),
-				StringToSQL(w.Sheet.Path),
 			),
 		)
 
@@ -66,7 +66,9 @@ func writeWorksMovements(works []model.Work) string {
 	for i, w := range works {
 		for j, mov := range w.Movements {
 			count++
-			b.WriteString(fmt.Sprintf("(%d, %d, %s, %s)", i + 1, j + 1, OptionalToSQL(mov.Form), OptionalToSQL(mov.Nickname)))
+			b.WriteString(
+				fmt.Sprintf("(%d, %d, %s, %s, %s)", i + 1, j + 1,
+					OptionalToSQL(mov.Form), OptionalToSQL(mov.Nickname), StringToSQL(mov.Sheet.Path)))
 
 			if count < total {
 				b.WriteByte(',')
@@ -98,12 +100,49 @@ func writeWorksTempoMarkings(works []model.Work) string {
 			movementID++
 			for j, tempo := range mov.TempoMarkings {
 				count++
-				b.WriteString(fmt.Sprintf("(%d, %d, %s)", movementID, j + 1, StringToSQL(tempo.Name)))
+				b.WriteString(fmt.Sprintf("(%d, %d, %s, %s)", movementID, j + 1, OptionalToSQL(tempo.Form), StringToSQL(tempo.Name)))
 
 				if count < total {
 					b.WriteByte(',')
 				} else {
 					b.WriteByte(';')
+				}
+			}
+		}
+	}
+
+	return b.String()
+}
+
+func writeWorksLyrics(works []model.Work) string {
+	var b strings.Builder
+	b.WriteString(getLyricInsertHeader())
+
+	// count total of lyrics
+	total := 0
+	for _, w := range works {
+		for _, mov := range w.Movements {
+			if lyrics, ok := mov.Lyrics.TryUnwrap(); ok {
+				total += len(lyrics)
+			}
+		}
+	}
+
+	count := 0
+	movementID := 0
+	for _, w := range works {
+		for _, mov := range w.Movements {
+			if lyrics, ok := mov.Lyrics.TryUnwrap(); ok {
+				movementID++
+				for j, lyric := range lyrics {
+					count++
+					b.WriteString(fmt.Sprintf("(%d, %d, %s)", movementID, j + 1, StringToSQL(lyric)))
+
+					if count < total {
+						b.WriteByte(',')
+					} else {
+						b.WriteByte(';')
+					}
 				}
 			}
 		}
@@ -148,15 +187,19 @@ func getWorkDataInsertHeader() string {
     title_kind, title_number, title_nickname,
     key_note, key_mode, composer_id,
     catalog_prefix, catalog_number, catalog_subnumber,
-    composition_start_year, composition_end_year, sheet_path) VALUES `
+    composition_start_year, composition_end_year) VALUES `
 }
 
 func getMovementInsertHeader() string {
-	return "INSERT INTO movements (work_id, order_num, form, nickname) VALUES "
+	return "INSERT INTO movements (work_id, order_num, form, nickname, sheet_path) VALUES "
 }
 
 func getTempoMarkingInsertHeader() string {
-	return "INSERT INTO tempo_markings (movement_id, order_num, name) VALUES "
+	return "INSERT INTO tempo_markings (movement_id, order_num, form, name) VALUES "
+}
+
+func getLyricInsertHeader() string {
+	return "INSERT INTO lyrics (movement_id, order_num, line) VALUES "
 }
 
 func getComposerInsertHeader() string {

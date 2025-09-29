@@ -3,6 +3,7 @@ package serialization
 import (
 	"fmt"
 	. "shared/option"
+	"strings"
 )
 
 func OptionalToSQL[T any](opt Option[T]) string {
@@ -19,5 +20,6 @@ func OptionalToSQL[T any](opt Option[T]) string {
 }
 
 func StringToSQL(s string) string {
-	return fmt.Sprintf("'%s'", s)
+    escaped := strings.ReplaceAll(s, "'", "''")
+    return fmt.Sprintf("'%s'", escaped)
 }
