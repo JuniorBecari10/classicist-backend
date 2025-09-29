@@ -70,9 +70,9 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "prelude.mxl",
 				},
@@ -114,9 +114,9 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "toccata.mxl",
 				},
@@ -162,9 +162,9 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "spring-1.mxl",
 				},
@@ -178,9 +178,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "spring-2.mxl",
 				},
@@ -194,9 +194,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "spring-3.mxl",
 				},
@@ -238,9 +238,9 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "summer-1.mxl",
 				},
@@ -254,9 +254,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "summer-2.mxl",
 				},
@@ -270,9 +270,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "summer-3.mxl",
 				},
@@ -314,9 +314,9 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "autumn-1.mxl",
 				},
@@ -330,9 +330,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "autumn-2.mxl",
 				},
@@ -346,9 +346,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "autumn-3.mxl",
 				},
@@ -390,9 +390,9 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "winter-1.mxl",
 				},
@@ -406,9 +406,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "winter-2.mxl",
 				},
@@ -422,9 +422,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "winter-3.mxl",
 				},
@@ -466,9 +466,9 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "eine-1.mxl",
 				},
@@ -482,9 +482,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: Some("Romanze"),
-				
-				Lyrics: None[[]string](),
+				Form: Some("Romanze"),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "eine-2.mxl",
 				},
@@ -498,9 +498,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: Some("Menuetto"),
-				
-				Lyrics: None[[]string](),
+				Form: Some("Menuetto"),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "eine-3.mxl",
 				},
@@ -514,9 +514,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: Some("Rondo"),
-				
-				Lyrics: None[[]string](),
+				Form: Some("Rondo"),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "eine-4.mxl",
 				},
@@ -558,9 +558,9 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "symp40-1.mxl",
 				},
@@ -574,9 +574,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "symp40-2.mxl",
 				},
@@ -590,9 +590,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: Some("Menuetto"),
-				
-				Lyrics: None[[]string](),
+				Form: Some("Menuetto"),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "symp40-3.mxl",
 				},
@@ -606,9 +606,9 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),
-				
-				Lyrics: None[[]string](),
+				Form: None[string](),				Lyrics: None[[]string](),
+
+
 				Sheet: model.SheetMusic{
 					Path: "symp40-4.mxl",
 				},
@@ -651,8 +651,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "facile-1.mxl",
 				},
@@ -667,8 +667,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "facile-2.mxl",
 				},
@@ -683,8 +683,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: Some("Rondo"),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "facile-3.mxl",
 				},
@@ -727,8 +727,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "moonlight-1.mxl",
 				},
@@ -743,8 +743,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "moonlight-2.mxl",
 				},
@@ -759,8 +759,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "moonlight-3.mxl",
 				},
@@ -803,8 +803,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "symp5-1.mxl",
 				},
@@ -819,8 +819,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "symp5-2.mxl",
 				},
@@ -835,8 +835,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: Some("Scherzo"),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "symp5-3.mxl",
 				},
@@ -851,8 +851,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: Some("Finale"),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "symp5-4.mxl",
 				},
@@ -895,8 +895,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "symp7-1.mxl",
 				},
@@ -915,8 +915,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "symp7-2.mxl",
 				},
@@ -931,8 +931,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "symp7-3.mxl",
 				},
@@ -951,8 +951,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "symp7-4.mxl",
 				},
@@ -995,8 +995,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "symp9-1.mxl",
 				},
@@ -1011,8 +1011,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "symp9-2.mxl",
 				},
@@ -1027,8 +1027,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "symp9-3.mxl",
 				},
@@ -1201,8 +1201,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "furelise.mxl",
 				},
@@ -1245,8 +1245,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "nocturne2.mxl",
 				},
@@ -1289,8 +1289,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "nocturne20.mxl",
 				},
@@ -1333,8 +1333,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "sonata2-1.mxl",
 				},
@@ -1353,8 +1353,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "sonata2-2.mxl",
 				},
@@ -1369,8 +1369,8 @@ var Works = []model.Work{
 			{
 				Nickname: Some("Funeral March"),
 				Form: Some("Marche funèbre"),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "sonata2-3.mxl",
 				},
@@ -1385,8 +1385,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: Some("Finale"),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "sonata2-4.mxl",
 				},
@@ -1429,8 +1429,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "ballade1.mxl",
 				},
@@ -1481,8 +1481,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: Some("Notturno"),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "liebestraum3.mxl",
 				},
@@ -1530,8 +1530,8 @@ var Works = []model.Work{
 			{
 				Nickname: None[string](),
 				Form: None[string](),
-
 				Lyrics: None[[]string](),
+
 				Sheet: model.SheetMusic{
 					Path: "hungrhap2.mxl",
 				},
