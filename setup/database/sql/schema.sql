@@ -26,8 +26,6 @@ CREATE TABLE IF NOT EXISTS works (
     composition_start_year INT NOT NULL,
     composition_end_year INT,
 
-    sheet_path TEXT NOT NULL,
-
     FOREIGN KEY (composer_id) REFERENCES composers(id)
 );
 
@@ -38,6 +36,7 @@ CREATE TABLE IF NOT EXISTS movements (
     order_num INT NOT NULL,
     form TEXT,
     nickname TEXT,
+    sheet_path TEXT NOT NULL,
 
     FOREIGN KEY (work_id) REFERENCES works(id)
 );
@@ -47,7 +46,18 @@ CREATE TABLE IF NOT EXISTS tempo_markings (
 
     movement_id INT NOT NULL,
     order_num INT NOT NULL,
+    form TEXT,
     name TEXT NOT NULL,
+
+    FOREIGN KEY (movement_id) REFERENCES movements(id)
+);
+
+CREATE TABLE IF NOT EXISTS lyrics (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    movement_id INT NOT NULL,
+    order_num INT NOT NULL,
+    line TEXT NOT NULL,
 
     FOREIGN KEY (movement_id) REFERENCES movements(id)
 );

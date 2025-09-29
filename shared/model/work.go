@@ -38,7 +38,7 @@ type WorkTitle struct {
 
 type Key struct {
 	Note Note `json:"note"`
-    Mode KeyMode `json:"mode"`
+	Mode KeyMode `json:"mode"`
 }
 
 type Composer struct {
@@ -51,17 +51,18 @@ type Composer struct {
 
 // e.g.: Op. 27, No. 2 (Chopin's Nocturne in D-flat Major)
 // the app assumes every work is catalogued, so this is mandatory
+// only one catalog number is allowed per piece for now
 type Catalog struct {
 	Prefix string `json:"prefix"` // Op., BWV, D., K...
 	Number Option[string] `json:"number"` // it may be posthumous or it just doesn't have a number. It's a string because it may contain letters.
-    Subnumber Option[string] `json:"subnumber"` // it may not have a subnumber. It may also contain letters.
+	Subnumber Option[string] `json:"subnumber"` // it may not have a subnumber. It may also contain letters.
 }
 
 type Movement struct {
 	Nickname Option[string] `json:"nickname"` // e.g. "Ode to Joy"
 	Form Option[string] `json:"form"` // e.g. Scherzo, Finale, Alla breve
-	Lyrics Option[[]string] `json:"lyrics"`
-	TempoMarkings []TempoMarking `json:"tempo_markings"`
+	Lyrics Option[[]string] `json:"lyrics"` // if not None, must have at least one line.
+	TempoMarkings []TempoMarking `json:"tempo_markings"` // must have at least one per piece
 	Sheet SheetMusic `json:"sheet"`
 }
 
