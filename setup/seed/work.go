@@ -72,12 +72,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "prelude.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "[no tempo marking]",
 					},
 				},
@@ -114,15 +116,18 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "toccata.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: Some("Toccata"),
 						Name: "[no tempo marking]",
 					},
 					{
+						Form: Some("Fugue"),
 						Name: "Allegro",
 					},
 				},
@@ -159,12 +164,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "spring-1.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro",
 					},
 				},
@@ -173,12 +180,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "spring-2.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Largo",
 					},
 				},
@@ -187,12 +196,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "spring-3.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro",
 					},
 				},
@@ -229,12 +240,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "summer-1.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro non molto",
 					},
 				},
@@ -243,12 +256,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "summer-2.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Adagio e piano",
 					},
 				},
@@ -257,12 +272,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "summer-3.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Presto",
 					},
 				},
@@ -299,12 +316,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "autumn-1.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro",
 					},
 				},
@@ -313,12 +332,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "autumn-2.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Adagio molto",
 					},
 				},
@@ -327,12 +348,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "autumn-3.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro",
 					},
 				},
@@ -369,12 +392,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "winter-1.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro non molto",
 					},
 				},
@@ -383,12 +408,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "winter-2.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Largo",
 					},
 				},
@@ -397,12 +424,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "winter-3.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro",
 					},
 				},
@@ -439,12 +468,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "eine-1.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro",
 					},
 				},
@@ -453,12 +484,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: Some("Romanze"),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "eine-2.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Andante",
 					},
 				},
@@ -467,12 +500,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: Some("Menuetto"),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "eine-3.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegretto",
 					},
 				},
@@ -481,12 +516,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: Some("Rondo"),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "eine-4.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro",
 					},
 				},
@@ -523,12 +560,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp40-1.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Molto allegro",
 					},
 				},
@@ -537,12 +576,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp40-2.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Andante",
 					},
 				},
@@ -551,12 +592,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: Some("Menuetto"),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp40-3.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegretto",
 					},
 				},
@@ -565,12 +608,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 				
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp40-4.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro assai",
 					},
 				},
@@ -579,6 +624,82 @@ var Works = []model.Work{
 
 		Year: model.CompositionYear{
 			StartYear: 1787,
+			EndYear: None[int](),
+		},
+	},
+	{
+		Title: model.WorkTitle{
+			Kind: "Piano Sonata",
+			Number: Some(16),
+			Nickname: Some("Sonata facile"),
+		},
+
+		Key: model.Key{
+			Note: model.C,
+			Mode: model.Major,
+		},
+
+		Composer: Composers[2], // Mozart
+
+		Catalog: model.Catalog{
+			Prefix: "K.",
+			Number: Some("545"),
+			Subnumber: None[string](),
+		},
+
+		Movements: []model.Movement{
+			{
+				Nickname: None[string](),
+				Form: None[string](),
+
+				Lyrics: None[[]string](),
+				Sheet: model.SheetMusic{
+					Path: "facile-1.mxl",
+				},
+
+				TempoMarkings: []model.TempoMarking{
+					{
+						Form: None[string](),
+						Name: "Allegro",
+					},
+				},
+			},
+			{
+				Nickname: None[string](),
+				Form: None[string](),
+
+				Lyrics: None[[]string](),
+				Sheet: model.SheetMusic{
+					Path: "facile-2.mxl",
+				},
+
+				TempoMarkings: []model.TempoMarking{
+					{
+						Form: None[string](),
+						Name: "Andante",
+					},
+				},
+			},
+			{
+				Nickname: None[string](),
+				Form: Some("Rondo"),
+
+				Lyrics: None[[]string](),
+				Sheet: model.SheetMusic{
+					Path: "facile-3.mxl",
+				},
+
+				TempoMarkings: []model.TempoMarking{
+					{
+						Form: None[string](),
+						Name: "Allegro",
+					},
+				},
+			},
+		},
+
+		Year: model.CompositionYear{
+			StartYear: 1788,
 			EndYear: None[int](),
 		},
 	},
@@ -607,12 +728,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "moonlight-1.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Adagio sostenuto",
 					},
 				},
@@ -621,12 +744,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "moonlight-2.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegretto",
 					},
 				},
@@ -635,12 +760,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "moonlight-3.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Presto agitato",
 					},
 				},
@@ -677,12 +804,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp5-1.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro con brio",
 					},
 				},
@@ -691,12 +820,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp5-2.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Andante con moto",
 					},
 				},
@@ -705,12 +836,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: Some("Scherzo"),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp5-3.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro",
 					},
 				},
@@ -719,12 +852,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: Some("Finale"),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp5-4.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro",
 					},
 				},
@@ -761,15 +896,18 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp7-1.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Poco sostenuto",
 					},
 					{
+						Form: None[string](),
 						Name: "Vivace",
 					},
 				},
@@ -778,12 +916,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp7-2.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegretto",
 					},
 				},
@@ -792,15 +932,18 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp7-3.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Presto",
 					},
 					{
+						Form: None[string](),
 						Name: "Assai meno presto",
 					},
 				},
@@ -809,12 +952,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp7-4.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro con brio",
 					},
 				},
@@ -851,12 +996,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp9-1.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Allegro ma non troppo, un poco maestoso",
 					},
 				},
@@ -865,12 +1012,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp9-2.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Molto vivace",
 					},
 				},
@@ -879,12 +1028,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "symp9-3.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Adagio molto e cantabile",
 					},
 				},
@@ -893,15 +1044,128 @@ var Works = []model.Work{
 				Nickname: Some("Ode to Joy"),
 				Form: None[string](),
 
+				Lyrics: Some([]string{
+					"Freude, schöner Götterfunken,",
+					"Tochter aus Elysium,",
+					"Wir betreten feuertrunken,",
+					"Himmlische, dein Heiligtum.",
+					"Deine Zauber binden wieder,",
+					"Was die Mode streng geteilt,*",
+					"Alle Menschen werden Brüder,*",
+					"Wo dein sanfter Flügel weilt.",
+					"Seid umschlungen Millionen!",
+					"Diesen Kuß der ganzen Welt!",
+					"Brüder – überm Sternenzelt",
+					"Muß ein lieber Vater wohnen.",
+					"Wem der große Wurf gelungen,",
+					"Eines Freundes Freund zu sein,",
+					"Wer ein holdes Weib errungen,",
+					"Mische seinen Jubel ein!",
+					"Ja – wer auch nur eine Seele",
+					"Sein nennt auf dem Erdenrund!",
+					"Und wer's nie gekonnt, der stehle",
+					"Weinend sich aus diesem Bund!",
+					"Was den großen Ring bewohnet",
+					"Huldige der Sympathe!",
+					"Zu den Sternen leitet sie,",
+					"Wo der Unbekannte thronet.",
+					"Freude trinken alle Wesen",
+					"An den Brüsten der Natur,",
+					"Alle Guten, alle Bösen",
+					"Folgen ihrer Rosenspur.",
+					"Küsse gab sie uns und Reben,",
+					"Einen Freund, geprüft im Tod,",
+					"Wollust ward dem Wurm gegeben,",
+					"Und der Cherub steht vor Gott.",
+					"Ihr stürzt nieder, Millionen?",
+					"Ahnest du den Schöpfer Welt?",
+					"Such ihn überm Sternenzelt,",
+					"Über Sternen muß er wohnen.",
+					"Freude heißt die starke Feder",
+					"In der ewigen Natur.",
+					"Freude, Freude treibt die Räder",
+					"In der großen Weltenuhr.",
+					"Blumen lockt sie aus den Keimen,",
+					"Sonnen aus dem Firmament,",
+					"Sphären rollt sie aus den Räumen,",
+					"Die des Sehers Rohr nicht kennt.",
+					"Froh, wie seine Sonnen fliegen",
+					"Durch des Himmels prächt'gen Plan,",
+					"Wandelt Brüder eure Bahn,",
+					"Freudig wie ein Held zum Siegen.",
+					"Aus der Wahrheit Feuerspiegel",
+					"Lächelt sie den Forscher an.",
+					"Zu der Tugend steilem Hügel",
+					"Leitet sie des Dulders Bahn.",
+					"Auf des Glaubens Sonnenberge",
+					"Sieht man ihre Fahnen wehn,",
+					"Durch den Riß gesprengter Särge",
+					"Sie im Chor der Engel stehn.",
+					"Duldet mutig Millionen!",
+					"Duldet für die beßre Welt!",
+					"Droben überm Sternenzelt",
+					"Wird ein großer Gott belohnen.",
+					"Göttern kann man nicht vergelten,",
+					"Schön ist ihnen gleich zu sein.",
+					"Gram und Armut solln sich melden,",
+					"Mit den Frohen sich erfreun.",
+					"Groll und Rache sein vergessen,",
+					"Unserm Todfeind sei verziehn,",
+					"Keine Träne soll ihn pressen,",
+					"Keine Reue nage ihn.",
+					"Unser Schuldbuch sei vernichtet,",
+					"Ausgesöhnt die ganze Welt!",
+					"Brüder – überm Sternenzelt",
+					"Richtet Gott wie ihr gerichtet.",
+					"Freude sprudelt in Pokalen,",
+					"In der Traube goldnem Blut",
+					"Trinken Sanftmut Kannibalen,",
+					"Die Verzweiflung Heldenmut.",
+					"Brüder fliegt von euren Sitzen,",
+					"Wenn der volle Römer kreist,",
+					"Laßt den Schaum zum Himmel spritzen:",
+					"Dieses Glas dem guten Geist!",
+					"Den der Sterne Wirbel loben,",
+					"Den des Seraphs Hymne preist,",
+					"Dieses Glas dem guten Geist,",
+					"Überm Sternenzelt dort droben!",
+					"Festen Mut in schweren Leiden,",
+					"Hilfe, wo die Unschuld weint,",
+					"Ewigkeit geschwornen Eiden,",
+					"Wahrheit gegen Freund und Feind,",
+					"Männerstolz vor Königsthronen,",
+					"Brüder, gält es Gut und Blut!",
+					"Dem Verdienste seine Kronen,",
+					"Untergang der Lügenbrut!",
+					"Schließt den heil'gen Zirkel dichter,",
+					"Schwört bei diesem goldnen Wein,",
+					"Dem Gelübde treu zu sein,",
+					"Schwört es bei dem Sternenrichter!",
+					"Rettung von Tyrannenketten,",
+					"Großmut auch dem Bösewicht,",
+					"Hoffnung auf den Sterbebetten,",
+					"Gnade auf dem Hochgericht!",
+					"Auch die Toten sollen leben!",
+					"Brüder, trinkt und stimmet ein,",
+					"Allen Sündern soll vergeben,",
+					"Und die Hölle nicht mehr sein.",
+					"Eine heitre Abschiedsstunde!",
+					"Süßen Schlaf im Leichentuch!",
+					"Brüder – einen sanften Spruch",
+					"Aus des Totenrichters Mund.",
+				}),
+
 				Sheet: model.SheetMusic{
 					Path: "symp9-4.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Presto",
 					},
 					{
+						Form: None[string](),
 						Name: "Allegro assai",
 					},
 				},
@@ -938,12 +1202,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "furelise.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Poco moto",
 					},
 				},
@@ -980,12 +1246,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "nocturne2.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Andante",
 					},
 				},
@@ -1022,12 +1290,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "nocturne20.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Lento con gran espressione",
 					},
 				},
@@ -1064,15 +1334,18 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
-					Path: "chopin-sonata2-1.mxl",
+					Path: "sonata2-1.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Grave",
 					},
 					{
+						Form: None[string](),
 						Name: "Doppio movimento",
 					},
 				},
@@ -1081,12 +1354,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
-					Path: "chopin-sonata2-2.mxl",
+					Path: "sonata2-2.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Scherzo",
 					},
 				},
@@ -1095,12 +1370,14 @@ var Works = []model.Work{
 				Nickname: Some("Funeral March"),
 				Form: Some("Marche funèbre"),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
-					Path: "chopin-sonata2-3.mxl",
+					Path: "sonata2-3.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Lento",
 					},
 				},
@@ -1109,12 +1386,14 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: Some("Finale"),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
-					Path: "chopin-sonata2-4.mxl",
+					Path: "sonata2-4.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Presto",
 					},
 				},
@@ -1151,18 +1430,22 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "ballade1.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Largo",
 					},
 					{
+						Form: None[string](),
 						Name: "Moderato",
 					},
 					{
+						Form: None[string](),
 						Name: "Presto con fuoco",
 					},
 				},
@@ -1199,15 +1482,18 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: Some("Notturno"),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "liebestraum3.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Poco allegro, con affetto",
 					},
 					{
+						Form: None[string](),
 						Name: "Tempo I",
 					},
 				},
@@ -1245,19 +1531,23 @@ var Works = []model.Work{
 				Nickname: None[string](),
 				Form: None[string](),
 
+				Lyrics: None[[]string](),
 				Sheet: model.SheetMusic{
 					Path: "hungrhap2.mxl",
 				},
 
 				TempoMarkings: []model.TempoMarking{
 					{
+						Form: None[string](),
 						Name: "Lento a capriccio",
 					},
 					{
-						Name: "Lassan: Andante mesto",
+						Form: Some("Lassan"),
+						Name: "Andante mesto",
 					},
 					{
-						Name: "Friska: Vivace",
+						Form: Some("Friska"),
+						Name: "Vivace",
 					},
 				},
 			},

@@ -60,12 +60,14 @@ type Catalog struct {
 type Movement struct {
 	Nickname Option[string] `json:"nickname"` // e.g. "Ode to Joy"
 	Form Option[string] `json:"form"` // e.g. Scherzo, Finale, Alla breve
+	Lyrics Option[[]string] `json:"lyrics"`
 	TempoMarkings []TempoMarking `json:"tempo_markings"`
 	Sheet SheetMusic `json:"sheet"`
 }
 
 // TODO: add BPM
 type TempoMarking struct {
+	Form Option[string] `json:"form"` // e.g. Lassan, Friska, Fugue
 	Name string `json:"name"`
 }
 
