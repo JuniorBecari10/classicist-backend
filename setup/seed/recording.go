@@ -102,7 +102,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		Work: Works[3], // Spring
+		Work: Works[2], // Spring
 		Year: 1976,
 		PhotoPath: "four-seasons-perlman.jpg",
 
@@ -126,28 +126,28 @@ var Recordings = []model.Recording{
 				Movement: Works[3].Movements[0],
 				AudioFile: model.AudioFile{
 					Path: "spring-1.mp3",
-					Duration: 0,
+					Duration: 196,
 				},
 			},
 			{
 				Movement: Works[3].Movements[1],
 				AudioFile: model.AudioFile{
 					Path: "spring-2.mp3",
-					Duration: 0,
+					Duration: 163,
 				},
 			},
 			{
 				Movement: Works[3].Movements[2],
 				AudioFile: model.AudioFile{
 					Path: "spring-3.mp3",
-					Duration: 0,
+					Duration: 286,
 				},
 			},
 		},
 	},
 
 	{
-		Work: Works[4], // Summer
+		Work: Works[3], // Summer
 		Year: 1976,
 		PhotoPath: "four-seasons-perlman.jpg",
 
@@ -171,28 +171,28 @@ var Recordings = []model.Recording{
 				Movement: Works[4].Movements[0],
 				AudioFile: model.AudioFile{
 					Path: "summer-1.mp3",
-					Duration: 0,
+					Duration: 375,
 				},
 			},
 			{
 				Movement: Works[4].Movements[1],
 				AudioFile: model.AudioFile{
 					Path: "summer-2.mp3",
-					Duration: 0,
+					Duration: 164,
 				},
 			},
 			{
 				Movement: Works[4].Movements[2],
 				AudioFile: model.AudioFile{
 					Path: "summer-3.mp3",
-					Duration: 0,
+					Duration: 185,
 				},
 			},
 		},
 	},
 
 	{
-		Work: Works[5], // Autumn
+		Work: Works[4], // Autumn
 		Year: 1976,
 		PhotoPath: "four-seasons-perlman.jpg",
 
@@ -216,21 +216,21 @@ var Recordings = []model.Recording{
 				Movement: Works[5].Movements[0],
 				AudioFile: model.AudioFile{
 					Path: "autumn-1.mp3",
-					Duration: 0,
+					Duration: 324,
 				},
 			},
 			{
 				Movement: Works[5].Movements[1],
 				AudioFile: model.AudioFile{
 					Path: "autumn-2.mp3",
-					Duration: 0,
+					Duration: 186,
 				},
 			},
 			{
 				Movement: Works[5].Movements[2],
 				AudioFile: model.AudioFile{
 					Path: "autumn-3.mp3",
-					Duration: 0,
+					Duration: 200,
 				},
 			},
 		},
@@ -261,21 +261,21 @@ var Recordings = []model.Recording{
 				Movement: Works[6].Movements[0],
 				AudioFile: model.AudioFile{
 					Path: "winter-1.mp3",
-					Duration: 0,
+					Duration: 217,
 				},
 			},
 			{
 				Movement: Works[6].Movements[1],
 				AudioFile: model.AudioFile{
 					Path: "winter-2.mp3",
-					Duration: 0,
+					Duration: 151,
 				},
 			},
 			{
 				Movement: Works[6].Movements[2],
 				AudioFile: model.AudioFile{
 					Path: "winter-3.mp3",
-					Duration: 0,
+					Duration: 199,
 				},
 			},
 		},
