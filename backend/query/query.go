@@ -168,8 +168,8 @@ func queryMovements(db *sql.DB, id int) ([]model.Movement, error) {
 	return movements, nil
 }
 
-func queryTempoMarkings(db *sql.DB, id, movId int) ([]model.TempoMarking, error) {
-	rows, err := db.Query(tempoMarkingsByIdQuery, id, movId)
+func queryTempoMarkings(db *sql.DB, workId, movId int) ([]model.TempoMarking, error) {
+	rows, err := db.Query(tempoMarkingsByIdQuery, workId, movId)
 	if err != nil {
 		return nil, err
 	}
@@ -195,8 +195,8 @@ func queryTempoMarkings(db *sql.DB, id, movId int) ([]model.TempoMarking, error)
 	return tempos, nil
 }
 
-func queryLyrics(db *sql.DB, id, movId int) (option.Option[[]string], error) {
-	rows, err := db.Query(lyricsByIdQuery, id, movId)
+func queryLyrics(db *sql.DB, workId, movId int) (option.Option[[]string], error) {
+	rows, err := db.Query(lyricsByIdQuery, workId, movId)
 	if err != nil {
 		return option.Option[[]string]{}, err
 	}

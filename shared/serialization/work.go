@@ -132,8 +132,9 @@ func writeWorksLyrics(works []model.Work) string {
 	movementID := 0
 	for _, w := range works {
 		for _, mov := range w.Movements {
+			movementID++
+			
 			if lyrics, ok := mov.Lyrics.TryUnwrap(); ok {
-				movementID++
 				for j, lyric := range lyrics {
 					count++
 					b.WriteString(fmt.Sprintf("(%d, %d, %s)", movementID, j + 1, StringToSQL(lyric)))

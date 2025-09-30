@@ -70,7 +70,8 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -114,7 +115,8 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -162,7 +164,8 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -178,7 +181,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -194,7 +198,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -238,7 +243,8 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -254,7 +260,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -270,7 +277,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -314,7 +322,8 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -330,7 +339,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -346,7 +356,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -390,7 +401,8 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -406,7 +418,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -422,7 +435,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -466,7 +480,8 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -482,7 +497,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: Some("Romanze"),				Lyrics: None[[]string](),
+				Form: Some("Romanze"),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -498,7 +514,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: Some("Menuetto"),				Lyrics: None[[]string](),
+				Form: Some("Menuetto"),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -514,7 +531,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: Some("Rondo"),				Lyrics: None[[]string](),
+				Form: Some("Rondo"),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -558,7 +576,8 @@ var Works = []model.Work{
 		Movements: []model.Movement{
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -574,7 +593,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -590,7 +610,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: Some("Menuetto"),				Lyrics: None[[]string](),
+				Form: Some("Menuetto"),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -606,7 +627,8 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),				Lyrics: None[[]string](),
+				Form: None[string](),
+				Lyrics: None[[]string](),
 
 
 				Sheet: model.SheetMusic{
@@ -1010,7 +1032,7 @@ var Works = []model.Work{
 			},
 			{
 				Nickname: None[string](),
-				Form: None[string](),
+				Form: Some("Scherzo"),
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
@@ -1021,6 +1043,10 @@ var Works = []model.Work{
 					{
 						Form: None[string](),
 						Name: "Molto vivace",
+					},
+					{
+						Form: None[string](),
+						Name: "Presto",
 					},
 				},
 			},
@@ -1045,114 +1071,92 @@ var Works = []model.Work{
 				Form: None[string](),
 
 				Lyrics: Some([]string{
+					"O Freunde, nicht diese Töne!",
+					"Sondern laßt uns angenehmere anstimmen,",
+					"Und freudenvollere,",
+					"Freude (Freude),",
+					"Freude (Freude),",
 					"Freude, schöner Götterfunken,",
 					"Tochter aus Elysium,",
 					"Wir betreten feuertrunken,",
 					"Himmlische, dein Heiligtum.",
 					"Deine Zauber binden wieder,",
-					"Was die Mode streng geteilt,*",
-					"Alle Menschen werden Brüder,*",
+					"Was die Mode streng geteilt,",
+					"Alle Menschen werden Brüder,",
 					"Wo dein sanfter Flügel weilt.",
-					"Seid umschlungen Millionen!",
-					"Diesen Kuß der ganzen Welt!",
-					"Brüder – überm Sternenzelt",
-					"Muß ein lieber Vater wohnen.",
+					"Deine Zauber binden wieder,",
+					"Was die Mode streng geteilt,",
+					"Alle Menschen werden Brüder,",
+					"Wo dein sanfter Flügel weilt.",
 					"Wem der große Wurf gelungen,",
 					"Eines Freundes Freund zu sein,",
 					"Wer ein holdes Weib errungen,",
-					"Mische seinen Jubel ein!",
-					"Ja – wer auch nur eine Seele",
-					"Sein nennt auf dem Erdenrund!",
-					"Und wer's nie gekonnt, der stehle",
-					"Weinend sich aus diesem Bund!",
-					"Was den großen Ring bewohnet",
-					"Huldige der Sympathe!",
-					"Zu den Sternen leitet sie,",
-					"Wo der Unbekannte thronet.",
-					"Freude trinken alle Wesen",
+					"Mische seinen Jubel ein.",
+					"Ja, wer auch nur eine Seele,",
+					"Sein nennt auf dem Erdenrund,",
+					"Und wer's nie gekonnt, der stehle,",
+					"Weinend sich aus diesem Bund.",
+					"Ja, wer auch nur eine Seele,",
+					"Sein nennt auf dem Erdenrund,",
+					"Und wer's nie gekonnt, der stehle,",
+					"Weinend sich aus diesem Bund.",
+					"Freude trinken alle Wesen,",
 					"An den Brüsten der Natur,",
-					"Alle Guten, alle Bösen",
+					"Alle Guten, alle Bösen,",
 					"Folgen ihrer Rosenspur.",
 					"Küsse gab sie uns und Reben,",
 					"Einen Freund, geprüft im Tod,",
 					"Wollust ward dem Wurm gegeben,",
 					"Und der Cherub steht vor Gott.",
-					"Ihr stürzt nieder, Millionen?",
-					"Ahnest du den Schöpfer Welt?",
-					"Such ihn überm Sternenzelt,",
-					"Über Sternen muß er wohnen.",
-					"Freude heißt die starke Feder",
-					"In der ewigen Natur.",
-					"Freude, Freude treibt die Räder",
-					"In der großen Weltenuhr.",
-					"Blumen lockt sie aus den Keimen,",
-					"Sonnen aus dem Firmament,",
-					"Sphären rollt sie aus den Räumen,",
-					"Die des Sehers Rohr nicht kennt.",
-					"Froh, wie seine Sonnen fliegen",
+					"Küsse gab sie uns und Reben,",
+					"Einen Freund, geprüft im Tod,",
+					"Wollust ward dem Wurm gegeben,",
+					"Und der Cherub steht vor Gott.",
+					"Und der Cherub steht vor Gott (steht vor Gott),",
+					"Vor Gott, vor Gott.",
+					"♪",
+					"Froh, froh wie seine Sonnen, seine Sonnen fliegen,",
+					"Froh wie seine Sonnen fliegen,",
 					"Durch des Himmels prächt'gen Plan,",
-					"Wandelt Brüder eure Bahn,",
-					"Freudig wie ein Held zum Siegen.",
-					"Aus der Wahrheit Feuerspiegel",
-					"Lächelt sie den Forscher an.",
-					"Zu der Tugend steilem Hügel",
-					"Leitet sie des Dulders Bahn.",
-					"Auf des Glaubens Sonnenberge",
-					"Sieht man ihre Fahnen wehn,",
-					"Durch den Riß gesprengter Särge",
-					"Sie im Chor der Engel stehn.",
-					"Duldet mutig Millionen!",
-					"Duldet für die beßre Welt!",
-					"Droben überm Sternenzelt",
-					"Wird ein großer Gott belohnen.",
-					"Göttern kann man nicht vergelten,",
-					"Schön ist ihnen gleich zu sein.",
-					"Gram und Armut solln sich melden,",
-					"Mit den Frohen sich erfreun.",
-					"Groll und Rache sein vergessen,",
-					"Unserm Todfeind sei verziehn,",
-					"Keine Träne soll ihn pressen,",
-					"Keine Reue nage ihn.",
-					"Unser Schuldbuch sei vernichtet,",
-					"Ausgesöhnt die ganze Welt!",
-					"Brüder – überm Sternenzelt",
-					"Richtet Gott wie ihr gerichtet.",
-					"Freude sprudelt in Pokalen,",
-					"In der Traube goldnem Blut",
-					"Trinken Sanftmut Kannibalen,",
-					"Die Verzweiflung Heldenmut.",
-					"Brüder fliegt von euren Sitzen,",
-					"Wenn der volle Römer kreist,",
-					"Laßt den Schaum zum Himmel spritzen:",
-					"Dieses Glas dem guten Geist!",
-					"Den der Sterne Wirbel loben,",
-					"Den des Seraphs Hymne preist,",
-					"Dieses Glas dem guten Geist,",
-					"Überm Sternenzelt dort droben!",
-					"Festen Mut in schweren Leiden,",
-					"Hilfe, wo die Unschuld weint,",
-					"Ewigkeit geschwornen Eiden,",
-					"Wahrheit gegen Freund und Feind,",
-					"Männerstolz vor Königsthronen,",
-					"Brüder, gält es Gut und Blut!",
-					"Dem Verdienste seine Kronen,",
-					"Untergang der Lügenbrut!",
-					"Schließt den heil'gen Zirkel dichter,",
-					"Schwört bei diesem goldnen Wein,",
-					"Dem Gelübde treu zu sein,",
-					"Schwört es bei dem Sternenrichter!",
-					"Rettung von Tyrannenketten,",
-					"Großmut auch dem Bösewicht,",
-					"Hoffnung auf den Sterbebetten,",
-					"Gnade auf dem Hochgericht!",
-					"Auch die Toten sollen leben!",
-					"Brüder, trinkt und stimmet ein,",
-					"Allen Sündern soll vergeben,",
-					"Und die Hölle nicht mehr sein.",
-					"Eine heitre Abschiedsstunde!",
-					"Süßen Schlaf im Leichentuch!",
-					"Brüder – einen sanften Spruch",
-					"Aus des Totenrichters Mund.",
+					"Laufet, Brüder, eure Bahn,",
+					"Laufet, Brüder, eure Bahn,",
+					"Freudig, wie ein Held zum Siegen,",
+					"Wie ein Held zum Siegen.",
+					"Laufet, Brüder, eure Bahn,",
+					"Laufet, Brüder, eure Bahn,",
+					"Freudig, wie ein Held zum Siegen,",
+					"Wie ein Held zum Siegen,",
+					"Freudig, wie ein Held zum Siegen.",
+					"♪",
+					"Freude, schöner Götterfunken,",
+					"Tochter aus Elysium,",
+					"Wir betreten feuertrunken,",
+					"Himmlische, dein Heiligtum.",
+					"Deine Zauber binden wieder,",
+					"Was die Mode streng geteilt,",
+					"Alle Menschen werden Brüder,",
+					"Wo dein sanfter Flügel weilt.",
+					"Deine Zauber binden wieder,",
+					"Was die Mode streng geteilt,",
+					"Alle Menschen werden Brüder,",
+					"Wo dein sanfter Flügel weilt.",
+					"Seid umschlungen, Millionen,",
+					"Diesen Kuß der ganzen Welt!",
+					"Seid umschlungen, Millionen,",
+					"Diesen Kuß der ganzen Welt!",
+					"Brüder, über'm Sternenzelt,",
+					"Muß ein lieber Vater wohnen.",
+					"Brüder, über'm Sternenzelt,",
+					"Muß ein lieber Vater wohnen.",
+					"Ihr stürzt nieder, Millionen?",
+					"Ahnest du den Schöpfer, Welt?",
+					"Such ihn über'm Sternenzelt,",
+					"Über Sternen muß er wohnen.",
+					"♪",
+					"Ihr stürzt nieder, Millionen?",
+					"Ahnest du den Schöpfer, Welt?",
+					"Such ihn über'm Sternenzelt,",
+					"Such ihn über'm Sternenzelt.",
 				}),
 
 				Sheet: model.SheetMusic{
