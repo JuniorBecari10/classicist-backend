@@ -30,7 +30,7 @@ var Performers = []model.Performer{
 var Recordings = []model.Recording{
 	{
 		Work: Works[0],
-		Year: 1962,
+		Year: 1963,
 		PhotoPath: "prelude-gould.jpg",
 		
 		Performers: []model.RecordingPerformer{
@@ -52,7 +52,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[0],
-		Year: 0xD0D0,
+		Year: 1984,
 		PhotoPath: "prelude-andras.jpg",
 		
 		Performers: []model.RecordingPerformer{
@@ -74,7 +74,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[1],
-		Year: 0xD0D0,
+		Year: 1988,
 		PhotoPath: "toccata-preston.jpg",
 		
 		Performers: []model.RecordingPerformer{
@@ -96,7 +96,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[1],
-		Year: 0xD0D0,
+		Year: 1964,
 		PhotoPath: "toccata-richter.jpg",
 		
 		Performers: []model.RecordingPerformer{
@@ -297,7 +297,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[6], // Eine kleine Nachtmusik
-		Year: 0xD0D0,
+		Year: 1966,
 		PhotoPath: "eine.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -344,7 +344,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[7], // Symphony No. 40
-		Year: 0xD0D0,
+		Year: 1977,
 		PhotoPath: "symp40.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -391,7 +391,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[8], // Piano Sonata No. 16
-		Year: 0xD0D0,
+		Year: 2023, // actually it's a live recording from 1956, it was remastered and re-released in 2023
 		PhotoPath: "facile.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -427,7 +427,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[9], // Piano Sonata No. 14
-		Year: 0xD0D0,
+		Year: 1978,
 		PhotoPath: "moonlight-kempff.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -463,7 +463,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[9], // Piano Sonata No. 14
-		Year: 0xD0D0,
+		Year: 1963,
 		PhotoPath: "moonlight-rubinstein.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -499,7 +499,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[10], // Symphony No. 5
-		Year: 0xD0D0,
+		Year: 1984,
 		PhotoPath: "symp5.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -546,7 +546,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[11], // Symphony No. 7
-		Year: 0xD0D0,
+		Year: 2020,
 		PhotoPath: "symp7.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -593,7 +593,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[12], // Symphony No. 9
-		Year: 0xD0D0,
+		Year: 1984,
 		PhotoPath: "symp9.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -640,7 +640,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[13], // Fur Elise
-		Year: 0xD0D0,
+		Year: 2015,
 		PhotoPath: "furelise-levit.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -662,7 +662,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[13], // Fur Elise
-		Year: 0xD0D0,
+		Year: 2025,
 		PhotoPath: "furelise-ugorski.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -684,7 +684,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[13], // Fur Elise
-		Year: 0xD0D0,
+		Year: 1984,
 		PhotoPath: "furelise-ashkenazy.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -706,7 +706,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[14], // Nocturne No. 2
-		Year: 0xD0D0,
+		Year: 2005,
 		PhotoPath: "nocturne2-pollini.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -728,7 +728,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[14], // Nocturne No. 2
-		Year: 0xD0D0,
+		Year: 1996,
 		PhotoPath: "nocturne2-maria-joao-pires.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -750,7 +750,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[15], // Nocturne No. 20
-		Year: 0xD0D0,
+		Year: 1996,
 		PhotoPath: "nocturne20-maria-joao-pires.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -772,7 +772,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[16], // Piano Sonata No. 2
-		Year: 0xD0D0,
+		Year: 2023,
 		PhotoPath: "sonata2.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -815,7 +815,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[17], // Ballade No. 1
-		Year: 0xD0D0,
+		Year: 1988,
 		PhotoPath: "ballade1-zimerman.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -837,7 +837,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[17], // Ballade No. 1
-		Year: 0xD0D0,
+		Year: 1999,
 		PhotoPath: "ballade1-pollini.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -859,7 +859,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[18], // Liebestraum No. 3
-		Year: 0xD0D0,
+		Year: 2011,
 		PhotoPath: "liebestraum3.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -881,7 +881,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[19], // Hungarian Rhapsody No. 2
-		Year: 0xD0D0,
+		Year: 2001,
 		PhotoPath: "hungrhap2.jpg",
 
 		Performers: []model.RecordingPerformer{
