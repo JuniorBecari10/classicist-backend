@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// -------------------- Works --------------------
+// --- Works ---
 
 func writeWorks(works []model.Work, composers []model.Composer) string {
 	var b strings.Builder
@@ -152,7 +152,7 @@ func writeWorksLyrics(works []model.Work) string {
 	return b.String()
 }
 
-// -------------------- Composers --------------------
+// --- Composers ---
 
 func writeComposers(composers []model.Composer) string {
 	var b strings.Builder
@@ -181,7 +181,7 @@ func writeComposerData(c model.Composer) string {
 	)
 }
 
-// -------------------- Headers --------------------
+// --- Headers ---
 
 func getWorkDataInsertHeader() string {
 	return `INSERT INTO works (
@@ -205,15 +205,4 @@ func getLyricInsertHeader() string {
 
 func getComposerInsertHeader() string {
 	return "INSERT INTO composers (name, birth_year, death_year, photo_path) VALUES "
-}
-
-// -------------------- Entry Point --------------------
-
-func WriteAll(works []model.Work, composers []model.Composer) string {
-	var b strings.Builder
-
-	b.WriteString(writeComposers(composers))
-	b.WriteString(writeWorks(works, composers))
-
-	return b.String()
 }

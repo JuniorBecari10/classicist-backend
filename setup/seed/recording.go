@@ -42,7 +42,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[0].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "prelude-gould.mp3",
 					Duration: 142,
@@ -64,7 +64,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[0].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "prelude-andras.mp3",
 					Duration: 115,
@@ -86,7 +86,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[1].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "toccata-preston.mp3",
 					Duration: 0xD0D0,
@@ -108,7 +108,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[1].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "toccata-richter.mp3",
 					Duration: 0xD0D0,
@@ -138,21 +138,21 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[2].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "spring-1.mp3",
 					Duration: 196,
 				},
 			},
 			{
-				Movement: Works[2].Movements[1],
+				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "spring-2.mp3",
 					Duration: 163,
 				},
 			},
 			{
-				Movement: Works[2].Movements[2],
+				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "spring-3.mp3",
 					Duration: 286,
@@ -183,21 +183,21 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[3].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "summer-1.mp3",
 					Duration: 375,
 				},
 			},
 			{
-				Movement: Works[3].Movements[1],
+				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "summer-2.mp3",
 					Duration: 164,
 				},
 			},
 			{
-				Movement: Works[3].Movements[2],
+				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "summer-3.mp3",
 					Duration: 185,
@@ -228,21 +228,21 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[4].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "autumn-1.mp3",
 					Duration: 324,
 				},
 			},
 			{
-				Movement: Works[4].Movements[1],
+				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "autumn-2.mp3",
 					Duration: 186,
 				},
 			},
 			{
-				Movement: Works[4].Movements[2],
+				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "autumn-3.mp3",
 					Duration: 200,
@@ -273,21 +273,21 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[5].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "winter-1.mp3",
 					Duration: 217,
 				},
 			},
 			{
-				Movement: Works[5].Movements[1],
+				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "winter-2.mp3",
 					Duration: 151,
 				},
 			},
 			{
-				Movement: Works[5].Movements[2],
+				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "winter-3.mp3",
 					Duration: 199,
@@ -313,28 +313,28 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[6].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "eine-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[6].Movements[1],
+				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "eine-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[6].Movements[2],
+				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "eine-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[6].Movements[3],
+				MovementIndex: 3,
 				AudioFile: model.AudioFile{
 					Path: "eine-4.mp3",
 					Duration: 0xD0D0,
@@ -360,28 +360,28 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[7].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "symp40-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[7].Movements[1],
+				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "symp40-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[7].Movements[2],
+				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "symp40-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[7].Movements[3],
+				MovementIndex: 3,
 				AudioFile: model.AudioFile{
 					Path: "symp40-4.mp3",
 					Duration: 0xD0D0,
@@ -403,21 +403,21 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[8].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "facile-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[8].Movements[1],
+				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "facile-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[8].Movements[2],
+				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "facile-3.mp3",
 					Duration: 0xD0D0,
@@ -439,21 +439,21 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[9].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[9].Movements[1],
+				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[9].Movements[2],
+				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-3.mp3",
 					Duration: 0xD0D0,
@@ -475,21 +475,21 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[9].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[9].Movements[1],
+				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[9].Movements[2],
+				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-3.mp3",
 					Duration: 0xD0D0,
@@ -515,28 +515,28 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[10].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "symp5-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[10].Movements[1],
+				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "symp5-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[10].Movements[2],
+				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "symp5-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[10].Movements[3],
+				MovementIndex: 3,
 				AudioFile: model.AudioFile{
 					Path: "symp5-4.mp3",
 					Duration: 0xD0D0,
@@ -562,28 +562,28 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[11].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "symp7-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[11].Movements[1],
+				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "symp7-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[11].Movements[2],
+				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "symp7-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[10].Movements[3],
+				MovementIndex: 3,
 				AudioFile: model.AudioFile{
 					Path: "symp7-4.mp3",
 					Duration: 0xD0D0,
@@ -609,28 +609,28 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[12].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "symp9-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[12].Movements[1],
+				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "symp9-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[12].Movements[2],
+				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "symp9-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[10].Movements[3],
+				MovementIndex: 3,
 				AudioFile: model.AudioFile{
 					Path: "symp9-4.mp3",
 					Duration: 0xD0D0,
@@ -652,7 +652,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[13].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "furelise-levit.mp3",
 					Duration: 0xD0D0,
@@ -674,7 +674,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[13].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "furelise-ugorski.mp3",
 					Duration: 0xD0D0,
@@ -696,7 +696,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[13].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "furelise-ashkenazy.mp3",
 					Duration: 0xD0D0,
@@ -718,7 +718,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[14].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "nocturne2-pollini.mp3",
 					Duration: 0xD0D0,
@@ -740,7 +740,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[14].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "nocturne2-maria-joao-pires.mp3",
 					Duration: 0xD0D0,
@@ -762,7 +762,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[15].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "nocturne20.mp3",
 					Duration: 0xD0D0,
@@ -784,28 +784,28 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[16].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "sonata2-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[16].Movements[1],
+				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "sonata2-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[16].Movements[2],
+				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "sonata2-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				Movement: Works[16].Movements[3],
+				MovementIndex: 3,
 				AudioFile: model.AudioFile{
 					Path: "sonata2-4.mp3",
 					Duration: 0xD0D0,
@@ -827,7 +827,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[17].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "ballade1-zimerman.mp3",
 					Duration: 0xD0D0,
@@ -849,7 +849,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[17].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "ballade1-pollini.mp3",
 					Duration: 0xD0D0,
@@ -871,7 +871,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[18].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "liebestraum3.mp3",
 					Duration: 0xD0D0,
@@ -893,7 +893,7 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				Movement: Works[19].Movements[0],
+				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "hungrhap2.mp3",
 					Duration: 0xD0D0,

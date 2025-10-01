@@ -19,7 +19,7 @@ func InsertSeed() {
 
 	defer db.Close()
 
-	seed := serialization.WriteAll(seed.Works, seed.Composers)
+	seed := serialization.WriteAll(seed.Works, seed.Composers, seed.Performers, seed.Recordings)
 
 	_, err = db.Exec(seed)
 	if err != nil {

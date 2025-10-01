@@ -20,7 +20,7 @@ type RecordingPerformer struct {
 
 type RecordedMovement struct {
 	Id int
-	Movement Movement // yes, a copy. no problem for now
+	MovementIndex int // to avoid data duplication, it is already in Work, inside Recording. Use the index to get it.
 	AudioFile AudioFile
 }
 
