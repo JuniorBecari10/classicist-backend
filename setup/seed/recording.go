@@ -391,7 +391,7 @@ var Recordings = []model.Recording{
 	},
 	{
 		Work: Works[8], // Piano Sonata No. 16
-		Year: 2023, // actually it's a live recording from 1956, it was remastered and re-released in 2023
+		Year: 2023, // actually it's a live recording from 1956; it was remastered and re-released in 2023
 		PhotoPath: "facile.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -751,7 +751,7 @@ var Recordings = []model.Recording{
 	{
 		Work: Works[15], // Nocturne No. 20
 		Year: 1996,
-		PhotoPath: "nocturne20-maria-joao-pires.jpg",
+		PhotoPath: "nocturne20.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
@@ -764,7 +764,7 @@ var Recordings = []model.Recording{
 			{
 				Movement: Works[15].Movements[0],
 				AudioFile: model.AudioFile{
-					Path: "nocturne20-maria-joao-pires.mp3",
+					Path: "nocturne20.mp3",
 					Duration: 0xD0D0,
 				},
 			},
@@ -895,7 +895,7 @@ var Recordings = []model.Recording{
 			{
 				Movement: Works[19].Movements[0],
 				AudioFile: model.AudioFile{
-					Path: "liebestraum3.mp3",
+					Path: "hungrhap2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
