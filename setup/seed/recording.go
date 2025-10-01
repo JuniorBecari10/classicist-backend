@@ -231,21 +231,21 @@ var Recordings = []model.Recording{
 				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "autumn-1.mp3",
-					Duration: 324,
+					Duration: 316,
 				},
 			},
 			{
 				MovementIndex: 1,
 				AudioFile: model.AudioFile{
 					Path: "autumn-2.mp3",
-					Duration: 186,
+					Duration: 187,
 				},
 			},
 			{
 				MovementIndex: 2,
 				AudioFile: model.AudioFile{
 					Path: "autumn-3.mp3",
-					Duration: 200,
+					Duration: 190,
 				},
 			},
 		},
@@ -830,7 +830,7 @@ var Recordings = []model.Recording{
 				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "ballade1-zimerman.mp3",
-					Duration: 0xD0D0,
+					Duration: 568,
 				},
 			},
 		},
@@ -852,7 +852,7 @@ var Recordings = []model.Recording{
 				MovementIndex: 0,
 				AudioFile: model.AudioFile{
 					Path: "ballade1-pollini.mp3",
-					Duration: 0xD0D0,
+					Duration: 504,
 				},
 			},
 		},
