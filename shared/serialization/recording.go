@@ -3,6 +3,7 @@ package serialization
 import (
 	"fmt"
 	"shared/model"
+	"slices"
 	"strings"
 )
 
@@ -32,14 +33,14 @@ func writePerformer(perf model.Performer) string {
 
 // --- Recordings ---
 
-func writeRecordings(recs []model.Recording) string {
+func writeRecordings(recs []model.Recording, performers []model.Performer) string {
 	var b strings.Builder
 
 	b.WriteString(writeRecordingsData(recs))
 
-	for _, rec := range recs {
-		b.WriteString(writeRecordedMovements(rec.Id, rec.Movements))
-		b.WriteString(writeRecordingPerformers(rec.Id, rec.Performers))
+	for i, rec := range recs {
+		b.WriteString(writeRecordedMovements(rec.Movements, i + 1))
+		b.WriteString(writeRecordingPerformers(rec.Performers, performers, i + 1))
 	}
 
 	return b.String()
@@ -69,13 +70,13 @@ func writeRecording(rec model.Recording) string {
 
 // --- Recording Movements ---
 
-func writeRecordedMovements(recordingId int, recMovs []model.RecordedMovement) string {
+func writeRecordedMovements(recMovs []model.RecordedMovement, recordingId int) string {
 	var b strings.Builder
 	b.WriteString(getRecordedMovementsInsertHeader())
 
 	total := len(recMovs)
 	for i, r := range recMovs {
-		b.WriteString(writeRecordedMovement(recordingId, r))
+		b.WriteString(writeRecordedMovement(r, recordingId))
 
 		if i < total - 1 {
 			b.WriteByte(',')
@@ -87,7 +88,7 @@ func writeRecordedMovements(recordingId int, recMovs []model.RecordedMovement) s
 	return b.String()
 }
 
-func writeRecordedMovement(recordingId int, recMov model.RecordedMovement) string {
+func writeRecordedMovement(recMov model.RecordedMovement, recordingId int) string {
 	return fmt.Sprintf("(%d, %d, %s, %d)",
 		recMov.MovementId,
 		recordingId,
@@ -98,13 +99,13 @@ func writeRecordedMovement(recordingId int, recMov model.RecordedMovement) strin
 
 // --- Recording Performers ---
 
-func writeRecordingPerformers(recordingId int, recPerfs []model.RecordingPerformer) string {
+func writeRecordingPerformers(recPerfs []model.RecordingPerformer, performers []model.Performer, recordingId int) string {
 	var b strings.Builder
 	b.WriteString(getRecordingPerformersInsertHeader())
 
 	total := len(recPerfs)
 	for i, rp := range recPerfs {
-		b.WriteString(writeRecordingPerformer(recordingId, rp))
+		b.WriteString(writeRecordingPerformer(rp, recordingId, performers))
 
 		if i < total - 1 {
 			b.WriteByte(',')
@@ -116,10 +117,10 @@ func writeRecordingPerformers(recordingId int, recPerfs []model.RecordingPerform
 	return b.String()
 }
 
-func writeRecordingPerformer(recordingId int, rp model.RecordingPerformer) string {
+func writeRecordingPerformer(rp model.RecordingPerformer, recordingId int, performers []model.Performer) string {
 	return fmt.Sprintf("(%d, %d, %s)",
 		recordingId,
-		rp.Performer.Id,
+		slices.Index(performers, rp.Performer) + 1, // assumes it's not -1
 		StringToSQL(rp.Role),
 	)
 }

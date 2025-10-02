@@ -12,7 +12,7 @@ func WriteAll(works []model.Work, composers []model.Composer, perfs []model.Perf
 	b.WriteString(writeWorks(works, composers))
 
 	b.WriteString(writePerformers(perfs))
-	b.WriteString(writeRecordings(recs))
+	b.WriteString(writeRecordings(recs, perfs))
 
 	return b.String()
 }
