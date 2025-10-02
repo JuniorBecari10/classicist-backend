@@ -88,7 +88,9 @@ CREATE TABLE IF NOT EXISTS recording_performers (
     role TEXT NOT NULL,
 
     FOREIGN KEY (recording_id) REFERENCES recordings(id),
-    FOREIGN KEY (performer_id) REFERENCES performers(id)
+    FOREIGN KEY (performer_id) REFERENCES performers(id),
+
+    UNIQUE (recording_id, performer_id)
 );
 
 CREATE TABLE IF NOT EXISTS recorded_movements (
@@ -101,5 +103,7 @@ CREATE TABLE IF NOT EXISTS recorded_movements (
     duration INT NOT NULL,
 
     FOREIGN KEY (movement_id) REFERENCES movements(id),
-    FOREIGN KEY (recording_id) REFERENCES recordings(id)
+    FOREIGN KEY (recording_id) REFERENCES recordings(id),
+
+    UNIQUE (movement_id, recording_id)
 );
