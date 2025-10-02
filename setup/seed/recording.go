@@ -2,6 +2,24 @@ package seed
 
 import "shared/model"
 
+var indexCount = 0
+var idCount = 0
+
+func getIndex() int {
+	indexCount++
+	return indexCount
+}
+
+func resetIndex() int {
+	indexCount = 0
+	return indexCount
+}
+
+func getId() int {
+	idCount++
+	return idCount
+}
+
 var Performers = []model.Performer{
 	{ Name: "Glenn Gould" },
 	{ Name: "András Schiff" },
@@ -42,7 +60,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "prelude-gould.mp3",
 					Duration: 142,
@@ -64,7 +83,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "prelude-andras.mp3",
 					Duration: 115,
@@ -86,7 +106,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "toccata-preston.mp3",
 					Duration: 0xD0D0,
@@ -108,7 +129,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "toccata-richter.mp3",
 					Duration: 0xD0D0,
@@ -138,21 +160,24 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "spring-1.mp3",
 					Duration: 196,
 				},
 			},
 			{
-				MovementIndex: 1,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "spring-2.mp3",
 					Duration: 163,
 				},
 			},
 			{
-				MovementIndex: 2,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "spring-3.mp3",
 					Duration: 286,
@@ -183,21 +208,24 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "summer-1.mp3",
 					Duration: 375,
 				},
 			},
 			{
-				MovementIndex: 1,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "summer-2.mp3",
 					Duration: 164,
 				},
 			},
 			{
-				MovementIndex: 2,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "summer-3.mp3",
 					Duration: 185,
@@ -228,21 +256,24 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "autumn-1.mp3",
 					Duration: 316,
 				},
 			},
 			{
-				MovementIndex: 1,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "autumn-2.mp3",
 					Duration: 187,
 				},
 			},
 			{
-				MovementIndex: 2,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "autumn-3.mp3",
 					Duration: 190,
@@ -273,21 +304,24 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "winter-1.mp3",
 					Duration: 217,
 				},
 			},
 			{
-				MovementIndex: 1,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "winter-2.mp3",
 					Duration: 151,
 				},
 			},
 			{
-				MovementIndex: 2,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "winter-3.mp3",
 					Duration: 199,
@@ -313,28 +347,32 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 1,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 2,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 3,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-4.mp3",
 					Duration: 0xD0D0,
@@ -360,28 +398,32 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 1,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 2,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 3,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-4.mp3",
 					Duration: 0xD0D0,
@@ -403,21 +445,24 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "facile-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 1,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "facile-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 2,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "facile-3.mp3",
 					Duration: 0xD0D0,
@@ -439,21 +484,24 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 1,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 2,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-3.mp3",
 					Duration: 0xD0D0,
@@ -475,21 +523,24 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 1,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 2,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-3.mp3",
 					Duration: 0xD0D0,
@@ -515,28 +566,32 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 1,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 2,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 3,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-4.mp3",
 					Duration: 0xD0D0,
@@ -562,28 +617,32 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 1,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 2,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 3,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-4.mp3",
 					Duration: 0xD0D0,
@@ -609,28 +668,32 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 1,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 2,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 3,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-4.mp3",
 					Duration: 0xD0D0,
@@ -652,7 +715,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "furelise-levit.mp3",
 					Duration: 0xD0D0,
@@ -674,7 +738,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "furelise-ugorski.mp3",
 					Duration: 0xD0D0,
@@ -696,7 +761,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "furelise-ashkenazy.mp3",
 					Duration: 0xD0D0,
@@ -718,7 +784,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "nocturne2-pollini.mp3",
 					Duration: 0xD0D0,
@@ -740,7 +807,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "nocturne2-maria-joao-pires.mp3",
 					Duration: 0xD0D0,
@@ -762,7 +830,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "nocturne20.mp3",
 					Duration: 0xD0D0,
@@ -784,28 +853,32 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 1,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 2,
+				MovementIndex: getIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: 3,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-4.mp3",
 					Duration: 0xD0D0,
@@ -827,7 +900,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "ballade1-zimerman.mp3",
 					Duration: 568,
@@ -849,7 +923,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "ballade1-pollini.mp3",
 					Duration: 504,
@@ -871,7 +946,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "liebestraum3.mp3",
 					Duration: 0xD0D0,
@@ -893,7 +969,8 @@ var Recordings = []model.Recording{
 
 		Movements: []model.RecordedMovement{
 			{
-				MovementIndex: 0,
+				MovementIndex: resetIndex(),
+				MovementId: getId(),
 				AudioFile: model.AudioFile{
 					Path: "hungrhap2.mp3",
 					Duration: 0xD0D0,
