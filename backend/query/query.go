@@ -9,20 +9,35 @@ import (
 	_ "embed"
 )
 
-//go:embed sql/composer_by_id.sql
+// --- Queries ---
+
+// Work
+
+//go:embed sql/work/composer_by_id.sql
 var composerByIdQuery string
 
-//go:embed sql/work_by_id.sql
+//go:embed sql/work/work_by_id.sql
 var workByIdQuery string
 
-//go:embed sql/movements_by_id.sql
+//go:embed sql/work/movements_by_id.sql
 var movementsByIdQuery string
 
-//go:embed sql/tempo_markings_by_id.sql
+//go:embed sql/work/tempo_markings_by_id.sql
 var tempoMarkingsByIdQuery string
 
-//go:embed sql/lyrics_by_id.sql
+//go:embed sql/work/lyrics_by_id.sql
 var lyricsByIdQuery string
+
+// Recording
+
+//go:embed sql/recording/recorded_movements.sql
+var recordedMovementsQuery string
+
+//go:embed sql/recording/recording_by_work_id.sql
+var recordingByWorkIdQuery string
+
+//go:embed sql/recording/recording_performers.sql
+var recordingPerformersQuery string
 
 func GetComposerById(db *sql.DB, id int) (model.Composer, error) {
 	rows, err := db.Query(composerByIdQuery, id)
@@ -222,4 +237,10 @@ func queryLyrics(db *sql.DB, workId, movId int) (option.Option[[]string], error)
 	} else {
 		return option.Some(lyrics), nil
 	}
+}
+
+// ---
+
+func queryRecording(db *sql.DB, recId int) (model.Recording, error) {
+
 }

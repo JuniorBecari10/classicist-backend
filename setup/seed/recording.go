@@ -4,8 +4,9 @@ import "shared/model"
 
 var indexCount = 0
 var idCount = 0
+var workId = 1
 
-func getIndex() int {
+func incIndex() int {
 	indexCount++
 	return indexCount
 }
@@ -15,9 +16,18 @@ func resetIndex() int {
 	return indexCount
 }
 
-func getId() int {
+func incId() int {
 	idCount++
 	return idCount
+}
+
+func getWorkId() int {
+	return workId
+}
+
+func incWorkId() int {
+	workId++
+	return workId
 }
 
 var Performers = []model.Performer{
@@ -47,7 +57,7 @@ var Performers = []model.Performer{
 
 var Recordings = []model.Recording{
 	{
-		WorkId: 0,
+		WorkId: getWorkId(),
 		Year: 1963,
 		PhotoPath: "prelude-gould.jpg",
 		
@@ -61,7 +71,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(), // to not need to create another function just to get the id
 				AudioFile: model.AudioFile{
 					Path: "prelude-gould.mp3",
 					Duration: 142,
@@ -70,7 +80,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 0,
+		WorkId: getWorkId(),
 		Year: 1984,
 		PhotoPath: "prelude-andras.jpg",
 		
@@ -84,7 +94,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "prelude-andras.mp3",
 					Duration: 115,
@@ -93,7 +103,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 1,
+		WorkId: incWorkId(),
 		Year: 1988,
 		PhotoPath: "toccata-preston.jpg",
 		
@@ -107,7 +117,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "toccata-preston.mp3",
 					Duration: 0xD0D0,
@@ -116,7 +126,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 1,
+		WorkId: getWorkId(),
 		Year: 1964,
 		PhotoPath: "toccata-richter.jpg",
 		
@@ -130,7 +140,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "toccata-richter.mp3",
 					Duration: 0xD0D0,
@@ -139,7 +149,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 2, // Spring
+		WorkId: incWorkId(), // Spring
 		Year: 1976,
 		PhotoPath: "four-seasons-perlman.jpg",
 
@@ -161,23 +171,23 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "spring-1.mp3",
 					Duration: 196,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "spring-2.mp3",
 					Duration: 163,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "spring-3.mp3",
 					Duration: 286,
@@ -187,7 +197,7 @@ var Recordings = []model.Recording{
 	},
 
 	{
-		WorkId: 3, // Summer
+		WorkId: incWorkId(), // Summer
 		Year: 1976,
 		PhotoPath: "four-seasons-perlman.jpg",
 
@@ -209,23 +219,23 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "summer-1.mp3",
 					Duration: 375,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "summer-2.mp3",
 					Duration: 164,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "summer-3.mp3",
 					Duration: 185,
@@ -235,7 +245,7 @@ var Recordings = []model.Recording{
 	},
 
 	{
-		WorkId: 4, // Autumn
+		WorkId: incWorkId(), // Autumn
 		Year: 1976,
 		PhotoPath: "four-seasons-perlman.jpg",
 
@@ -257,23 +267,23 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "autumn-1.mp3",
 					Duration: 316,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "autumn-2.mp3",
 					Duration: 187,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "autumn-3.mp3",
 					Duration: 190,
@@ -283,7 +293,7 @@ var Recordings = []model.Recording{
 	},
 
 	{
-		WorkId: 5, // Winter
+		WorkId: incWorkId(), // Winter
 		Year: 1976,
 		PhotoPath: "four-seasons-perlman.jpg",
 
@@ -305,23 +315,23 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "winter-1.mp3",
 					Duration: 217,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "winter-2.mp3",
 					Duration: 151,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "winter-3.mp3",
 					Duration: 199,
@@ -330,7 +340,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 6, // Eine kleine Nachtmusik
+		WorkId: incWorkId(), // Eine kleine Nachtmusik
 		Year: 1966,
 		PhotoPath: "eine.jpg",
 
@@ -348,31 +358,31 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-4.mp3",
 					Duration: 0xD0D0,
@@ -381,7 +391,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 7, // Symphony No. 40
+		WorkId: incWorkId(), // Symphony No. 40
 		Year: 1977,
 		PhotoPath: "symp40.jpg",
 
@@ -399,31 +409,31 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-4.mp3",
 					Duration: 0xD0D0,
@@ -432,7 +442,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 8, // Piano Sonata No. 16
+		WorkId: incWorkId(), // Piano Sonata No. 16
 		Year: 2023, // actually it's a live recording from 1956; it was remastered and re-released in 2023
 		PhotoPath: "facile.jpg",
 
@@ -446,23 +456,23 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "facile-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "facile-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "facile-3.mp3",
 					Duration: 0xD0D0,
@@ -471,7 +481,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 9, // Piano Sonata No. 14
+		WorkId: incWorkId(), // Piano Sonata No. 14
 		Year: 1978,
 		PhotoPath: "moonlight-kempff.jpg",
 
@@ -485,23 +495,23 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-3.mp3",
 					Duration: 0xD0D0,
@@ -510,7 +520,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 9, // Piano Sonata No. 14
+		WorkId: incWorkId(), // Piano Sonata No. 14
 		Year: 1963,
 		PhotoPath: "moonlight-rubinstein.jpg",
 
@@ -524,23 +534,23 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-3.mp3",
 					Duration: 0xD0D0,
@@ -549,7 +559,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 10, // Symphony No. 5
+		WorkId: incWorkId(), // Symphony No. 5
 		Year: 1984,
 		PhotoPath: "symp5.jpg",
 
@@ -567,31 +577,31 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-4.mp3",
 					Duration: 0xD0D0,
@@ -600,7 +610,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 11, // Symphony No. 7
+		WorkId: incWorkId(), // Symphony No. 7
 		Year: 2020,
 		PhotoPath: "symp7.jpg",
 
@@ -618,31 +628,31 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-4.mp3",
 					Duration: 0xD0D0,
@@ -651,7 +661,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 12, // Symphony No. 9
+		WorkId: incWorkId(), // Symphony No. 9
 		Year: 1984,
 		PhotoPath: "symp9.jpg",
 
@@ -669,31 +679,31 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-3.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-4.mp3",
 					Duration: 0xD0D0,
@@ -702,7 +712,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 13, // Fur Elise
+		WorkId: incWorkId(), // Fur Elise
 		Year: 2015,
 		PhotoPath: "furelise-levit.jpg",
 
@@ -716,7 +726,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "furelise-levit.mp3",
 					Duration: 0xD0D0,
@@ -725,7 +735,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 13, // Fur Elise
+		WorkId: getWorkId(), // Fur Elise
 		Year: 2025,
 		PhotoPath: "furelise-ugorski.jpg",
 
@@ -739,7 +749,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "furelise-ugorski.mp3",
 					Duration: 0xD0D0,
@@ -748,7 +758,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 13, // Fur Elise
+		WorkId: getWorkId(), // Fur Elise
 		Year: 1984,
 		PhotoPath: "furelise-ashkenazy.jpg",
 
@@ -762,7 +772,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "furelise-ashkenazy.mp3",
 					Duration: 0xD0D0,
@@ -771,7 +781,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 14, // Nocturne No. 2
+		WorkId: incWorkId(), // Nocturne No. 2
 		Year: 2005,
 		PhotoPath: "nocturne2-pollini.jpg",
 
@@ -785,7 +795,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "nocturne2-pollini.mp3",
 					Duration: 0xD0D0,
@@ -794,7 +804,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 14, // Nocturne No. 2
+		WorkId: getWorkId(), // Nocturne No. 2
 		Year: 1996,
 		PhotoPath: "nocturne2-maria-joao-pires.jpg",
 
@@ -808,7 +818,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "nocturne2-maria-joao-pires.mp3",
 					Duration: 0xD0D0,
@@ -817,7 +827,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 15, // Nocturne No. 20
+		WorkId: incWorkId(), // Nocturne No. 20
 		Year: 1996,
 		PhotoPath: "nocturne20.jpg",
 
@@ -831,7 +841,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "nocturne20.mp3",
 					Duration: 0xD0D0,
@@ -840,7 +850,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 16, // Piano Sonata No. 2
+		WorkId: incWorkId(), // Piano Sonata No. 2
 		Year: 2023,
 		PhotoPath: "sonata2.jpg",
 
@@ -854,23 +864,23 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-1.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-2.mp3",
 					Duration: 0xD0D0,
 				},
 			},
 			{
-				MovementIndex: getIndex(),
-				MovementId: getId(),
+				MovementIndex: incIndex(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-3.mp3",
 					Duration: 0xD0D0,
@@ -878,7 +888,7 @@ var Recordings = []model.Recording{
 			},
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-4.mp3",
 					Duration: 0xD0D0,
@@ -887,7 +897,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 17, // Ballade No. 1
+		WorkId: incWorkId(), // Ballade No. 1
 		Year: 1988,
 		PhotoPath: "ballade1-zimerman.jpg",
 
@@ -901,7 +911,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "ballade1-zimerman.mp3",
 					Duration: 568,
@@ -910,7 +920,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 17, // Ballade No. 1
+		WorkId: getWorkId(), // Ballade No. 1
 		Year: 1999,
 		PhotoPath: "ballade1-pollini.jpg",
 
@@ -924,7 +934,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "ballade1-pollini.mp3",
 					Duration: 504,
@@ -933,7 +943,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 18, // Liebestraum No. 3
+		WorkId: incWorkId(), // Liebestraum No. 3
 		Year: 2011,
 		PhotoPath: "liebestraum3.jpg",
 
@@ -947,7 +957,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "liebestraum3.mp3",
 					Duration: 0xD0D0,
@@ -956,7 +966,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: 19, // Hungarian Rhapsody No. 2
+		WorkId: incWorkId(), // Hungarian Rhapsody No. 2
 		Year: 2001,
 		PhotoPath: "hungrhap2.jpg",
 
@@ -970,7 +980,7 @@ var Recordings = []model.Recording{
 		Movements: []model.RecordedMovement{
 			{
 				MovementIndex: resetIndex(),
-				MovementId: getId(),
+				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "hungrhap2.mp3",
 					Duration: 0xD0D0,
