@@ -105,7 +105,7 @@ func writeRecordingPerformers(recPerfs []model.RecordingPerformer, performers []
 
 	total := len(recPerfs)
 	for i, rp := range recPerfs {
-		b.WriteString(writeRecordingPerformer(rp, recordingId, performers))
+		b.WriteString(writeRecordingPerformer(rp, performers, recordingId))
 
 		if i < total - 1 {
 			b.WriteByte(',')
@@ -117,7 +117,7 @@ func writeRecordingPerformers(recPerfs []model.RecordingPerformer, performers []
 	return b.String()
 }
 
-func writeRecordingPerformer(rp model.RecordingPerformer, recordingId int, performers []model.Performer) string {
+func writeRecordingPerformer(rp model.RecordingPerformer, performers []model.Performer, recordingId int) string {
 	return fmt.Sprintf("(%d, %d, %s)",
 		recordingId,
 		slices.Index(performers, rp.Performer) + 1, // assumes it's not -1
