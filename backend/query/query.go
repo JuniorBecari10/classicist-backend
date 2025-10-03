@@ -275,6 +275,13 @@ func queryRecordingDetails(db *sql.DB, rec *model.Recording) error {
 	}
 
 	rec.Movements = recMovs
+
+	recPerfs, err := queryRecordingPerformers(db, rec)
+	if err != nil {
+		return err
+	}
+
+	rec.Performers = recPerfs
 	return nil
 }
 
@@ -291,10 +298,10 @@ func queryRecordedMovements(db *sql.DB, rec *model.Recording) ([]model.RecordedM
 	for rows.Next() {
 		var (
 			recMov model.RecordedMovement
-			movId int // unused
+			recId int // unused
 		)
 
-		if err := rows.Scan(&recMov.Id, &recMov.MovementId, &movId, &recMov.AudioFile.Path, &recMov.AudioFile.Duration); err != nil {
+		if err := rows.Scan(&recMov.Id, &recMov.MovementId, &recId, &recMov.AudioFile.Path, &recMov.AudioFile.Duration); err != nil {
 			return nil, err
 		}
 
@@ -302,4 +309,30 @@ func queryRecordedMovements(db *sql.DB, rec *model.Recording) ([]model.RecordedM
 	}
 
 	return recMovs, nil
+}
+
+// in/out parameter
+func queryRecordingPerformers(db *sql.DB, rec *model.Recording) ([]model.RecordingPerformer, error) {
+	rows, err := db.Query(recordingPerformersQuery, rec.Id)
+	if err != nil {
+		return nil, err
+	}
+
+	defer rows.Close()
+	recPerfs := []model.RecordingPerformer{}
+
+	for rows.Next() {
+		var (
+			recPerf model.RecordingPerformer
+			recId int // unused
+		)
+
+		if err := rows.Scan(&recPerf.Id, &recId, &recPerf.Performer.Id, &recPerf.Role); err != nil {
+			return nil, err
+		}
+
+		recPerfs = append(recPerfs, recPerf)
+	}
+
+	return recPerfs, nil
 }
