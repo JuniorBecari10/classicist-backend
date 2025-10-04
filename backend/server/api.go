@@ -21,9 +21,10 @@ func setupApi(app *fiber.App) {
 
 	getById(api, "composer", "Composer", query.GetComposerById)
 	getById(api, "work", "Work", query.GetWorkById)
+	getById(api, "recbywork", "Recording", query.GetRecordingsByWorkId)
 }
 
-func getById[W any](api fiber.Router, route, what string, getFn func (*sql.DB, int) (W, error)) fiber.Router {
+func getById[W any](api fiber.Router, route, what string, query func (*sql.DB, int) (W, error)) fiber.Router {
 	return api.Get(fmt.Sprintf("/%s/:id", route), func (c *fiber.Ctx) error {
 		id, err := c.ParamsInt("id")
 		if err != nil {
@@ -39,7 +40,7 @@ func getById[W any](api fiber.Router, route, what string, getFn func (*sql.DB, i
 			})
 		}
 
-		it, err := getFn(db, id)
+		it, err := query(db, id)
 		if err != nil {
 			log.Println(err)
 			return c.Status(fiber.StatusNotFound).JSON(fiber.Map{

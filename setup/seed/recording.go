@@ -520,7 +520,7 @@ var Recordings = []model.Recording{
 		},
 	},
 	{
-		WorkId: incWorkId(), // Piano Sonata No. 14
+		WorkId: getWorkId(), // Piano Sonata No. 14
 		Year: 1963,
 		PhotoPath: "moonlight-rubinstein.jpg",
 
