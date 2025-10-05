@@ -2,11 +2,12 @@ package query
 
 import (
 	"database/sql"
+	"errors"
 	"fmt"
 	"shared/model"
 
-	"shared/option"
 	_ "embed"
+	"shared/option"
 )
 
 // --- Queries ---
@@ -27,13 +28,6 @@ var tempoMarkingsByIdQuery string
 var lyricsByIdQuery string
 
 func GetComposerById(db *sql.DB, id int) (model.Composer, error) {
-	rows, err := db.Query(composerByIdQuery, id)
-	if err != nil {
-		return model.Composer{}, err
-	}
-
-	defer rows.Close()
-
 	var (
 		composer model.Composer
 		deathYear sql.NullInt64
@@ -54,13 +48,6 @@ func GetComposerById(db *sql.DB, id int) (model.Composer, error) {
 }
 
 func GetWorkById(db *sql.DB, id int) (model.Work, error) {
-	rows, err := db.Query(composerByIdQuery, id)
-	if err != nil {
-		return model.Work{}, err
-	}
-
-	defer rows.Close()
-
 	work, err := queryWork(db, id)
 	if err != nil {
 		return model.Work{}, err
@@ -167,7 +154,11 @@ func queryMovements(db *sql.DB, id int) ([]model.Movement, error) {
 		movements = append(movements, mov)
 	}
 
-	return movements, nil
+	if len(movements) == 0 {
+		return nil, errors.New("Movements not found")
+	} else {
+		return movements, nil
+	}
 }
 
 func queryTempoMarkings(db *sql.DB, workId, movId int) ([]model.TempoMarking, error) {
@@ -194,9 +185,14 @@ func queryTempoMarkings(db *sql.DB, workId, movId int) ([]model.TempoMarking, er
 		tempos = append(tempos, tempo)
 	}
 
-	return tempos, nil
+	if len(tempos) == 0 {
+		return nil, errors.New("Tempo markings not found")
+	} else {
+		return tempos, nil
+	}
 }
 
+// this one can return no lyrics, because it's an optional list
 func queryLyrics(db *sql.DB, workId, movId int) (option.Option[[]string], error) {
 	rows, err := db.Query(lyricsByIdQuery, workId, movId)
 	if err != nil {

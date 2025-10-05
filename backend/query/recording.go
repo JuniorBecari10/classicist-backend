@@ -35,6 +35,10 @@ func GetRecordingsByWorkId(db *sql.DB, workId int) ([]model.Recording, error) {
 		var rec model.Recording
 
 		if err := rows.Scan(&rec.Id, &rec.WorkId, &rec.Year, &rec.PhotoPath); err != nil {
+			if err == sql.ErrNoRows {
+				return nil, fmt.Errorf("Recording not found")
+			}
+			
 			return nil, err
 		}
 
@@ -46,7 +50,11 @@ func GetRecordingsByWorkId(db *sql.DB, workId int) ([]model.Recording, error) {
 		recs = append(recs, rec)
 	}
 
-	return recs, nil
+	if len(recs) == 0 {
+		return nil, fmt.Errorf("Recording not found")
+	} else {
+		return recs, nil
+	}
 }
 
 func queryRecordingDetails(db *sql.DB, rec *model.Recording) error {
@@ -83,13 +91,21 @@ func queryRecordedMovements(db *sql.DB, rec *model.Recording) ([]model.RecordedM
 		)
 
 		if err := rows.Scan(&recMov.Id, &recMov.MovementId, &recId, &recMov.AudioFile.Path, &recMov.AudioFile.Duration); err != nil {
+			if err == sql.ErrNoRows {
+				return nil, fmt.Errorf("Recorded movements not found")
+			}
+			
 			return nil, err
 		}
 
 		recMovs = append(recMovs, recMov)
 	}
 
-	return recMovs, nil
+	if len(recMovs) == 0 {
+		return nil, fmt.Errorf("Recorded movements not found")
+	} else {
+		return recMovs, nil
+	}
 }
 
 // in/out parameter
@@ -109,6 +125,10 @@ func queryRecordingPerformers(db *sql.DB, rec *model.Recording) ([]model.Recordi
 		)
 
 		if err := rows.Scan(&recPerf.Id, &recId, &recPerf.Performer.Id, &recPerf.Role); err != nil {
+			if err == sql.ErrNoRows {
+				return nil, fmt.Errorf("Recorded performers not found")
+			}
+			
 			return nil, err
 		}
 
@@ -121,7 +141,11 @@ func queryRecordingPerformers(db *sql.DB, rec *model.Recording) ([]model.Recordi
 		recPerfs = append(recPerfs, recPerf)
 	}
 
-	return recPerfs, nil
+	if len(recPerfs) == 0 {
+		return nil, fmt.Errorf("Recorded performers not found")
+	} else {
+		return recPerfs, nil
+	}
 }
 
 func queryPerformer(db *sql.DB, id int) (model.Performer, error) {
@@ -130,7 +154,7 @@ func queryPerformer(db *sql.DB, id int) (model.Performer, error) {
 	var perf model.Performer
 	if err := row.Scan(&perf.Id, &perf.Name); err != nil {
 		if err == sql.ErrNoRows {
-			return model.Performer{}, fmt.Errorf("Composer not found")
+			return model.Performer{}, fmt.Errorf("Performer not found")
 		}
 
 		return model.Performer{}, err

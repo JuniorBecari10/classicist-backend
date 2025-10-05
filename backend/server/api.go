@@ -19,15 +19,16 @@ func setupApi(app *fiber.App) {
 		return c.SendString("Start")
 	})
 
-	getById(api, "composer", "Composer", query.GetComposerById)
-	getById(api, "work", "Work", query.GetWorkById)
-	getById(api, "recbywork", "Recording", query.GetRecordingsByWorkId)
+	apiEndpoint(api, "composer", "Composer", query.GetComposerById)
+	apiEndpoint(api, "work", "Work", query.GetWorkById)
+	apiEndpoint(api, "recbywork", "Recording", query.GetRecordingsByWorkId)
 }
 
-func getById[W any](api fiber.Router, route, what string, query func (*sql.DB, int) (W, error)) fiber.Router {
+func apiEndpoint[W any](api fiber.Router, route, what string, query func (*sql.DB, int) (W, error)) fiber.Router {
 	return api.Get(fmt.Sprintf("/%s/:id", route), func (c *fiber.Ctx) error {
 		id, err := c.ParamsInt("id")
 		if err != nil {
+			log.Println(err)
 			return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{
 				"error": "Invalid ID",
 			})
@@ -35,12 +36,14 @@ func getById[W any](api fiber.Router, route, what string, query func (*sql.DB, i
 
 		db, err := database.GetDatabaseConnection()
 		if err != nil {
+			log.Println(err)
 			return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 				"error": "Cannot connect to database",
 			})
 		}
 
 		it, err := query(db, id)
+		log.Println(err)
 		if err != nil {
 			log.Println(err)
 			return c.Status(fiber.StatusNotFound).JSON(fiber.Map{
