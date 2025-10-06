@@ -23,14 +23,13 @@ func setupApi(app *fiber.App) {
 	apiEndpoint(api, "work", "Work", query.GetWorkById)
 	apiEndpoint(api, "recbywork", "Recording", query.GetRecordingsByWorkId)
 
-	api.Get("/search/:term", searchEndpoint)
+	api.Get("/search", searchEndpoint)
 }
 
 func apiEndpoint[W any](api fiber.Router, route, what string, query func (*sql.DB, int) (W, error)) fiber.Router {
 	return api.Get(fmt.Sprintf("/%s/:id", route), func (c *fiber.Ctx) error {
-		id, err := c.ParamsInt("id")
-		if err != nil {
-			log.Println(err)
+		id := c.QueryInt("id", -1)
+		if id < 0 {
 			return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{
 				"error": "Invalid ID",
 			})
@@ -58,7 +57,7 @@ func apiEndpoint[W any](api fiber.Router, route, what string, query func (*sql.D
 }
 
 func searchEndpoint(c *fiber.Ctx) error {
-	term := c.Params("term")
+	term := c.Query("q")
 
 	db, err := database.GetDatabaseConnection()
 	if err != nil {

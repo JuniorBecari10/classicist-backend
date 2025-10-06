@@ -1,4 +1,4 @@
-SELECT * FROM works
+SELECT id FROM works
 WHERE
     LOWER(
         COALESCE(title_kind, '') || ' ' ||
