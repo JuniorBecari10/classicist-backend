@@ -65,7 +65,7 @@ func searchWorks(db *sql.DB, term string) ([]model.SearchResult, error) {
 
 	// use the list of IDs to properly query each work
 	for _, id := range filtered {
-		work, err := GetWorkById(db, id)
+		work, err := QueryWork(db, id)
 		if err != nil {
 			return nil, err
 		}

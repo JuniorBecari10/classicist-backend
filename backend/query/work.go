@@ -12,28 +12,28 @@ import (
 
 // --- Queries ---
 
-//go:embed sql/work/composer_by_id.sql
-var composerByIdQuery string
+//go:embed sql/work/composer.sql
+var composerQuery string
 
-//go:embed sql/work/work_by_id.sql
-var workByIdQuery string
+//go:embed sql/work/work.sql
+var workQuery string
 
-//go:embed sql/work/movements_by_id.sql
-var movementsByIdQuery string
+//go:embed sql/work/movements.sql
+var movementsQuery string
 
-//go:embed sql/work/tempo_markings_by_id.sql
-var tempoMarkingsByIdQuery string
+//go:embed sql/work/tempo_markings.sql
+var tempoMarkingsQuery string
 
-//go:embed sql/work/lyrics_by_id.sql
-var lyricsByIdQuery string
+//go:embed sql/work/lyrics.sql
+var lyricsQuery string
 
-func GetComposerById(db *sql.DB, id int) (model.Composer, error) {
+func QueryComposer(db *sql.DB, id int) (model.Composer, error) {
 	var (
 		composer model.Composer
 		deathYear sql.NullInt64
 	)
 
-	row := db.QueryRow(composerByIdQuery, id)
+	row := db.QueryRow(composerQuery, id)
 	
 	if err := row.Scan(&composer.Id, &composer.Name, &composer.BirthYear, &deathYear, &composer.PhotoPath); err != nil {
 		if err == sql.ErrNoRows {
@@ -47,7 +47,7 @@ func GetComposerById(db *sql.DB, id int) (model.Composer, error) {
 	return composer, nil
 }
 
-func GetWorkById(db *sql.DB, id int) (model.Work, error) {
+func QueryWork(db *sql.DB, id int) (model.Work, error) {
 	work, err := queryWork(db, id)
 	if err != nil {
 		return model.Work{}, err
@@ -78,7 +78,7 @@ func queryWork(db *sql.DB, id int) (model.Work, error) {
 		compositionEndYear sql.NullInt32
 	)
 
-	row := db.QueryRow(workByIdQuery, id)
+	row := db.QueryRow(workQuery, id)
 
 	if err := row.Scan(
 		&work.Id, &work.Title.Kind, &titleNumber, &titleNickname,
@@ -99,7 +99,7 @@ func queryWork(db *sql.DB, id int) (model.Work, error) {
 	work.Catalog.Subnumber = option.FromSQL(catalogSubnumber.String, catalogSubnumber.Valid)
 	work.Year.EndYear = option.FromSQL(int(compositionEndYear.Int32), compositionEndYear.Valid)
 
-	composer, err := GetComposerById(db, composerId)
+	composer, err := QueryComposer(db, composerId)
 	if err != nil {
 		return model.Work{}, err
 	}
@@ -109,7 +109,7 @@ func queryWork(db *sql.DB, id int) (model.Work, error) {
 }
 
 func queryMovements(db *sql.DB, id int) ([]model.Movement, error) {
-	rows, err := db.Query(movementsByIdQuery, id)
+	rows, err := db.Query(movementsQuery, id)
 	if err != nil {
 		return nil, err
 	}
@@ -160,7 +160,7 @@ func queryMovements(db *sql.DB, id int) ([]model.Movement, error) {
 }
 
 func queryTempoMarkings(db *sql.DB, workId, movId int) ([]model.TempoMarking, error) {
-	rows, err := db.Query(tempoMarkingsByIdQuery, workId, movId)
+	rows, err := db.Query(tempoMarkingsQuery, workId, movId)
 	if err != nil {
 		return nil, err
 	}
@@ -192,7 +192,7 @@ func queryTempoMarkings(db *sql.DB, workId, movId int) ([]model.TempoMarking, er
 
 // this one can return no lyrics, because it's an optional list
 func queryLyrics(db *sql.DB, workId, movId int) (option.Option[[]string], error) {
-	rows, err := db.Query(lyricsByIdQuery, workId, movId)
+	rows, err := db.Query(lyricsQuery, workId, movId)
 	if err != nil {
 		return option.Option[[]string]{}, err
 	}

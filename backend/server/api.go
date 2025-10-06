@@ -19,15 +19,16 @@ func setupApi(app *fiber.App) {
 		return c.SendString("Start")
 	})
 
-	apiEndpoint(api, "composer", "Composer", query.GetComposerById)
-	apiEndpoint(api, "work", "Work", query.GetWorkById)
-	apiEndpoint(api, "recbywork", "Recording", query.GetRecordingsByWorkId)
+	apiEndpoint(api, "composer", "Composer", query.QueryComposer)
+	apiEndpoint(api, "work", "Work", query.QueryWork)
+	apiEndpoint(api, "performer", "Performer", query.QueryPerformer)
+	apiEndpoint(api, "recsforwork", "Recording", query.QueryRecordingsForWork)
 
 	api.Get("/search", searchEndpoint)
 }
 
 func apiEndpoint[W any](api fiber.Router, route, what string, query func (*sql.DB, int) (W, error)) fiber.Router {
-	return api.Get(fmt.Sprintf("/%s/:id", route), func (c *fiber.Ctx) error {
+	return api.Get(fmt.Sprintf("/%s", route), func (c *fiber.Ctx) error {
 		id := c.QueryInt("id", -1)
 		if id < 0 {
 			return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{
@@ -44,7 +45,6 @@ func apiEndpoint[W any](api fiber.Router, route, what string, query func (*sql.D
 		}
 
 		it, err := query(db, id)
-		log.Println(err)
 		if err != nil {
 			log.Println(err)
 			return c.Status(fiber.StatusNotFound).JSON(fiber.Map{

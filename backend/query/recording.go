@@ -13,16 +13,16 @@ import (
 //go:embed sql/recording/recorded_movements.sql
 var recordedMovementsQuery string
 
-//go:embed sql/recording/recordings_by_work_id.sql
+//go:embed sql/recording/recordings_for_work.sql
 var recordingsByWorkIdQuery string
 
 //go:embed sql/recording/recording_performers.sql
 var recordingPerformersQuery string
 
-//go:embed sql/recording/performer_by_id.sql
+//go:embed sql/recording/performer.sql
 var performerQuery string
 
-func GetRecordingsByWorkId(db *sql.DB, workId int) ([]model.Recording, error) {
+func QueryRecordingsForWork(db *sql.DB, workId int) ([]model.Recording, error) {
 	rows, err := db.Query(recordingsByWorkIdQuery, workId)
 	if err != nil {
 		return nil, err
@@ -132,7 +132,7 @@ func queryRecordingPerformers(db *sql.DB, rec *model.Recording) ([]model.Recordi
 			return nil, err
 		}
 
-		perf, err := queryPerformer(db, recPerf.Performer.Id)
+		perf, err := QueryPerformer(db, recPerf.Performer.Id)
 		if err != nil {
 			return nil, err
 		}
@@ -148,7 +148,7 @@ func queryRecordingPerformers(db *sql.DB, rec *model.Recording) ([]model.Recordi
 	}
 }
 
-func queryPerformer(db *sql.DB, id int) (model.Performer, error) {
+func QueryPerformer(db *sql.DB, id int) (model.Performer, error) {
 	row := db.QueryRow(performerQuery, id)
 
 	var perf model.Performer
