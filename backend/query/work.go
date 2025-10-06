@@ -64,8 +64,6 @@ func GetWorkById(db *sql.DB, id int) (model.Work, error) {
 
 // ---
 
-// it will be incomplete. complete it using another function.
-// remaining field: Movements
 func queryWork(db *sql.DB, id int) (model.Work, error) {
 	var (
 		work model.Work
