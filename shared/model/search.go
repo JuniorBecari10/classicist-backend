@@ -1,44 +1,39 @@
 package model
 
-import (
-	"encoding/json"
-)
+type SearchItem interface {
+	search()
+}
 
-type SearchResult interface {
-	MarshalJSON() ([]byte, error)
+type SearchResult struct {
+	Type string `json:"type"`
+	Data SearchItem `json:"data"`
 }
 
 // ---
 
-func (w Work) MarshalJSON() ([]byte, error) {
-	type Content Work
-	return json.Marshal(&struct {
-		Type string `json:"type"`
-		Content
-	}{
+func NewWorkSR(w Work) SearchResult {
+	return SearchResult{
 		Type: "work",
-		Content: Content(w),
-	})
+		Data: w,
+	}
 }
 
-func (c Composer) MarshalJSON() ([]byte, error) {
-	type Content Composer
-	return json.Marshal(&struct {
-		Type string `json:"type"`
-		Content
-	}{
+func NewComposerSR(c Composer) SearchResult {
+	return SearchResult{
 		Type: "composer",
-		Content: Content(c),
-	})
+		Data: c,
+	}
 }
 
-func (p Performer) MarshalJSON() ([]byte, error) {
-	type Content Performer
-	return json.Marshal(&struct {
-		Type string `json:"type"`
-		Content
-	}{
+func NewPerformerSR(p Performer) SearchResult {
+	return SearchResult{
 		Type: "performer",
-		Content: Content(p),
-	})
+		Data: p,
+	}
 }
+
+// ---
+
+func (x Work) search() { }
+func (x Composer) search() { }
+func (x Performer) search() { }

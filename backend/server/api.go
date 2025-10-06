@@ -22,6 +22,8 @@ func setupApi(app *fiber.App) {
 	apiEndpoint(api, "composer", "Composer", query.GetComposerById)
 	apiEndpoint(api, "work", "Work", query.GetWorkById)
 	apiEndpoint(api, "recbywork", "Recording", query.GetRecordingsByWorkId)
+
+	api.Get("/search/:term", searchEndpoint)
 }
 
 func apiEndpoint[W any](api fiber.Router, route, what string, query func (*sql.DB, int) (W, error)) fiber.Router {
@@ -53,4 +55,26 @@ func apiEndpoint[W any](api fiber.Router, route, what string, query func (*sql.D
 
 		return c.JSON(it)
 	})
+}
+
+func searchEndpoint(c *fiber.Ctx) error {
+	term := c.Params("term")
+
+	db, err := database.GetDatabaseConnection()
+	if err != nil {
+		log.Println(err)
+		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
+			"error": "Cannot connect to database",
+		})
+	}
+
+	results, err := query.SearchDatabase(db, term)
+	if err != nil {
+		log.Println(err)
+		return c.Status(fiber.StatusNotFound).JSON(fiber.Map{
+			"error": "Cannot get search results",
+		})
+	}
+
+	return c.JSON(results)
 }
