@@ -120,7 +120,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "toccata-preston.mp3",
-					Duration: 0xD0D0,
+					Duration: 506,
 				},
 			},
 		},
@@ -143,7 +143,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "toccata-richter.mp3",
-					Duration: 0xD0D0,
+					Duration: 535,
 				},
 			},
 		},
@@ -222,7 +222,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "summer-1.mp3",
-					Duration: 375,
+					Duration: 376,
 				},
 			},
 			{
@@ -278,7 +278,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "autumn-2.mp3",
-					Duration: 187,
+					Duration: 186,
 				},
 			},
 			{
@@ -286,7 +286,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "autumn-3.mp3",
-					Duration: 190,
+					Duration: 189,
 				},
 			},
 		},
@@ -361,7 +361,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-1.mp3",
-					Duration: 0xD0D0,
+					Duration: 336,
 				},
 			},
 			{
@@ -369,7 +369,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-2.mp3",
-					Duration: 0xD0D0,
+					Duration: 330,
 				},
 			},
 			{
@@ -377,7 +377,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-3.mp3",
-					Duration: 0xD0D0,
+					Duration: 229,
 				},
 			},
 			{
@@ -385,7 +385,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-4.mp3",
-					Duration: 0xD0D0,
+					Duration: 200,
 				},
 			},
 		},
@@ -412,7 +412,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-1.mp3",
-					Duration: 0xD0D0,
+					Duration: 440,
 				},
 			},
 			{
@@ -420,7 +420,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-2.mp3",
-					Duration: 0xD0D0,
+					Duration: 466,
 				},
 			},
 			{
@@ -428,7 +428,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-3.mp3",
-					Duration: 0xD0D0,
+					Duration: 278,
 				},
 			},
 			{
@@ -436,14 +436,14 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-4.mp3",
-					Duration: 0xD0D0,
+					Duration: 279,
 				},
 			},
 		},
 	},
 	{
 		WorkId: incWorkId(), // Piano Sonata No. 16
-		Year: 2023, // actually it's a live recording from 1956; it was remastered and re-released in 2023
+		Year: 2023,
 		PhotoPath: "facile.jpg",
 
 		Performers: []model.RecordingPerformer{
@@ -459,7 +459,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "facile-1.mp3",
-					Duration: 0xD0D0,
+					Duration: 178,
 				},
 			},
 			{
@@ -467,7 +467,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "facile-2.mp3",
-					Duration: 0xD0D0,
+					Duration: 322,
 				},
 			},
 			{
@@ -475,7 +475,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "facile-3.mp3",
-					Duration: 0xD0D0,
+					Duration: 102,
 				},
 			},
 		},
@@ -498,7 +498,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-1.mp3",
-					Duration: 0xD0D0,
+					Duration: 545,
 				},
 			},
 			{
@@ -506,7 +506,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-2.mp3",
-					Duration: 0xD0D0,
+					Duration: 139,
 				},
 			},
 			{
@@ -514,7 +514,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-3.mp3",
-					Duration: 0xD0D0,
+					Duration: 336,
 				},
 			},
 		},
@@ -537,7 +537,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-1.mp3",
-					Duration: 0xD0D0,
+					Duration: 377,
 				},
 			},
 			{
@@ -545,7 +545,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-2.mp3",
-					Duration: 0xD0D0,
+					Duration: 159,
 				},
 			},
 			{
@@ -553,7 +553,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-3.mp3",
-					Duration: 0xD0D0,
+					Duration: 398,
 				},
 			},
 		},
@@ -580,7 +580,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-1.mp3",
-					Duration: 0xD0D0,
+					Duration: 442,
 				},
 			},
 			{
@@ -588,7 +588,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-2.mp3",
-					Duration: 0xD0D0,
+					Duration: 561,
 				},
 			},
 			{
@@ -596,7 +596,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-3.mp3",
-					Duration: 0xD0D0,
+					Duration: 289,
 				},
 			},
 			{
@@ -604,7 +604,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-4.mp3",
-					Duration: 0xD0D0,
+					Duration: 523,
 				},
 			},
 		},
@@ -631,7 +631,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-1.mp3",
-					Duration: 0xD0D0,
+					Duration: 811,
 				},
 			},
 			{
@@ -639,7 +639,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-2.mp3",
-					Duration: 0xD0D0,
+					Duration: 461,
 				},
 			},
 			{
@@ -647,7 +647,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-3.mp3",
-					Duration: 0xD0D0,
+					Duration: 508,
 				},
 			},
 			{
@@ -655,7 +655,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-4.mp3",
-					Duration: 0xD0D0,
+					Duration: 481,
 				},
 			},
 		},
@@ -682,7 +682,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-1.mp3",
-					Duration: 0xD0D0,
+					Duration: 936,
 				},
 			},
 			{
@@ -690,7 +690,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-2.mp3",
-					Duration: 0xD0D0,
+					Duration: 626,
 				},
 			},
 			{
@@ -698,7 +698,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-3.mp3",
-					Duration: 0xD0D0,
+					Duration: 954,
 				},
 			},
 			{
@@ -706,7 +706,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-4.mp3",
-					Duration: 0xD0D0,
+					Duration: 1458,
 				},
 			},
 		},
@@ -729,7 +729,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "furelise-levit.mp3",
-					Duration: 0xD0D0,
+					Duration: 222,
 				},
 			},
 		},
@@ -752,7 +752,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "furelise-ugorski.mp3",
-					Duration: 0xD0D0,
+					Duration: 239,
 				},
 			},
 		},
@@ -775,7 +775,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "furelise-ashkenazy.mp3",
-					Duration: 0xD0D0,
+					Duration: 184,
 				},
 			},
 		},
@@ -798,7 +798,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "nocturne2-pollini.mp3",
-					Duration: 0xD0D0,
+					Duration: 242,
 				},
 			},
 		},
@@ -821,7 +821,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "nocturne2-maria-joao-pires.mp3",
-					Duration: 0xD0D0,
+					Duration: 269,
 				},
 			},
 		},
@@ -844,7 +844,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "nocturne20.mp3",
-					Duration: 0xD0D0,
+					Duration: 242,
 				},
 			},
 		},
@@ -867,7 +867,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-1.mp3",
-					Duration: 0xD0D0,
+					Duration: 436,
 				},
 			},
 			{
@@ -875,7 +875,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-2.mp3",
-					Duration: 0xD0D0,
+					Duration: 374,
 				},
 			},
 			{
@@ -883,7 +883,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-3.mp3",
-					Duration: 0xD0D0,
+					Duration: 514,
 				},
 			},
 			{
@@ -891,7 +891,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-4.mp3",
-					Duration: 0xD0D0,
+					Duration: 93,
 				},
 			},
 		},
@@ -960,7 +960,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "liebestraum3.mp3",
-					Duration: 0xD0D0,
+					Duration: 293,
 				},
 			},
 		},
@@ -983,7 +983,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "hungrhap2.mp3",
-					Duration: 0xD0D0,
+					Duration: 612,
 				},
 			},
 		},
