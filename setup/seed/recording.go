@@ -40,7 +40,6 @@ var Performers = []model.Performer{
 	{ Name: "London Philharmonic Orchestra" },
 	{ Name: "Herbert von Karajan" },
 	{ Name: "Berliner Philharmoniker" },
-	{ Name: "Sviatoslav Richter" },
 	{ Name: "Wilhelm Kempff" },
 	{ Name: "Arthur Rubinstein" },
 	{ Name: "Kirill Petrenko" },
@@ -278,7 +277,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "autumn-2.mp3",
-					Duration: 186,
+					Duration: 179,
 				},
 			},
 			{
@@ -361,7 +360,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-1.mp3",
-					Duration: 336,
+					Duration: 333,
 				},
 			},
 			{
@@ -369,7 +368,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-2.mp3",
-					Duration: 330,
+					Duration: 326,
 				},
 			},
 			{
@@ -377,7 +376,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-3.mp3",
-					Duration: 229,
+					Duration: 146,
 				},
 			},
 			{
@@ -385,7 +384,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-4.mp3",
-					Duration: 200,
+					Duration: 195,
 				},
 			},
 		},
@@ -459,7 +458,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "facile-1.mp3",
-					Duration: 178,
+					Duration: 176,
 				},
 			},
 			{
@@ -467,7 +466,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "facile-2.mp3",
-					Duration: 322,
+					Duration: 319,
 				},
 			},
 			{
@@ -475,7 +474,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "facile-3.mp3",
-					Duration: 102,
+					Duration: 98,
 				},
 			},
 		},
@@ -972,7 +971,7 @@ var Recordings = []model.Recording{
 
 		Performers: []model.RecordingPerformer{
 			{
-				Performer: Performers[21],
+				Performer: Performers[20],
 				Role: "Pianist",
 			},
 		},
