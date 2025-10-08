@@ -150,7 +150,7 @@ var Recordings = []model.Recording{
 	{
 		WorkId: incWorkId(), // Spring
 		Year: 1976,
-		PhotoPath: "four-seasons-perlman.jpg",
+		PhotoPath: "four-seasons.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
@@ -198,7 +198,7 @@ var Recordings = []model.Recording{
 	{
 		WorkId: incWorkId(), // Summer
 		Year: 1976,
-		PhotoPath: "four-seasons-perlman.jpg",
+		PhotoPath: "four-seasons.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
@@ -246,7 +246,7 @@ var Recordings = []model.Recording{
 	{
 		WorkId: incWorkId(), // Autumn
 		Year: 1976,
-		PhotoPath: "four-seasons-perlman.jpg",
+		PhotoPath: "four-seasons.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
@@ -294,7 +294,7 @@ var Recordings = []model.Recording{
 	{
 		WorkId: incWorkId(), // Winter
 		Year: 1976,
-		PhotoPath: "four-seasons-perlman.jpg",
+		PhotoPath: "four-seasons.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
@@ -805,7 +805,7 @@ var Recordings = []model.Recording{
 	{
 		WorkId: getWorkId(), // Nocturne No. 2
 		Year: 1996,
-		PhotoPath: "nocturne2-maria-joao-pires.jpg",
+		PhotoPath: "nocturnes-maria-joao-pires.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
