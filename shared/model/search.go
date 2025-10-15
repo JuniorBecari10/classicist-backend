@@ -34,6 +34,6 @@ func NewPerformerSR(p Performer) SearchResult {
 
 // ---
 
-func (x Work) search() { }
-func (x Composer) search() { }
-func (x Performer) search() { }
+func (x Work) search() {}
+func (x Composer) search() {}
+func (x Performer) search() {}
