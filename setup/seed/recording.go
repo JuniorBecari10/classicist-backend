@@ -828,7 +828,7 @@ var Recordings = []model.Recording{
 	{
 		WorkId: incWorkId(), // Nocturne No. 20
 		Year: 1996,
-		PhotoPath: "nocturne20.jpg",
+		PhotoPath: "nocturnes-maria-joao-pires.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
