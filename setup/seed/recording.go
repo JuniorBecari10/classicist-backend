@@ -73,7 +73,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(), // to not need to create another function just to get the id
 				AudioFile: model.AudioFile{
 					Path: "prelude-gould.mp3",
-					Duration: 142,
+					Duration: 141,
 				},
 			},
 		},
@@ -96,7 +96,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "prelude-andras.mp3",
-					Duration: 115,
+					Duration: 111,
 				},
 			},
 		},
@@ -119,7 +119,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "toccata-preston.mp3",
-					Duration: 506,
+					Duration: 499,
 				},
 			},
 		},
@@ -142,7 +142,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "toccata-richter.mp3",
-					Duration: 535,
+					Duration: 533,
 				},
 			},
 		},
@@ -150,7 +150,7 @@ var Recordings = []model.Recording{
 	{
 		WorkId: incWorkId(), // Spring
 		Year: 1976,
-		PhotoPath: "four-seasons-perlman.jpg",
+		PhotoPath: "four-seasons.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
@@ -173,7 +173,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "spring-1.mp3",
-					Duration: 196,
+					Duration: 189,
 				},
 			},
 			{
@@ -181,7 +181,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "spring-2.mp3",
-					Duration: 163,
+					Duration: 156,
 				},
 			},
 			{
@@ -189,7 +189,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "spring-3.mp3",
-					Duration: 286,
+					Duration: 280,
 				},
 			},
 		},
@@ -198,7 +198,7 @@ var Recordings = []model.Recording{
 	{
 		WorkId: incWorkId(), // Summer
 		Year: 1976,
-		PhotoPath: "four-seasons-perlman.jpg",
+		PhotoPath: "four-seasons.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
@@ -221,7 +221,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "summer-1.mp3",
-					Duration: 376,
+					Duration: 368,
 				},
 			},
 			{
@@ -229,7 +229,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "summer-2.mp3",
-					Duration: 164,
+					Duration: 157,
 				},
 			},
 			{
@@ -237,7 +237,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "summer-3.mp3",
-					Duration: 185,
+					Duration: 176,
 				},
 			},
 		},
@@ -246,7 +246,7 @@ var Recordings = []model.Recording{
 	{
 		WorkId: incWorkId(), // Autumn
 		Year: 1976,
-		PhotoPath: "four-seasons-perlman.jpg",
+		PhotoPath: "four-seasons.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
@@ -285,7 +285,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "autumn-3.mp3",
-					Duration: 189,
+					Duration: 190,
 				},
 			},
 		},
@@ -294,7 +294,7 @@ var Recordings = []model.Recording{
 	{
 		WorkId: incWorkId(), // Winter
 		Year: 1976,
-		PhotoPath: "four-seasons-perlman.jpg",
+		PhotoPath: "four-seasons.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
@@ -317,7 +317,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "winter-1.mp3",
-					Duration: 217,
+					Duration: 210,
 				},
 			},
 			{
@@ -325,7 +325,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "winter-2.mp3",
-					Duration: 151,
+					Duration: 146,
 				},
 			},
 			{
@@ -333,7 +333,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "winter-3.mp3",
-					Duration: 199,
+					Duration: 196,
 				},
 			},
 		},
@@ -360,7 +360,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "eine-1.mp3",
-					Duration: 333,
+					Duration: 334,
 				},
 			},
 			{
@@ -411,7 +411,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-1.mp3",
-					Duration: 440,
+					Duration: 435,
 				},
 			},
 			{
@@ -419,7 +419,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-2.mp3",
-					Duration: 466,
+					Duration: 459,
 				},
 			},
 			{
@@ -427,7 +427,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-3.mp3",
-					Duration: 278,
+					Duration: 274,
 				},
 			},
 			{
@@ -435,7 +435,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp40-4.mp3",
-					Duration: 279,
+					Duration: 274,
 				},
 			},
 		},
@@ -474,7 +474,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "facile-3.mp3",
-					Duration: 98,
+					Duration: 99,
 				},
 			},
 		},
@@ -497,7 +497,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-1.mp3",
-					Duration: 545,
+					Duration: 340,
 				},
 			},
 			{
@@ -505,7 +505,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-2.mp3",
-					Duration: 139,
+					Duration: 138,
 				},
 			},
 			{
@@ -513,7 +513,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-kempff-3.mp3",
-					Duration: 336,
+					Duration: 333,
 				},
 			},
 		},
@@ -536,7 +536,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-1.mp3",
-					Duration: 377,
+					Duration: 359,
 				},
 			},
 			{
@@ -544,7 +544,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-2.mp3",
-					Duration: 159,
+					Duration: 156,
 				},
 			},
 			{
@@ -552,7 +552,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "moonlight-rubinstein-3.mp3",
-					Duration: 398,
+					Duration: 393,
 				},
 			},
 		},
@@ -579,7 +579,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-1.mp3",
-					Duration: 442,
+					Duration: 433,
 				},
 			},
 			{
@@ -587,7 +587,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-2.mp3",
-					Duration: 561,
+					Duration: 555,
 				},
 			},
 			{
@@ -595,7 +595,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-3.mp3",
-					Duration: 289,
+					Duration: 285,
 				},
 			},
 			{
@@ -603,7 +603,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp5-4.mp3",
-					Duration: 523,
+					Duration: 521,
 				},
 			},
 		},
@@ -615,7 +615,7 @@ var Recordings = []model.Recording{
 
 		Performers: []model.RecordingPerformer{
 			{
-				Performer: Performers[12],
+				Performer: Performers[11],
 				Role: "Conductor",
 			},
 			{
@@ -630,7 +630,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-1.mp3",
-					Duration: 811,
+					Duration: 807,
 				},
 			},
 			{
@@ -638,7 +638,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-2.mp3",
-					Duration: 461,
+					Duration: 456,
 				},
 			},
 			{
@@ -646,7 +646,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-3.mp3",
-					Duration: 508,
+					Duration: 507,
 				},
 			},
 			{
@@ -654,7 +654,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp7-4.mp3",
-					Duration: 481,
+					Duration: 478,
 				},
 			},
 		},
@@ -681,7 +681,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-1.mp3",
-					Duration: 936,
+					Duration: 917,
 				},
 			},
 			{
@@ -689,7 +689,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-2.mp3",
-					Duration: 626,
+					Duration: 615,
 				},
 			},
 			{
@@ -697,7 +697,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-3.mp3",
-					Duration: 954,
+					Duration: 944,
 				},
 			},
 			{
@@ -705,7 +705,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "symp9-4.mp3",
-					Duration: 1458,
+					Duration: 1451,
 				},
 			},
 		},
@@ -714,6 +714,29 @@ var Recordings = []model.Recording{
 		WorkId: incWorkId(), // Fur Elise
 		Year: 2015,
 		PhotoPath: "furelise-levit.jpg",
+
+		Performers: []model.RecordingPerformer{
+			{
+				Performer: Performers[12],
+				Role: "Pianist",
+			},
+		},
+
+		Movements: []model.RecordedMovement{
+			{
+				MovementIndex: resetIndex(),
+				MovementId: incId(),
+				AudioFile: model.AudioFile{
+					Path: "furelise-levit.mp3",
+					Duration: 209,
+				},
+			},
+		},
+	},
+	{
+		WorkId: getWorkId(), // Fur Elise
+		Year: 2025,
+		PhotoPath: "furelise-ugorski.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
@@ -727,16 +750,16 @@ var Recordings = []model.Recording{
 				MovementIndex: resetIndex(),
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
-					Path: "furelise-levit.mp3",
-					Duration: 222,
+					Path: "furelise-ugorski.mp3",
+					Duration: 237,
 				},
 			},
 		},
 	},
 	{
 		WorkId: getWorkId(), // Fur Elise
-		Year: 2025,
-		PhotoPath: "furelise-ugorski.jpg",
+		Year: 1984,
+		PhotoPath: "furelise-ashkenazy.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
@@ -750,16 +773,16 @@ var Recordings = []model.Recording{
 				MovementIndex: resetIndex(),
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
-					Path: "furelise-ugorski.mp3",
-					Duration: 239,
+					Path: "furelise-ashkenazy.mp3",
+					Duration: 173,
 				},
 			},
 		},
 	},
 	{
-		WorkId: getWorkId(), // Fur Elise
-		Year: 1984,
-		PhotoPath: "furelise-ashkenazy.jpg",
+		WorkId: incWorkId(), // Nocturne No. 2
+		Year: 2005,
+		PhotoPath: "nocturne2-pollini.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
@@ -773,16 +796,16 @@ var Recordings = []model.Recording{
 				MovementIndex: resetIndex(),
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
-					Path: "furelise-ashkenazy.mp3",
-					Duration: 184,
+					Path: "nocturne2-pollini.mp3",
+					Duration: 232,
 				},
 			},
 		},
 	},
 	{
-		WorkId: incWorkId(), // Nocturne No. 2
-		Year: 2005,
-		PhotoPath: "nocturne2-pollini.jpg",
+		WorkId: getWorkId(), // Nocturne No. 2
+		Year: 1996,
+		PhotoPath: "nocturnes-maria-joao-pires.jpg",
 
 		Performers: []model.RecordingPerformer{
 			{
@@ -796,31 +819,8 @@ var Recordings = []model.Recording{
 				MovementIndex: resetIndex(),
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
-					Path: "nocturne2-pollini.mp3",
-					Duration: 242,
-				},
-			},
-		},
-	},
-	{
-		WorkId: getWorkId(), // Nocturne No. 2
-		Year: 1996,
-		PhotoPath: "nocturne2-maria-joao-pires.jpg",
-
-		Performers: []model.RecordingPerformer{
-			{
-				Performer: Performers[17],
-				Role: "Pianist",
-			},
-		},
-
-		Movements: []model.RecordedMovement{
-			{
-				MovementIndex: resetIndex(),
-				MovementId: incId(),
-				AudioFile: model.AudioFile{
 					Path: "nocturne2-maria-joao-pires.mp3",
-					Duration: 269,
+					Duration: 256,
 				},
 			},
 		},
@@ -832,7 +832,7 @@ var Recordings = []model.Recording{
 
 		Performers: []model.RecordingPerformer{
 			{
-				Performer: Performers[17],
+				Performer: Performers[16],
 				Role: "Pianist",
 			},
 		},
@@ -843,7 +843,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "nocturne20.mp3",
-					Duration: 242,
+					Duration: 230,
 				},
 			},
 		},
@@ -855,7 +855,7 @@ var Recordings = []model.Recording{
 
 		Performers: []model.RecordingPerformer{
 			{
-				Performer: Performers[18],
+				Performer: Performers[17],
 				Role: "Pianist",
 			},
 		},
@@ -866,7 +866,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-1.mp3",
-					Duration: 436,
+					Duration: 431,
 				},
 			},
 			{
@@ -874,7 +874,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-2.mp3",
-					Duration: 374,
+					Duration: 365,
 				},
 			},
 			{
@@ -882,7 +882,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-3.mp3",
-					Duration: 514,
+					Duration: 500,
 				},
 			},
 			{
@@ -890,7 +890,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "sonata2-4.mp3",
-					Duration: 93,
+					Duration: 86,
 				},
 			},
 		},
@@ -902,7 +902,7 @@ var Recordings = []model.Recording{
 
 		Performers: []model.RecordingPerformer{
 			{
-				Performer: Performers[19],
+				Performer: Performers[18],
 				Role: "Pianist",
 			},
 		},
@@ -925,7 +925,7 @@ var Recordings = []model.Recording{
 
 		Performers: []model.RecordingPerformer{
 			{
-				Performer: Performers[16],
+				Performer: Performers[15],
 				Role: "Pianist",
 			},
 		},
@@ -948,7 +948,7 @@ var Recordings = []model.Recording{
 
 		Performers: []model.RecordingPerformer{
 			{
-				Performer: Performers[20],
+				Performer: Performers[19],
 				Role: "Pianist",
 			},
 		},
@@ -959,7 +959,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "liebestraum3.mp3",
-					Duration: 293,
+					Duration: 276,
 				},
 			},
 		},
@@ -982,7 +982,7 @@ var Recordings = []model.Recording{
 				MovementId: incId(),
 				AudioFile: model.AudioFile{
 					Path: "hungrhap2.mp3",
-					Duration: 612,
+					Duration: 609,
 				},
 			},
 		},

@@ -1,35 +1,35 @@
 package model
 
 type AudioFile struct {
-	Path string // relative to /public/audio
-	Duration int // in seconds
+	Path string `json:"path"` // relative to /public/audio
+	Duration int `json:"duration"` // in seconds
 }
 
 type Performer struct {
-	Id int
-	Name string
+	Id int `json:"id"`
+	Name string `json:"name"`
 }
 
 // two different structs are necessary because a single performer
 // can have multiple roles, depending on the recording.
 type RecordingPerformer struct {
-	Id int
-	Performer Performer
-	Role string // e.g. Conductor, Pianist, Violinist, Orchestra
+	Id int `json:"id"`
+	Performer Performer `json:"performer"`
+	Role string `json:"role"` // e.g. Conductor, Pianist, Violinist, Orchestra
 }
 
 type RecordedMovement struct {
-	Id int
-	MovementIndex int // to avoid data duplication, it is already in Work, inside Recording. Use the index to get it.
-	MovementId int
-	AudioFile AudioFile
+	Id int `json:"id"`
+	MovementIndex int `json:"movement_index"` // use index to locate the movement inside Work
+	MovementId int `json:"movement_id"`
+	AudioFile AudioFile `json:"audio_file"`
 }
 
 type Recording struct {
-	Id int
-	WorkId int
-	Year int
-	PhotoPath string // relative to /public/images/recordings
-	Performers []RecordingPerformer
-	Movements []RecordedMovement
+	Id int `json:"id"`
+	WorkId int `json:"work_id"`
+	Year int `json:"year"`
+	PhotoPath string `json:"photo_path"` // relative to /public/images/recordings
+	Performers []RecordingPerformer `json:"performers"`
+	Movements []RecordedMovement `json:"movements"`
 }
