@@ -49,7 +49,7 @@ func searchWorks(db *sql.DB, term string) ([]model.SearchResult, error) {
 
 	// separate by words, because in the query order matters, and here it doesn't.
 	// perform one query per word, in a list of results (list of list of IDs)
-	for _, part := range strings.Split(term, " ") {
+	for part := range strings.SplitSeq(term, " ") {
 		list, err := queryWorkTerm(db, part)
 		if err != nil {
 			return nil, err
