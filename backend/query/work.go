@@ -27,6 +27,9 @@ var tempoMarkingsQuery string
 //go:embed sql/work/lyrics.sql
 var lyricsQuery string
 
+//go:embed sql/work/worksbycomposer.sql
+var worksByComposerQuery string
+
 func QueryComposer(db *sql.DB, id int) (model.Composer, error) {
 	var (
 		composer model.Composer
@@ -218,4 +221,81 @@ func queryLyrics(db *sql.DB, workId, movId int) (option.Option[[]string], error)
 	} else {
 		return option.Some(lyrics), nil
 	}
+}
+
+func QueryWorksByComposer(db *sql.DB, composerId int) ([]model.Work, error) {
+	rows, err := db.Query(worksByComposerQuery, composerId)
+	if err != nil {
+		return nil, err
+	}
+
+	defer rows.Close()
+	works := []model.Work{}
+
+	for rows.Next() {
+		var (
+			workId, keyNote, keyMode, compositionStartYear int
+			titleKind, catalogPrefix string
+			titleNickname, catalogNumber, catalogSubnumber sql.NullString
+			titleNumber, compositionEndYear sql.NullInt32
+		)
+
+		if err := rows.Scan(
+			&workId,
+			&titleKind,
+			&titleNumber,
+			&titleNickname,
+			&keyNote,
+			&keyMode,
+			&catalogPrefix,
+			&catalogNumber,
+			&catalogSubnumber,
+			&compositionStartYear,
+			&compositionEndYear,
+		); err != nil {
+			return nil, err
+		}
+
+		movements, err := queryMovements(db, workId)
+		if err != nil {
+			return nil, err
+		}
+
+		composer, err := QueryComposer(db, composerId)
+		if err != nil {
+			return nil, err
+		}
+
+		work := model.Work{
+			Id: workId,
+			Title: model.WorkTitle{
+				Kind:     titleKind,
+				Number:   option.FromSQL(int(titleNumber.Int32), titleNumber.Valid),
+				Nickname: option.FromSQL(titleNickname.String, titleNickname.Valid),
+			},
+			Key: model.Key{
+				Note: model.Note(keyNote),
+				Mode: model.KeyMode(keyMode),
+			},
+			Composer: composer,
+			Catalog: model.Catalog{
+				Prefix:    catalogPrefix,
+				Number:    option.FromSQL(catalogNumber.String, catalogNumber.Valid),
+				Subnumber: option.FromSQL(catalogSubnumber.String, catalogSubnumber.Valid),
+			},
+			Movements: movements,
+			Year: model.CompositionYear{
+				StartYear: compositionStartYear,
+				EndYear:   option.FromSQL(int(compositionEndYear.Int32), compositionEndYear.Valid),
+			},
+		}
+
+		works = append(works, work)
+	}
+
+	if len(works) == 0 {
+		return nil, errors.New("no works found for composer")
+	}
+
+	return works, nil
 }
