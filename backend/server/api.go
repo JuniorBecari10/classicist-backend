@@ -22,9 +22,9 @@ func setupApi(app *fiber.App) {
 	apiEndpoint(api, "composer", "Composer", query.QueryComposer)
 	apiEndpoint(api, "work", "Work", query.QueryWork)
 	apiEndpoint(api, "performer", "Performer", query.QueryPerformer)
-	apiEndpoint(api, "recsforwork", "Recording", query.QueryRecordingsForWork)
-	apiEndpoint(api, "recsbyperformer", "Recording", query.QueryRecordingsByPerformer)
-	apiEndpoint(api, "worksbycomposer", "Work", query.QueryWorksByComposer)
+	apiEndpoint(api, "recsforwork", "Recordings", query.QueryRecordingsForWork)
+	apiEndpoint(api, "recsbyperformer", "Recordings", query.QueryRecordingsByPerformer)
+	apiEndpoint(api, "worksbycomposer", "Works", query.QueryWorksByComposer)
 
 	api.Get("/search", searchEndpoint)
 }
