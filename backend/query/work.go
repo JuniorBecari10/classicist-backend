@@ -235,6 +235,7 @@ func QueryWorksByComposer(db *sql.DB, composerId int) ([]model.Work, error) {
 	for rows.Next() {
 		var (
 			workId, keyNote, keyMode, compositionStartYear int
+			composerId int
 			titleKind, catalogPrefix string
 			titleNickname, catalogNumber, catalogSubnumber sql.NullString
 			titleNumber, compositionEndYear sql.NullInt32
@@ -247,6 +248,7 @@ func QueryWorksByComposer(db *sql.DB, composerId int) ([]model.Work, error) {
 			&titleNickname,
 			&keyNote,
 			&keyMode,
+			&composerId,
 			&catalogPrefix,
 			&catalogNumber,
 			&catalogSubnumber,
