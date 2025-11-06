@@ -14,7 +14,10 @@ import (
 var recordedMovementsQuery string
 
 //go:embed sql/recording/recordings_for_work.sql
-var recordingsByWorkIdQuery string
+var recordingsForWorkQuery string
+
+//go:embed sql/recording/recordings_by_performer.sql
+var recordingsByPerformerQuery string
 
 //go:embed sql/recording/recording_performers.sql
 var recordingPerformersQuery string
@@ -22,8 +25,58 @@ var recordingPerformersQuery string
 //go:embed sql/recording/performer.sql
 var performerQuery string
 
+func QueryPerformer(db *sql.DB, id int) (model.Performer, error) {
+	row := db.QueryRow(performerQuery, id)
+
+	var perf model.Performer
+	if err := row.Scan(&perf.Id, &perf.Name); err != nil {
+		if err == sql.ErrNoRows {
+			return model.Performer{}, fmt.Errorf("Performer not found")
+		}
+
+		return model.Performer{}, err
+	}
+
+	return perf, nil
+}
+
 func QueryRecordingsForWork(db *sql.DB, workId int) ([]model.Recording, error) {
-	rows, err := db.Query(recordingsByWorkIdQuery, workId)
+	rows, err := db.Query(recordingsForWorkQuery, workId)
+	if err != nil {
+		return nil, err
+	}
+
+	defer rows.Close()
+	recs := []model.Recording{}
+
+	for rows.Next() {
+		var rec model.Recording
+
+		if err := rows.Scan(&rec.Id, &rec.WorkId, &rec.Year, &rec.PhotoPath); err != nil {
+			if err == sql.ErrNoRows {
+				return nil, fmt.Errorf("Recording not found")
+			}
+			
+			return nil, err
+		}
+
+		err := queryRecordingDetails(db, &rec)
+		if err != nil {
+			return nil, err
+		}
+
+		recs = append(recs, rec)
+	}
+
+	if len(recs) == 0 {
+		return nil, fmt.Errorf("Recording not found")
+	} else {
+		return recs, nil
+	}
+}
+
+func QueryRecordingsByPerformer(db *sql.DB, perfId int) ([]model.Recording, error) {
+	rows, err := db.Query(recordingsByPerformerQuery, perfId)
 	if err != nil {
 		return nil, err
 	}
@@ -146,19 +199,4 @@ func queryRecordingPerformers(db *sql.DB, rec *model.Recording) ([]model.Recordi
 	} else {
 		return recPerfs, nil
 	}
-}
-
-func QueryPerformer(db *sql.DB, id int) (model.Performer, error) {
-	row := db.QueryRow(performerQuery, id)
-
-	var perf model.Performer
-	if err := row.Scan(&perf.Id, &perf.Name); err != nil {
-		if err == sql.ErrNoRows {
-			return model.Performer{}, fmt.Errorf("Performer not found")
-		}
-
-		return model.Performer{}, err
-	}
-
-	return perf, nil
 }
