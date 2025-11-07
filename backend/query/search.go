@@ -50,13 +50,7 @@ func SearchDatabase(db *sql.DB, term string) ([]model.SearchResult, error) {
 	return concat, nil
 }
 
-func searchWorks(db *sql.DB, term string) ([]model.SearchResult, error) {
-	query := strings.TrimSpace(term)
-
-	if query == "" {
-		return []model.SearchResult{}, nil
-	}
-
+func searchWorks(db *sql.DB, query string) ([]model.SearchResult, error) {
 	var queryIds [][]int
 
 	// separate by words, because in the query order matters, and here it doesn't.
@@ -93,13 +87,7 @@ func searchWorks(db *sql.DB, term string) ([]model.SearchResult, error) {
 	return results, nil
 }
 
-func searchComposers(db *sql.DB, term string) ([]model.SearchResult, error) {
-	query := strings.TrimSpace(term)
-
-	if query == "" {
-		return []model.SearchResult{}, nil
-	}
-
+func searchComposers(db *sql.DB, query string) ([]model.SearchResult, error) {
 	rows, err := db.Query(searchComposerQuery, query)
 	if err != nil {
 		return nil, err
@@ -134,13 +122,7 @@ func searchComposers(db *sql.DB, term string) ([]model.SearchResult, error) {
 	return results, nil
 }
 
-func searchPerformers(db *sql.DB, term string) ([]model.SearchResult, error) {
-	query := strings.TrimSpace(term)
-
-	if query == "" {
-		return []model.SearchResult{}, nil
-	}
-
+func searchPerformers(db *sql.DB, query string) ([]model.SearchResult, error) {
 	rows, err := db.Query(searchPerformerQuery, query)
 	if err != nil {
 		return nil, err
@@ -174,13 +156,7 @@ func searchPerformers(db *sql.DB, term string) ([]model.SearchResult, error) {
 // ---
 
 // List of IDs
-func queryWorkTerm(db *sql.DB, term string) ([]int, error) {
-	query := strings.TrimSpace(term)
-
-	if query == "" {
-		return []int{}, nil
-	}
-
+func queryWorkTerm(db *sql.DB, query string) ([]int, error) {
 	rows, err := db.Query(searchWorkQuery, query)
 	if err != nil {
 		return nil, err
