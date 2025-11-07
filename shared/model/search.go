@@ -6,7 +6,7 @@ type SearchItem interface {
 
 type SearchResult struct {
 	Type string `json:"type"`
-	Data SearchItem `json:"data"`
+	Value SearchItem `json:"value"`
 }
 
 // ---
@@ -14,21 +14,21 @@ type SearchResult struct {
 func NewWorkSR(w Work) SearchResult {
 	return SearchResult{
 		Type: "work",
-		Data: w,
+		Value: w,
 	}
 }
 
 func NewComposerSR(c Composer) SearchResult {
 	return SearchResult{
 		Type: "composer",
-		Data: c,
+		Value: c,
 	}
 }
 
 func NewPerformerSR(p Performer) SearchResult {
 	return SearchResult{
 		Type: "performer",
-		Data: p,
+		Value: p,
 	}
 }
 
