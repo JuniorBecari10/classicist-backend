@@ -20,17 +20,23 @@ var searchComposerQuery string
 var searchPerformerQuery string
 
 func SearchDatabase(db *sql.DB, term string) ([]model.SearchResult, error) {
-	works, err := searchWorks(db, term)
+	query := strings.TrimSpace(term)
+
+	if query == "" {
+		return []model.SearchResult{}, nil
+	}
+
+	works, err := searchWorks(db, query)
 	if err != nil {
 		return nil, err
 	}
 
-	composers, err := searchComposers(db, term)
+	composers, err := searchComposers(db, query)
 	if err != nil {
 		return nil, err
 	}
 
-	performers, err := searchPerformers(db, term)
+	performers, err := searchPerformers(db, query)
 	if err != nil {
 		return nil, err
 	}
@@ -45,22 +51,28 @@ func SearchDatabase(db *sql.DB, term string) ([]model.SearchResult, error) {
 }
 
 func searchWorks(db *sql.DB, term string) ([]model.SearchResult, error) {
-	var termIds [][]int
+	query := strings.TrimSpace(term)
+
+	if query == "" {
+		return []model.SearchResult{}, nil
+	}
+
+	var queryIds [][]int
 
 	// separate by words, because in the query order matters, and here it doesn't.
 	// perform one query per word, in a list of results (list of list of IDs)
-	for part := range strings.SplitSeq(term, " ") {
+	for part := range strings.SplitSeq(query, " ") {
 		list, err := queryWorkTerm(db, part)
 		if err != nil {
 			return nil, err
 		}
 
-		termIds = append(termIds, list)
+		queryIds = append(queryIds, list)
 	}
 
 	// take the intersection of them, ensuring there are no duplicates
 	// (take the common items only in all of the lists)
-	filtered := Intersection(termIds...)
+	filtered := Intersection(queryIds...)
 	var works []model.Work
 
 	// use the list of IDs to properly query each work
@@ -82,7 +94,13 @@ func searchWorks(db *sql.DB, term string) ([]model.SearchResult, error) {
 }
 
 func searchComposers(db *sql.DB, term string) ([]model.SearchResult, error) {
-	rows, err := db.Query(searchComposerQuery, term)
+	query := strings.TrimSpace(term)
+
+	if query == "" {
+		return []model.SearchResult{}, nil
+	}
+
+	rows, err := db.Query(searchComposerQuery, query)
 	if err != nil {
 		return nil, err
 	}
@@ -117,7 +135,13 @@ func searchComposers(db *sql.DB, term string) ([]model.SearchResult, error) {
 }
 
 func searchPerformers(db *sql.DB, term string) ([]model.SearchResult, error) {
-	rows, err := db.Query(searchPerformerQuery, term)
+	query := strings.TrimSpace(term)
+
+	if query == "" {
+		return []model.SearchResult{}, nil
+	}
+
+	rows, err := db.Query(searchPerformerQuery, query)
 	if err != nil {
 		return nil, err
 	}
@@ -151,7 +175,13 @@ func searchPerformers(db *sql.DB, term string) ([]model.SearchResult, error) {
 
 // List of IDs
 func queryWorkTerm(db *sql.DB, term string) ([]int, error) {
-	rows, err := db.Query(searchWorkQuery, term)
+	query := strings.TrimSpace(term)
+
+	if query == "" {
+		return []int{}, nil
+	}
+
+	rows, err := db.Query(searchWorkQuery, query)
 	if err != nil {
 		return nil, err
 	}
