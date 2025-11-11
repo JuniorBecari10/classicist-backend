@@ -75,7 +75,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "prelude.mxl",
+					Path: "prelude.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -120,7 +120,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "toccata.mxl",
+					Path: "toccata.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -169,7 +169,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "spring-1.mxl",
+					Path: "spring-1.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -186,7 +186,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "spring-2.mxl",
+					Path: "spring-2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -203,7 +203,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "spring-3.mxl",
+					Path: "spring-3.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -248,7 +248,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "summer-1.mxl",
+					Path: "summer-1.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -265,7 +265,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "summer-2.mxl",
+					Path: "summer-2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -282,7 +282,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "summer-3.mxl",
+					Path: "summer-3.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -327,7 +327,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "autumn-1.mxl",
+					Path: "autumn-1.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -344,7 +344,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "autumn-2.mxl",
+					Path: "autumn-2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -361,7 +361,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "autumn-3.mxl",
+					Path: "autumn-3.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -406,7 +406,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "winter-1.mxl",
+					Path: "winter-1.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -423,7 +423,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "winter-2.mxl",
+					Path: "winter-2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -440,7 +440,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "winter-3.mxl",
+					Path: "winter-3.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -485,7 +485,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "eine-1.mxl",
+					Path: "eine-1.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -502,7 +502,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "eine-2.mxl",
+					Path: "eine-2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -519,7 +519,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "eine-3.mxl",
+					Path: "eine-3.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -536,7 +536,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "eine-4.mxl",
+					Path: "eine-4.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -581,7 +581,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "symp40-1.mxl",
+					Path: "symp40-1.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -598,7 +598,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "symp40-2.mxl",
+					Path: "symp40-2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -615,7 +615,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "symp40-3.mxl",
+					Path: "symp40-3.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -632,7 +632,7 @@ var Works = []model.Work{
 
 
 				Sheet: model.SheetMusic{
-					Path: "symp40-4.mxl",
+					Path: "symp40-4.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -676,7 +676,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "facile-1.mxl",
+					Path: "facile-1.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -692,7 +692,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "facile-2.mxl",
+					Path: "facile-2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -708,7 +708,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "facile-3.mxl",
+					Path: "facile-3.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -752,7 +752,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "moonlight-1.mxl",
+					Path: "moonlight-1.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -768,7 +768,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "moonlight-2.mxl",
+					Path: "moonlight-2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -784,7 +784,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "moonlight-3.mxl",
+					Path: "moonlight-3.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -828,7 +828,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "symp5-1.mxl",
+					Path: "symp5-1.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -844,7 +844,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "symp5-2.mxl",
+					Path: "symp5-2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -860,7 +860,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "symp5-3.mxl",
+					Path: "symp5-3.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -876,7 +876,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "symp5-4.mxl",
+					Path: "symp5-4.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -920,7 +920,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "symp7-1.mxl",
+					Path: "symp7-1.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -940,7 +940,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "symp7-2.mxl",
+					Path: "symp7-2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -956,7 +956,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "symp7-3.mxl",
+					Path: "symp7-3.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -976,7 +976,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "symp7-4.mxl",
+					Path: "symp7-4.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1020,7 +1020,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "symp9-1.mxl",
+					Path: "symp9-1.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1036,7 +1036,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "symp9-2.mxl",
+					Path: "symp9-2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1056,7 +1056,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "symp9-3.mxl",
+					Path: "symp9-3.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1160,7 +1160,7 @@ var Works = []model.Work{
 				}),
 
 				Sheet: model.SheetMusic{
-					Path: "symp9-4.mxl",
+					Path: "symp9-4.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1208,7 +1208,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "furelise.mxl",
+					Path: "furelise.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1252,7 +1252,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "nocturne2.mxl",
+					Path: "nocturne2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1296,7 +1296,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "nocturne20.mxl",
+					Path: "nocturne20.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1340,7 +1340,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "sonata2-1.mxl",
+					Path: "sonata2-1.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1360,7 +1360,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "sonata2-2.mxl",
+					Path: "sonata2-2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1376,7 +1376,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "sonata2-3.mxl",
+					Path: "sonata2-3.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1392,7 +1392,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "sonata2-4.mxl",
+					Path: "sonata2-4.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1436,7 +1436,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "ballade1.mxl",
+					Path: "ballade1.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1488,7 +1488,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "liebestraum3.mxl",
+					Path: "liebestraum3.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{
@@ -1537,7 +1537,7 @@ var Works = []model.Work{
 				Lyrics: None[[]string](),
 
 				Sheet: model.SheetMusic{
-					Path: "hungrhap2.mxl",
+					Path: "hungrhap2.png",
 				},
 
 				TempoMarkings: []model.TempoMarking{

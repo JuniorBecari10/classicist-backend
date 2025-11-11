@@ -447,7 +447,7 @@ var Recordings = []model.Recording{
 
 		Performers: []model.RecordingPerformer{
 			{
-				Performer: Performers[8],
+				Performer: Performers[1],
 				Role: "Pianist",
 			},
 		},
